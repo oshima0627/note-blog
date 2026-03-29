@@ -316,4 +316,5 @@ Claude Codeの最大の強みは「エージェント性」です。指示を出
 title: Claude Codeで開発効率を劇的に上げる5つの実践テクニック
 keywords: Claude Code, AIペアプログラミング, 開発効率化, CLI, MCP, CLAUDE.md, 権限管理
 target: ターミナルで日常的に開発を行うエンジニア（Web系・バックエンド問わず）
+hashtags: #AI #プログラミング #ClaudeCode #生成AI #エンジニア
 -->
