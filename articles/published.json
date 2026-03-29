@@ -1,3 +1,22 @@
 {
-  "articles": []
+  "articles": [
+    {
+      "id": 1,
+      "date": "2026-03-29",
+      "title": "Claude Codeで開発効率を劇的に上げる5つの実践テクニック",
+      "slug": "claude-code-practical-techniques",
+      "keywords": ["Claude Code", "AIペアプログラミング", "開発効率化", "CLI", "MCP", "CLAUDE.md", "権限管理"],
+      "theme": "Claude Codeの実践的な使い方・テクニック",
+      "target": "ターミナルで日常的に開発を行うエンジニア",
+      "review_scores": {
+        "accuracy": 8,
+        "completeness": 7,
+        "structure": 9,
+        "readability": 8,
+        "originality": 7,
+        "average": 7.8
+      },
+      "file": "articles/drafts/2026-03-29_claude-code-practical-techniques.md"
+    }
+  ]
 }
