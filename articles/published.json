@@ -35,6 +35,24 @@
         "average": 8.0
       },
       "file": "articles/drafts/2026-03-31_claude-code-hooks-guide.md"
+    },
+    {
+      "id": 3,
+      "date": "2026-03-31",
+      "title": "Claude Codeサブエージェント並列処理の全技術",
+      "slug": "claude-code-subagent-parallel",
+      "keywords": ["Claude Code", "サブエージェント", "並列処理", "Agent tool", "worktree", "カスタムエージェント", "subagent_type", "コスト最適化"],
+      "theme": "Claude Codeのサブエージェントによる並列処理と開発高速化",
+      "target": "Claude Codeを使い始めた開発者、AIコーディングの効率を上げたい方",
+      "review_scores": {
+        "accuracy": 8,
+        "completeness": 7,
+        "structure": 8,
+        "readability": 8,
+        "originality": 7,
+        "average": 7.6
+      },
+      "file": "articles/drafts/2026-03-31_claude-code-subagent-parallel.md"
     }
   ]
 }
