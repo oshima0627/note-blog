@@ -17,6 +17,24 @@
         "average": 7.8
       },
       "file": "articles/drafts/2026-03-29_claude-code-practical-techniques.md"
+    },
+    {
+      "id": 2,
+      "date": "2026-03-31",
+      "title": "Claude Code Hooks入門：AIの操作を100%制御する仕組み",
+      "slug": "claude-code-hooks-guide",
+      "keywords": ["Claude Code", "Hooks", "自動化", "コード品質", "AI制御", "PreToolUse", "PostToolUse", "stdin", "終了コード"],
+      "theme": "Claude Code Hooksによるイベント駆動ワークフロー自動化",
+      "target": "Claude Codeを使い始めた開発者、AIエージェントの動作を厳密に管理したい方",
+      "review_scores": {
+        "accuracy": 8,
+        "completeness": 7,
+        "structure": 9,
+        "readability": 9,
+        "originality": 7,
+        "average": 8.0
+      },
+      "file": "articles/drafts/2026-03-31_claude-code-hooks-guide.md"
     }
   ]
 }
