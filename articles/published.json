@@ -37,6 +37,26 @@
         "average": 8.2
       },
       "file": "articles/drafts/2026-04-19_claude-code-crowdsourcing-sidejob-100k.md"
+    },
+    {
+      "id": 3,
+      "date": "2026-04-19",
+      "title": "Claude APIで月5万円！不労所得マイクロSaaS術",
+      "slug": "claude-api-micro-saas-passive-income",
+      "keywords": ["Claude API", "マイクロSaaS", "サブスク収益化", "個人開発", "プロンプトキャッシング", "Stripe", "MRR"],
+      "theme": "Claude APIで個人開発マイクロSaaSを作りStripeサブスクで月5万円MRRを目指す実践ルート",
+      "target": "Next.js/TypeScriptが書け、副業でサブスク型SaaSを個人開発したいエンジニア",
+      "monetization_model": "Stripeサブスク課金（Free/Pro 1,980円/Business 4,980円の3階層）",
+      "income_range": "月5万〜20万円MRR",
+      "review_scores": {
+        "monetization": 9,
+        "actionability": 9,
+        "accuracy": 7,
+        "structure": 9,
+        "originality": 8,
+        "average": 8.4
+      },
+      "file": "articles/drafts/2026-04-19_claude-api-micro-saas-passive-income.md"
     }
   ]
 }
