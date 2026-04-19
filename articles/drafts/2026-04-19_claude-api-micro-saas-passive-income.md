@@ -56,14 +56,15 @@ Pro 1,980円なら、API原価は約300円が上限の目安です。
 
 個人開発で速く作り、運用で消耗しない構成を選びます。
 
-- フロント/API: **Next.js App Router + Vercel**
+- フロント/API: **Next.js App Router + Cloudflare Pages / Workers**
 - 認証: **Clerk**（メール+OAuth即導入）
-- DB: **Supabase + Prisma**
-- 課金: **Stripe Billing + Webhook**
+- DB: **Cloudflare D1 もしくは Supabase + Drizzle ORM**
+- 課金: **Stripe Billing + Webhook**（Cloudflare Workers で受け口を実装）
 - AI: **Claude API（@anthropic-ai/sdk）**
 - UI: TypeScript + React + Tailwind
+- その他: **Cloudflare KV / R2 / Queues** でキャッシュ・ストレージ・非同期処理
 
-SaaS Starterテンプレを流用すれば、MVPは1〜2週間で立ち上がります。
+SaaS Starterテンプレ（`@opennextjs/cloudflare` ベース）を流用すれば、MVPは1〜2週間で立ち上がります。Cloudflareはエッジ実行で世界中どこからも低レイテンシ、従量課金の下限が非常に低い点が個人開発に向きます。
 
 ## コスト最適化：最大95%削減の3点セット
 
@@ -111,7 +112,7 @@ export async function runAI(userInput: string) {
 
 1. **ニッチ特定（30日）**: X/Reddit/Indie Hackersで課題を20件ヒアリング、待機リスト20人を集める
 2. **料金先決め**: Free 5回/月・Pro 1,980円・Business 4,980円で粗利60%を試算
-3. **MVP構築（14日）**: Next.js+Vercel+Clerk+Stripe+Claude APIで最小構成を実装
+3. **MVP構築（14日）**: Next.js+Cloudflare Pages/Workers+Clerk+Stripe+Claude APIで最小構成を実装
 4. **法務と運用ガード**: 特商法表記・利用規約・プラポリ、レート制限、日次トークン上限
 5. **Closed β（14日）**: 待機リスト10〜20人に50%OFFクーポンを配布し有料3〜5人獲得
 6. **本ローンチ**: ProductHunt火曜0:01 PST（公式ガイド・直近上位事例で推奨される米西海岸の朝一投下） + Indie Hackers + X + Zenn + Noteに同時展開
@@ -125,10 +126,10 @@ export async function runAI(userInput: string) {
 月次の固定費は1万円以下で始められます。
 
 - Claude API検証: $20〜$50
-- Vercel Hobby: 0円
-- Supabase Free: 0円
-- Clerk Free: 0円
-- ドメイン: 年1,500円
+- Cloudflare Pages/Workers Free: 0円（リクエスト10万/日まで無料）
+- Cloudflare D1 / KV / R2 Free枠: 0円
+- Clerk Free: 0円（10,000 MAUまで無料）
+- ドメイン: Cloudflare Registrar で原価取得（年1,500円前後）
 
 構築時間はMVPまで100〜160時間、夜+週末で2〜3ヶ月が目安です。
 **損益分岐はMRR1万円**。Pro 1,980円なら5人で黒字化します。
@@ -146,7 +147,7 @@ export async function runAI(userInput: string) {
 
 - XとRedditで「業界×職種×面倒な1タスク」の愚痴を20件収集する
 - Claudeコンソールで$20入金し、プロンプトキャッシュ付きAPIを試す
-- Next.js+Stripe+Clerk構成のSaaSスターターをローカルで起動する
+- Next.js+Cloudflare Pages+Stripe+Clerk構成のSaaSスターターをローカルで起動する
 
 小さく速く始め、解約率の低いニッチでMRRを積み上げていきましょう。
 
