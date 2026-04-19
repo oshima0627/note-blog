@@ -17,6 +17,26 @@
         "average": 7.8
       },
       "file": "articles/drafts/2026-03-29_claude-code-practical-techniques.md"
+    },
+    {
+      "id": 2,
+      "date": "2026-04-19",
+      "title": "Claude Codeで副業月10万円！クラウドソーシング実践ルート",
+      "slug": "claude-code-crowdsourcing-sidejob-100k",
+      "keywords": ["Claude Code", "副業", "クラウドワークス", "ランサーズ", "受託開発", "月10万円", "提案文"],
+      "theme": "Claude Codeを活用したクラウドソーシング副業で月10万円を稼ぐ実践ルート",
+      "target": "副業で月10万円を狙うプログラミング経験1年以上の会社員エンジニア",
+      "monetization_model": "クラウドソーシング経由の受託開発（LP/WordPress/スクレイピング/業務効率化）",
+      "income_range": "月10万〜30万円",
+      "review_scores": {
+        "monetization": 9,
+        "actionability": 9,
+        "accuracy": 7,
+        "structure": 9,
+        "originality": 7,
+        "average": 8.2
+      },
+      "file": "articles/drafts/2026-04-19_claude-code-crowdsourcing-sidejob-100k.md"
     }
   ]
 }
