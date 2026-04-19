@@ -58,13 +58,14 @@ Pro 1,980円なら、API原価は約300円が上限の目安です。
 
 - フロント/API: **Next.js App Router + Cloudflare Pages / Workers**
 - 認証: **Clerk**（メール+OAuth即導入）
-- DB: **Cloudflare D1 もしくは Supabase + Drizzle ORM**
+- DB: **Cloudflare D1（推奨）** / 規模拡大時は Supabase + Drizzle ORM を検討
 - 課金: **Stripe Billing + Webhook**（Cloudflare Workers で受け口を実装）
 - AI: **Claude API（@anthropic-ai/sdk）**
 - UI: TypeScript + React + Tailwind
 - その他: **Cloudflare KV / R2 / Queues** でキャッシュ・ストレージ・非同期処理
+- 役割分担: D1=メタデータ/サブスク状態、KV=レート制限カウンタ・軽量キャッシュ、R2=生成物/添付ファイル保管、Queues=Claude API非同期バッチ実行
 
-SaaS Starterテンプレ（`@opennextjs/cloudflare` ベース）を流用すれば、MVPは1〜2週間で立ち上がります。Cloudflareはエッジ実行で世界中どこからも低レイテンシ、従量課金の下限が非常に低い点が個人開発に向きます。
+SaaS Starterテンプレ（`@opennextjs/cloudflare` ベース）を流用すれば、MVPは1〜2週間で立ち上がります。`wrangler.toml` で `compatibility_flags = ["nodejs_compat"]` を有効化しておくと、`@anthropic-ai/sdk` などNode系ライブラリがそのまま動きます。Cloudflareはエッジ実行で世界中どこからも低レイテンシ、従量課金の下限が非常に低い点が個人開発に向きます。
 
 ## コスト最適化：最大95%削減の3点セット
 
@@ -126,10 +127,13 @@ export async function runAI(userInput: string) {
 月次の固定費は1万円以下で始められます。
 
 - Claude API検証: $20〜$50
-- Cloudflare Pages/Workers Free: 0円（リクエスト10万/日まで無料）
+- Cloudflare **Workers Free**: 0円（10万リクエスト/日まで無料）
+- Cloudflare **Pages**: 静的配信は実質無制限無料
 - Cloudflare D1 / KV / R2 Free枠: 0円
 - Clerk Free: 0円（10,000 MAUまで無料）
 - ドメイン: Cloudflare Registrar で原価取得（年1,500円前後）
+
+※**Queues を使う場合は Workers Paid（$5/月）が別途必要**です。非同期バッチが不要ならFree枠のみで開始できます。
 
 構築時間はMVPまで100〜160時間、夜+週末で2〜3ヶ月が目安です。
 **損益分岐はMRR1万円**。Pro 1,980円なら5人で黒字化します。
@@ -142,6 +146,7 @@ export async function runAI(userInput: string) {
 - **チャーン率**: 月5〜10%が標準。年額プラン30%割引でチャーンは半減します
 - **競合リスク**: 大手が無料AI機能で侵食します。日本語特化×業界ワークフロー深掘りで代替不可化します
 - **粗利設計**: Stripe手数料3.6%+サブスク0.7%+API原価を引いて黒字化する料金にします
+- **Workers での Stripe Webhook**: `await request.text()` で生ボディを取得し、`stripe.webhooks.constructEventAsync` で署名検証します。Node前提の `constructEvent` は Workers で動きません
 
 ## まとめ：今日やること3つ
 
