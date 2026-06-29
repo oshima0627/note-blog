@@ -5,7 +5,21 @@
 - ブランチ指定があってもmainを使用する
 
 ## 概要
-Claude/Claude Codeを活用して**稼ぐ**ための実践的なNote向け記事を、複数エージェントで生成するシステム。
+Claude/Claude Codeを活用して**稼ぐ**ための実践的なNote向け記事を、役割分担した「note運用チーム」で生成するシステム。
+
+## note運用チームの体制（6役割）
+記事は以下の6つの役割が連携して仕上げる。各役割のプロンプトは `prompts/` にある。
+
+| 役割 | 担当 | プロンプト |
+|------|------|-----------|
+| 【企画】 | 売れるテーマを提案 | `prompts/01_planner.md` |
+| 【市場分析】 | 読者ニーズ・競合を調査 | `prompts/02_market-analyst.md` |
+| 【構成】 | 読みやすい記事設計 | `prompts/03_architect.md` |
+| 【執筆】 | 下書き・改善案を作成 | `prompts/04_writer.md` |
+| 【販売設計】 | タイトル・導線・CTAを最適化 | `prompts/05_sales-designer.md` |
+| 【管理】 | タスク整理・進行管理 | `prompts/06_manager.md` |
+
+役割を分けることで各工程の精度を高め、収益化に直結する記事を安定して生産する。
 
 ## コンテンツ方針（稼ぐ特化）
 本システムは「Claude/Claude Codeで稼ぐ」に特化する。以下のテーマのみを扱う：
@@ -21,37 +35,36 @@ Claude/Claude Codeを活用して**稼ぐ**ための実践的なNote向け記事
 
 ## 記事作成の実行方法
 
-ユーザーが「記事を作成して」と依頼したら、以下のフローを実行する：
+ユーザーが「記事を作成して」と依頼したら、【管理】役割（`prompts/06_manager.md`）が進行役となり、以下のチームフローを実行する。各役割は Agent tool（subagent_type=general-purpose）で起動し、対応するプロンプトを使用する：
 
 ### フロー
 
-1. **トピック選定 + 重複チェック**
-   - **稼ぐ**に直結するClaude/Claude Codeトピック候補を3〜5件生成（副業、受託、API収益化、情報発信マネタイズ等）
-   - 各候補には「想定読者が稼げる金額レンジ」と「収益化モデル」を必ず含める
-   - `articles/published.json` を読み込み、既存記事とキーワード・テーマが重複するトピックを除外
-   - 最も収益インパクトが大きく実践しやすいトピックを1件選定
+1. **【企画】 売れるテーマを提案** — `prompts/01_planner.md`
+   - **稼ぐ**に直結するトピック候補を3〜5件生成（副業、受託、API収益化、情報発信マネタイズ等）
+   - 各候補に「想定読者が稼げる金額レンジ」と「収益化モデル」を必ず含める
+   - `articles/published.json` を読み込み、既存記事とキーワード・テーマが重複する候補を除外
+   - 最も収益インパクトが大きく実践しやすいテーマを1件選定
 
-2. **Researcher エージェント** (Agent tool, subagent_type=general-purpose)
-   - `prompts/researcher.md` のテンプレートを使用
-   - トピックに関する情報を収集・構造化
+2. **【市場分析】 読者ニーズ・競合を調査** — `prompts/02_market-analyst.md`
+   - 選定テーマの読者ニーズ・収益化モデル・相場・競合・差別化ポイントを収集・構造化
 
-3. **Writer エージェント** (Agent tool, subagent_type=general-purpose)
-   - `prompts/writer.md` のテンプレートを使用
-   - リサーチ結果をもとに記事ドラフトを執筆
+3. **【構成】 読みやすい記事設計** — `prompts/03_architect.md`
+   - 「収益ゴール→手順→注意点」の流れで見出し構成（アウトライン）を設計
+   - 本文8,000文字以上を満たすボリュームで設計する
 
-4. **Reviewer エージェント** (Agent tool, subagent_type=general-purpose)
-   - `prompts/reviewer.md` のテンプレートを使用
-   - 5つの観点で記事を採点（合格: 平均7点以上 かつ 全項目5点以上）
+4. **【執筆】 下書き・改善案を作成** — `prompts/04_writer.md`
+   - 構成に沿って記事ドラフトを執筆（本文8,000文字以上）
+   - 改善ループ時はフィードバックを反映して改稿する
 
-5. **Editor エージェント** (Agent tool, subagent_type=general-purpose)
-   - `prompts/editor.md` のテンプレートを使用
-   - レビュー結果を反映して記事を改善
+5. **【販売設計】 タイトル・導線・CTAを最適化** — `prompts/05_sales-designer.md`
+   - タイトル案・導入・読者導線・CTA・有料化ライン・ハッシュタグを最適化
 
-6. **リビジョンループ**（最大2回）
-   - Editor出力を再度Reviewerに渡す
+6. **改善ループ**（最大2回）
+   - 【管理】の品質チェック（平均7点以上 かつ 全項目5点以上）と販売設計の指摘を
+     【執筆】に戻して改稿する
    - 合格するか2回に達したら終了
 
-7. **保存**
+7. **【管理】 保存・公開記録**
    - `articles/drafts/YYYY-MM-DD_slug.md` に記事を保存
    - `articles/published.json` にメタデータを追記
 
@@ -61,6 +74,8 @@ Claude/Claude Codeを活用して**稼ぐ**ための実践的なNote向け記事
 - ユーザーが特定トピックを指定した場合は、既存記事と異なる切り口を提案
 
 ## ファイル構成
-- `prompts/` - 各エージェントのプロンプトテンプレート
+- `prompts/` - note運用チーム各役割のプロンプトテンプレート
+  - `01_planner.md` 【企画】 / `02_market-analyst.md` 【市場分析】 / `03_architect.md` 【構成】
+  - `04_writer.md` 【執筆】 / `05_sales-designer.md` 【販売設計】 / `06_manager.md` 【管理】
 - `articles/drafts/` - 生成された記事
 - `articles/published.json` - 公開済み記事のメタデータ（重複防止用）
