@@ -77,6 +77,26 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-06-30_claude-sme-ai-consulting-retainer.md"
+    },
+    {
+      "id": 5,
+      "date": "2026-07-01",
+      "title": "Claude Codeで書いた『有料note』で月10万円：AI×一次情報で作る売れる有料記事の設計図",
+      "slug": "claude-code-paid-note-monetization",
+      "keywords": ["有料note", "情報発信マネタイズ", "Claude執筆", "一次情報", "定期購読マガジン", "有料化ライン", "メンバーシップ"],
+      "theme": "Claude Codeで自分の実践知（一次情報）を有料noteにし、単品販売＋定期購読マガジン/メンバーシップでストック収益化する情報発信マネタイズ",
+      "target": "Claude/Claude Codeを実務で使い、自分の実践知を有料noteにして情報発信で稼ぎたいエンジニア・個人開発者",
+      "monetization_model": "note有料単品販売＋定期購読マガジン/メンバーシップ（無料→有料ラインで課金する導線設計）",
+      "income_range": "月3万〜15万円（単品1,000円×月30〜50本＋月額500円×100〜200人、継続前提の目安）",
+      "review_scores": {
+        "monetization": 9,
+        "actionability": 9,
+        "accuracy": 8,
+        "structure": 9,
+        "originality": 9,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-07-01_claude-code-paid-note-monetization.md"
     }
   ]
 }
