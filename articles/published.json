@@ -171,6 +171,33 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-02_claude-5-family-model-news.md"
+    },
+    {
+      "id": 7,
+      "date": "2026-07-02",
+      "type": "free",
+      "title": "Claude Agent SDK課金分離が凍結：claude -pユーザーへの影響",
+      "slug": "claude-agent-sdk-billing-split-paused",
+      "keywords": [
+        "Claude Agent SDK",
+        "claude -p",
+        "課金分離",
+        "Claude Code GitHub Actions",
+        "サブスクリプション",
+        "料金改定"
+      ],
+      "theme": "Anthropicが計画したAgent SDK/claude -pの課金分離が施行当日に凍結された経緯と、読者への影響をまとめた無料ニュース記事",
+      "target": "claude -p・Agent SDK・GitHub Actions経由でClaude Codeを自動実行するエンジニア・個人開発者",
+      "news_date": "2026-07-02",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 8,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.4
+      },
+      "file": "articles/drafts/2026-07-02_claude-agent-sdk-billing-split-paused.md"
     }
   ]
 }
