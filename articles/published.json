@@ -198,6 +198,35 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-07-02_claude-agent-sdk-billing-split-paused.md"
+    },
+    {
+      "id": 8,
+      "date": "2026-07-02",
+      "type": "paid",
+      "title": "Claude Codeの実務経験を『教材』に：月10万円を狙う講座づくりの全手順",
+      "slug": "claude-code-course-monetization",
+      "keywords": [
+        "Udemy",
+        "ストアカ",
+        "ココナラ",
+        "オンライン講座",
+        "教育コンテンツ",
+        "画面収録",
+        "自己集客"
+      ],
+      "theme": "Claude Codeの実務経験を動画講座(Udemy)・ライブ講座(ストアカ)・個別(ココナラ)にして販売し、自己集客で手数料を圧縮してストック型の教育コンテンツ収益を作る実践ルート",
+      "target": "Claude Codeを実務で使った経験があり、その知見を教材化して副収入（目安月10万円）を作りたいエンジニア・AI活用者",
+      "monetization_model": "教育コンテンツ販売（Udemy買い切り動画＝ストック型＋ストアカ/ココナラのライブ・個別＝即金型を組み合わせ、X/YouTube/noteの無料発信で自己集客し手数料を圧縮）",
+      "income_range": "月10万円（目安・保証ではない。Udemy薄利×本数＋ストアカ単価5,000〜15,000円×月十数名の組合せ例）",
+      "review_scores": {
+        "monetization": 8,
+        "actionability": 9,
+        "accuracy": 8,
+        "structure": 9,
+        "originality": 8,
+        "average": 8.4
+      },
+      "file": "articles/drafts/2026-07-02_claude-code-course-monetization.md"
     }
   ]
 }
