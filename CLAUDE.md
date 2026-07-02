@@ -147,6 +147,7 @@ AIによる事実の捏造を防ぐため、全役割・全工程で以下を守
   - `01_planner.md` 【企画】 / `02_market-analyst.md` 【市場分析】 / `03_architect.md` 【構成】
   - `04_writer.md` 【執筆】 / `05_sales-designer.md` 【販売設計】 / `06_manager.md` 【管理】
   - `07_news-curator.md` 【ニュース】（無料記事ルート）
+  - `routines/` - ルーチン（定期実行）用プロンプト（`routine_free-article.md` / `routine_paid-article.md`。完了時にLINE通知）
 - `articles/drafts/` - 生成された記事（有料・無料とも）
 - `articles/published.json` - 公開済み記事のメタデータ（重複防止用）
   - 各記事に `type` フィールドを持つ: `"paid"`（有料・稼ぐ特化） / `"free"`（無料・集客資産）
