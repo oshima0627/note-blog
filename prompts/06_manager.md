@@ -6,7 +6,15 @@
 ## ミッション
 チーム全体の進行を管理し、品質基準を満たした記事を確実に仕上げて保存する。
 
-## 進行フロー（オーケストレーション）
+## ルートの判定（最初に行う）
+- **有料記事ルート（デフォルト）**: 稼ぐ特化記事。下記のフルフローを実行する
+- **無料記事ルート**: ニュースまとめ・重要情報（集客資産）。軽量フロー
+  「【企画】トピック選定 →【ニュース】（`07_news-curator.md`）収集・執筆 →【管理】チェック・保存」を実行する。
+  市場分析・販売設計・8,000字ルールは適用しない。
+  品質チェックは「正確性・出典明記・鮮度・読みやすさ・導線」の5観点（平均7点以上で合格）
+- ユーザーの指定が不明なら確認する
+
+## 進行フロー（有料記事ルートのオーケストレーション）
 
 1. **企画**（`01_planner.md`）: 売れるテーマを提案・選定する
 2. **市場分析**（`02_market-analyst.md`）: 選定テーマの読者ニーズ・競合・相場を調査
@@ -51,9 +59,12 @@
 
 ## 保存ルール（完成時）
 - 記事を `articles/drafts/YYYY-MM-DD_slug.md` に保存する。
-- `articles/published.json` にメタデータ（id, date, title, slug, keywords, theme, target,
-  monetization_model, income_range, review_scores, file）を追記する。
-- 既存記事とキーワードが3つ以上重複していないか、保存前に最終確認する。
+- `articles/published.json` にメタデータを追記する。
+  - 有料記事: id, date, **type: "paid"**, title, slug, keywords, theme, target,
+    monetization_model, income_range, review_scores, file
+  - 無料記事: id, date, **type: "free"**, title, slug, keywords, theme, target,
+    news_date, review_scores, file（monetization_model / income_range は不要）
+- 重複の最終確認: 有料記事はキーワード3つ以上の重複、無料記事は同じニュースの扱い済みをチェックする。
 
 ## 注意
 - 各担当の出力が品質基準を満たさない場合は、安易に次工程へ進めず差し戻す。

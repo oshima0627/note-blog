@@ -3,9 +3,18 @@
     {
       "id": 1,
       "date": "2026-03-29",
+      "type": "paid",
       "title": "Claude Codeで開発効率を劇的に上げる5つの実践テクニック",
       "slug": "claude-code-practical-techniques",
-      "keywords": ["Claude Code", "AIペアプログラミング", "開発効率化", "CLI", "MCP", "CLAUDE.md", "権限管理"],
+      "keywords": [
+        "Claude Code",
+        "AIペアプログラミング",
+        "開発効率化",
+        "CLI",
+        "MCP",
+        "CLAUDE.md",
+        "権限管理"
+      ],
       "theme": "Claude Codeの実践的な使い方・テクニック",
       "target": "ターミナルで日常的に開発を行うエンジニア",
       "review_scores": {
@@ -21,9 +30,18 @@
     {
       "id": 2,
       "date": "2026-04-19",
+      "type": "paid",
       "title": "Claude Codeで副業月10万円！クラウドソーシング実践ルート",
       "slug": "claude-code-crowdsourcing-sidejob-100k",
-      "keywords": ["Claude Code", "副業", "クラウドワークス", "ランサーズ", "受託開発", "月10万円", "提案文"],
+      "keywords": [
+        "Claude Code",
+        "副業",
+        "クラウドワークス",
+        "ランサーズ",
+        "受託開発",
+        "月10万円",
+        "提案文"
+      ],
       "theme": "Claude Codeを活用したクラウドソーシング副業で月10万円を稼ぐ実践ルート",
       "target": "副業で月10万円を狙うプログラミング経験1年以上の会社員エンジニア",
       "monetization_model": "クラウドソーシング経由の受託開発（LP/WordPress/スクレイピング/業務効率化）",
@@ -41,9 +59,18 @@
     {
       "id": 3,
       "date": "2026-04-19",
+      "type": "paid",
       "title": "Claude APIで月5万円！不労所得マイクロSaaS術",
       "slug": "claude-api-micro-saas-passive-income",
-      "keywords": ["Claude API", "マイクロSaaS", "サブスク収益化", "個人開発", "プロンプトキャッシング", "Stripe", "MRR"],
+      "keywords": [
+        "Claude API",
+        "マイクロSaaS",
+        "サブスク収益化",
+        "個人開発",
+        "プロンプトキャッシング",
+        "Stripe",
+        "MRR"
+      ],
       "theme": "Claude APIで個人開発マイクロSaaSを作りStripeサブスクで月5万円MRRを目指す実践ルート",
       "target": "Next.js/TypeScriptが書け、副業でサブスク型SaaSを個人開発したいエンジニア",
       "monetization_model": "Stripeサブスク課金（Free/Pro 1,980円/Business 4,980円の3階層）",
@@ -61,9 +88,18 @@
     {
       "id": 4,
       "date": "2026-06-30",
+      "type": "paid",
       "title": "中小企業のClaude導入を月30万円で請け負う『生成AIコンサル』案件獲得術",
       "slug": "claude-sme-ai-consulting-retainer",
-      "keywords": ["Claude導入支援", "生成AIコンサル", "月額顧問", "業務自動化", "中小企業", "補助金", "セキュリティ"],
+      "keywords": [
+        "Claude導入支援",
+        "生成AIコンサル",
+        "月額顧問",
+        "業務自動化",
+        "中小企業",
+        "補助金",
+        "セキュリティ"
+      ],
       "theme": "中小企業向けにClaude/Claude Codeの導入支援を行い、スポット導入＋月額顧問でストック収益化する生成AIコンサル案件獲得術",
       "target": "Claude/Claude Code経験があり企業向け生成AI導入支援で高単価・ストック収益を得たいエンジニア/個人事業主",
       "monetization_model": "企業向けコンサル・業務受託（スポット導入支援＋月額顧問契約）",
@@ -81,9 +117,18 @@
     {
       "id": 5,
       "date": "2026-07-01",
+      "type": "paid",
       "title": "Claude Codeで書いた『有料note』で月10万円：AI×一次情報で作る売れる有料記事の設計図",
       "slug": "claude-code-paid-note-monetization",
-      "keywords": ["有料note", "情報発信マネタイズ", "Claude執筆", "一次情報", "定期購読マガジン", "有料化ライン", "メンバーシップ"],
+      "keywords": [
+        "有料note",
+        "情報発信マネタイズ",
+        "Claude執筆",
+        "一次情報",
+        "定期購読マガジン",
+        "有料化ライン",
+        "メンバーシップ"
+      ],
       "theme": "Claude Codeで自分の実践知（一次情報）を有料noteにし、単品販売＋定期購読マガジン/メンバーシップでストック収益化する情報発信マネタイズ",
       "target": "Claude/Claude Codeを実務で使い、自分の実践知を有料noteにして情報発信で稼ぎたいエンジニア・個人開発者",
       "monetization_model": "note有料単品販売＋定期購読マガジン/メンバーシップ（無料→有料ラインで課金する導線設計）",
