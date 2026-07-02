@@ -142,6 +142,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-01_claude-code-paid-note-monetization.md"
+    },
+    {
+      "id": 6,
+      "date": "2026-07-02",
+      "type": "free",
+      "title": "Claude 5ファミリー登場：Claude Codeのモデル最新まとめ",
+      "slug": "claude-5-family-model-news",
+      "keywords": [
+        "Claude Fable 5",
+        "Claude Mythos 5",
+        "Claude 5ファミリー",
+        "Claude Code",
+        "Claude Opus 4.8",
+        "Claude Haiku 4.5",
+        "モデル比較",
+        "輸出規制"
+      ],
+      "theme": "Claude 5ファミリー（Fable 5 / Mythos 5）の発表・提供再開と、Claude Codeでの現行モデルとの使い分けをまとめた無料ニュース記事",
+      "target": "Claude Codeを使う（使い始めたい）エンジニア・個人開発者",
+      "news_date": "2026-07-02",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-02_claude-5-family-model-news.md"
     }
   ]
 }
