@@ -227,6 +227,35 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-07-02_claude-code-course-monetization.md"
+    },
+    {
+      "id": 9,
+      "date": "2026-07-03",
+      "type": "free",
+      "title": "Claude Sonnet 5がClaude Codeの新既定モデルに：料金と使い分け",
+      "slug": "claude-sonnet-5-claude-code-default",
+      "keywords": [
+        "Claude Sonnet 5",
+        "Claude Code",
+        "既定モデル",
+        "1Mコンテキスト",
+        "API料金",
+        "Claude Opus 4.8",
+        "Claude Haiku 4.5",
+        "モデル使い分け"
+      ],
+      "theme": "Claude Sonnet 5がClaude Codeの既定モデルになった発表内容・料金・現行モデルとの使い分けをまとめた無料ニュース記事",
+      "target": "Claude Codeを使う（使い始めたい）エンジニア・個人開発者",
+      "news_date": "2026-06-30",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-03_claude-sonnet-5-claude-code-default.md"
     }
   ]
 }
