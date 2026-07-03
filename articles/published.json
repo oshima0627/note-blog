@@ -256,6 +256,36 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-03_claude-sonnet-5-claude-code-default.md"
+    },
+    {
+      "id": 10,
+      "date": "2026-07-03",
+      "type": "paid",
+      "title": "Claude Codeで「買い切りAIツール」を量産して月5万円：Gumroad/BOOTHで売るデジタル物販ルート",
+      "slug": "claude-code-buyout-ai-tools-digital-goods",
+      "keywords": [
+        "Claude Code",
+        "買い切り",
+        "デジタル物販",
+        "Gumroad",
+        "BOOTH",
+        "Chrome拡張",
+        "個人開発",
+        "副業"
+      ],
+      "theme": "Claude Codeで小さなAIツール/Chrome拡張を量産し、Gumroad/BOOTHで買い切り単品販売してストック収益化するデジタル物販ルート（価格×本数×手取りの逆算と実手数料での手取り計算を提示）",
+      "target": "サブスク運用の負担を避けたい個人開発者・副業志望者（Claude Codeで小規模ツールを作れる層）",
+      "monetization_model": "デジタル物販（買い切り・都度課金の単品販売）。Gumroad/BOOTHでダウンロード商品またはライセンスキーを1,000〜3,000円で複数本販売し積み上げる。Chrome拡張はストア無料公開＋外部ライセンス販売の二段構え",
+      "income_range": "月3万〜10万円（手数料から逆算した計算上の目安・保証ではない。例：1,500円商品×手取り約1,371円×月35〜70本、または1本月数千円×複数本の合算）",
+      "review_scores": {
+        "monetization": 8,
+        "actionability": 8,
+        "accuracy": 8,
+        "structure": 9,
+        "originality": 8,
+        "average": 8.2
+      },
+      "file": "articles/drafts/2026-07-03_claude-code-buyout-ai-tools-digital-goods.md"
     }
   ]
 }
