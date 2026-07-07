@@ -314,6 +314,34 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-05_claude-code-july-2026-updates.md"
+    },
+    {
+      "id": 12,
+      "date": "2026-07-07",
+      "type": "free",
+      "title": "Claude Codeで4.6億行を監査：アルバータ州政府の実例",
+      "slug": "alberta-claude-code-security-audit",
+      "keywords": [
+        "Claude Code",
+        "セキュリティ監査",
+        "脆弱性",
+        "並列エージェント",
+        "アルバータ州政府",
+        "Anthropic",
+        "レガシー改修"
+      ],
+      "theme": "カナダ・アルバータ州政府がClaude Code（Opus/Sonnet）で約50体の並列エージェントを使い4.66億行のコードをセキュリティ監査・修正した事例と、個人開発者が取り込める考え方をまとめた無料ニュース記事",
+      "target": "Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-07-06",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-07_alberta-claude-code-security-audit.md"
     }
   ]
 }
