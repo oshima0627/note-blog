@@ -342,6 +342,34 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-07_alberta-claude-code-security-audit.md"
+    },
+    {
+      "id": 13,
+      "date": "2026-07-09",
+      "type": "free",
+      "title": "Claude Cowork がweb・モバイルに対応：閉じても動くリモート開発へ",
+      "slug": "claude-cowork-web-mobile-remote",
+      "keywords": [
+        "Claude Cowork",
+        "リモートセッション",
+        "スケジュール実行",
+        "Claude Code",
+        "Microsoft 365",
+        "モバイル対応",
+        "Anthropic"
+      ],
+      "theme": "Claude Cowork が2026年7月7日にweb・モバイルへ対応し、リモートセッション・スケジュール実行が可能になった発表と、Claude Codeユーザーへの影響をまとめた無料ニュース記事",
+      "target": "Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-07-07",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-09_claude-cowork-web-mobile-remote.md"
     }
   ]
 }
