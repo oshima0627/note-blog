@@ -370,6 +370,35 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-09_claude-cowork-web-mobile-remote.md"
+    },
+    {
+      "id": 14,
+      "date": "2026-07-10",
+      "type": "paid",
+      "title": "Claude Agent SDK構築代行で受託単価を上げる7ステップ｜1案件30万〜100万円の目安",
+      "slug": "claude-agent-sdk-agent-building-outsourcing",
+      "keywords": [
+        "Claude Agent SDK",
+        "AIエージェント構築代行",
+        "RAG受託",
+        "受託単価アップ",
+        "API料金設計",
+        "見積テンプレート",
+        "契約リスク回避"
+      ],
+      "theme": "企業のFAQ一次対応・社内ナレッジ検索(RAG)・定型作業をClaude Agent SDKで自律エージェント化し、要件定義〜設計〜実装〜納品を一括請負する『構築代行』を1案件30万〜100万円＋保守月額で受注する実践ルート。工程別見積・API従量課金の顧客転嫁・契約リスク回避(著作権/精度保証/PoC止まり)を具体化",
+      "target": "Claude Code/Agent SDKで実装はできるが案件化・値付けが分からない受託者・副業エンジニア",
+      "monetization_model": "受託開発（要件定義〜納品の一括請負）＋運用保守月額のストック収益（1案件完結＋保守月額の二段構え）",
+      "income_range": "1案件30万〜100万円（小規模30〜50万／中規模50〜100万。相場からの推定・目安で、個人の固定価格成約の公開一次事例は未確認）＋保守月額",
+      "review_scores": {
+        "monetization": 9,
+        "actionability": 9,
+        "accuracy": 8,
+        "structure": 9,
+        "originality": 9,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-07-10_claude-agent-sdk-agent-building-outsourcing.md"
     }
   ]
 }
