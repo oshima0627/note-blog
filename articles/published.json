@@ -399,6 +399,34 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-10_claude-agent-sdk-agent-building-outsourcing.md"
+    },
+    {
+      "id": 15,
+      "date": "2026-07-11",
+      "type": "free",
+      "title": "Claude Code 7月第2週の更新：/doctor強化と自動プッシュ、安全対策",
+      "slug": "claude-code-july-week2-updates",
+      "keywords": [
+        "Claude Code",
+        "changelog",
+        "doctor",
+        "commit-push-pr",
+        "Autoモード",
+        "ワークフロー",
+        "アップデート"
+      ],
+      "theme": "2026年7月6日〜9日のClaude Code更新（v2.1.202〜2.1.206：/doctorのセットアップ診断強化、/commit-push-prの自動プッシュ拡張、/cdのパス補完、Autoモードのトランスクリプト改ざんブロック、動的ワークフローサイズ設定、headless SessionStartフック修正）を公式changelogで整理した無料ニュース記事",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-07-09",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-11_claude-code-july-week2-updates.md"
     }
   ]
 }
