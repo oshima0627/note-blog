@@ -427,6 +427,34 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-11_claude-code-july-week2-updates.md"
+    },
+    {
+      "id": 16,
+      "date": "2026-07-13",
+      "type": "free",
+      "title": "Claude Code Desktopの内蔵ブラウザが外部サイトに対応",
+      "slug": "claude-code-desktop-in-app-browser",
+      "keywords": [
+        "Claude Code",
+        "Desktop",
+        "ブラウザ",
+        "外部サイト",
+        "Browserペイン",
+        "安全性",
+        "アップデート"
+      ],
+      "theme": "Claude Code Desktopの内蔵ブラウザ（Browserペイン）がタブ付きブラウザとなり外部サイトの閲覧・操作に対応（Week 28 / v2.1.202〜2.1.206）。開き方、独立プロファイルとPersist sessions、書き込み操作への安全性チェックとサイト単位の許可制、Claude in Chromeとの使い分けを公式ドキュメントで整理した無料ニュース記事",
+      "target": "Claude Code Desktopを使うエンジニア・個人開発者",
+      "news_date": "2026-07-10",
+      "review_scores": {
+        "accuracy": 8,
+        "sourcing": 9,
+        "freshness": 8,
+        "readability": 8,
+        "funnel": 7,
+        "average": 8.0
+      },
+      "file": "articles/drafts/2026-07-13_claude-code-desktop-in-app-browser.md"
     }
   ]
 }
