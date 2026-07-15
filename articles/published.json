@@ -455,6 +455,34 @@
         "average": 8.0
       },
       "file": "articles/drafts/2026-07-13_claude-code-desktop-in-app-browser.md"
+    },
+    {
+      "id": 17,
+      "date": "2026-07-15",
+      "type": "free",
+      "title": "Claude Opus 4.1がAPIから引退へ：8月5日までに移行を",
+      "slug": "claude-opus-4-1-api-retirement",
+      "keywords": [
+        "Claude Opus 4.1",
+        "モデル廃止",
+        "API引退",
+        "Claude Opus 4.8",
+        "移行ガイド",
+        "Claude API",
+        "Mythos Preview"
+      ],
+      "theme": "Claude Opus 4.1（claude-opus-4-1-20250805）が2026年8月5日にClaude APIから引退する件と、推奨移行先Claude Opus 4.8への移行・使用状況の確認手順・Anthropicの廃止ポリシー（60日前通知）・同時期のMythos Preview引退やパラメータ廃止を公式ドキュメントで整理した無料ニュース記事",
+      "target": "Claude API/SDKでモデルを指定して使うエンジニア・個人開発者",
+      "news_date": "2026-06-05",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-15_claude-opus-4-1-api-retirement.md"
     }
   ]
 }
