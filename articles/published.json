@@ -540,6 +540,34 @@
         "average": 8.2
       },
       "file": "articles/drafts/2026-07-17_claude-api-line-store-bot-subscription.md"
+    },
+    {
+      "id": 20,
+      "date": "2026-07-17",
+      "type": "free",
+      "title": "Claudeが1Passwordで「代わりにログイン」：パスワードを渡さずに会員サイトを操作",
+      "slug": "claude-1password-secure-login",
+      "keywords": [
+        "Claude",
+        "1Password",
+        "Agentic Mode",
+        "エージェント",
+        "セキュリティ",
+        "会員サイトログイン",
+        "パスワード管理"
+      ],
+      "theme": "1PasswordとAnthropicが2026年7月16日に発表したClaude向けの安全なログイン連携（1Password for Claude）と、パスワードをClaude/Anthropicに渡さないAgentic Modeの仕組み・対応条件をまとめた無料ニュース記事",
+      "target": "Macで1Passwordを使いClaudeで会員サイトの確認作業を任せたい個人・実務担当者",
+      "news_date": "2026-07-16",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-17_claude-1password-secure-login.md"
     }
   ]
 }
