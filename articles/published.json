@@ -511,6 +511,35 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-17_claude-code-july-week3-updates.md"
+    },
+    {
+      "id": 19,
+      "date": "2026-07-17",
+      "type": "paid",
+      "title": "Claude API×LINEで店舗ボット副業：初期5万〜＋月額でMRRを積む設計図",
+      "slug": "claude-api-line-store-bot-subscription",
+      "keywords": [
+        "LINE公式アカウント",
+        "チャットボット",
+        "Claude API",
+        "店舗DX",
+        "月額運用",
+        "予約自動化",
+        "接客自動化"
+      ],
+      "theme": "Claude APIとLINE公式アカウントを組み合わせ、飲食店・美容室・整体などローカル店舗向けの予約/接客/FAQ自動化ボットを業種特化のproductized serviceとして提供し、初期構築フィー＋月額運用サブスクの二段構えでMRR（ストック収益）を積む実践ルート。値付け・営業（モニター価格/直接営業/ココナラ/ランサーズ）・原価（LINE料金/Claude API従量費）・契約リスクまでを具体化",
+      "target": "実装はできるが値付け・営業・案件化が分からない副業/独立志望のエンジニア・AI活用者",
+      "monetization_model": "受託（初期構築フィー）＋月額運用サブスクのストック収益（業種特化productized serviceで横展開しMRR化）",
+      "income_range": "初期5万〜15万円＋月額1.5万〜3万円/店（相場からの推定・目安で保証ではない。個人が店舗にこの固定価格で成約した公開一次事例は未確認）",
+      "review_scores": {
+        "monetization": 8,
+        "actionability": 8,
+        "accuracy": 8,
+        "structure": 9,
+        "originality": 8,
+        "average": 8.2
+      },
+      "file": "articles/drafts/2026-07-17_claude-api-line-store-bot-subscription.md"
     }
   ]
 }
