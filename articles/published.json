@@ -483,6 +483,34 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-15_claude-opus-4-1-api-retirement.md"
+    },
+    {
+      "id": 18,
+      "date": "2026-07-17",
+      "type": "free",
+      "title": "Claude Code 7月第3週の更新：フリーズ解消とメモリリーク修正",
+      "slug": "claude-code-july-week3-updates",
+      "keywords": [
+        "Claude Code",
+        "changelog",
+        "メモリリーク",
+        "Auto mode",
+        "プロンプトインジェクション",
+        "スクリーンリーダー",
+        "アップデート"
+      ],
+      "theme": "2026年7月11日〜15日のClaude Code更新（v2.1.207〜2.1.211：長い応答でのターミナルフリーズ修正、長時間セッションのメモリリーク修正とトランスクリプト最大79倍削減などの性能改善、Bedrock/Vertex/FoundryでのAuto mode既定化、間接プロンプトインジェクション対策やrm -rf確認などの安全性強化、スクリーンリーダー/vim/マウス対応、--forward-subagent-textフラグ追加）を公式changelogで整理した無料ニュース記事",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-07-15",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-17_claude-code-july-week3-updates.md"
     }
   ]
 }
