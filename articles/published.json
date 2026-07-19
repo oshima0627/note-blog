@@ -568,6 +568,35 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-17_claude-1password-secure-login.md"
+    },
+    {
+      "id": 21,
+      "date": "2026-07-19",
+      "type": "free",
+      "title": "Claude Code 7月第4週の更新：権限チェックの抜け穴修正と暴走防止の上限",
+      "slug": "claude-code-july-week4-updates",
+      "keywords": [
+        "Claude Code",
+        "changelog",
+        "権限チェック",
+        "パーミッション",
+        "サブエージェント",
+        "WebSearch上限",
+        "fork",
+        "アップデート"
+      ],
+      "theme": "2026年7月17日〜18日のClaude Code更新（v2.1.212〜2.1.214：権限チェックの抜け穴を複数修正、WebSearch/サブエージェントのセッション上限追加、MCPツールの2分自動バックグラウンド、/forkのバックグラウンドセッション化と/subtask新設、/resumeピッカー、auto-mode reset、プランモードの権限バイパス修正、EndConversationツール追加）を公式changelogで整理した無料ニュース記事",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-07-18",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-19_claude-code-july-week4-updates.md"
     }
   ]
 }
