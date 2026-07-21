@@ -597,6 +597,34 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-19_claude-code-july-week4-updates.md"
+    },
+    {
+      "id": 22,
+      "date": "2026-07-21",
+      "type": "free",
+      "title": "Claude Code v2.1.216の更新：長時間セッションの遅延を解消",
+      "slug": "claude-code-v2-1-216-updates",
+      "keywords": [
+        "Claude Code",
+        "changelog",
+        "パフォーマンス",
+        "サンドボックス",
+        "権限",
+        "code-review",
+        "アップデート"
+      ],
+      "theme": "2026年7月19日〜20日のClaude Code更新（v2.1.215〜2.1.216：長時間セッションでのメッセージ正規化による数秒の遅延を解消、ファイル隔離だけを外しネットワーク制御は維持するsandbox.filesystem.disabled設定の追加、OAuth期限切れ後の自動モード401誤拒否の修正、ワークツリー隔離サブエージェントのgit不整合やバックグラウンド再開時のエージェント復元、git/ghコマンド検証の改善、/verify・/code-reviewの自動実行廃止）を公式changelogで整理した無料ニュース記事",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-07-20",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-21_claude-code-v2-1-216-updates.md"
     }
   ]
 }
