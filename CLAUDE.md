@@ -152,6 +152,14 @@ AIによる事実の捏造を防ぐため、全役割・全工程で以下を守
 - `articles/published.json` - 公開済み記事のメタデータ（重複防止用）
   - 各記事に `type` フィールドを持つ: `"paid"`（有料・稼ぐ特化） / `"free"`（無料・集客資産）
 
+## noteへの自動下書き投稿（nexeed-ops連携）
+- `articles/drafts/` に記事を追加して main に push すると、ローカルPCで定期実行される
+  nexeed-ops の `note-post` タスクが検出し、note.com に**下書き**を自動作成して LINE に通知する
+- 記事タイトルは「ファイル先頭行の `# 見出し` → 無ければ `published.json` の `title`」の順で
+  取得されるため、`published.json` の `file` と `title` は正確に記録すること
+- 公開（公開ボタン・有料ライン・価格設定）は手動。セットアップ・運用方法は
+  nexeed-ops リポジトリの `tasks/note-post/README.md` を参照
+
 ---
 
 # 行動ガイドライン（LLMコーディングの一般則）
