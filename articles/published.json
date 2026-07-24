@@ -653,6 +653,36 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-23_claude-code-v2-1-217-218-updates.md"
+    },
+    {
+      "id": 24,
+      "date": "2026-07-24",
+      "type": "paid",
+      "title": "Claude Codeの社内実績を年収+50万に変える手順",
+      "slug": "claude-code-employee-salary-raise-promotion",
+      "keywords": [
+        "Claude Code",
+        "業務自動化",
+        "年収アップ",
+        "AIスキル",
+        "昇給交渉",
+        "転職",
+        "実績カード",
+        "会社員"
+      ],
+      "theme": "副業ではなく本業で年収を上げる切り口。Claude Code/CLAUDE.mdで社内の定型業務を自動化し、削減工数を(Before-After)×時給換算×年間頻度で金額化して『実績カード』化。1on1・人事評価で提示し横展開でリーダー実績にし、職務経歴書へ定量実績として転記して昇給交渉・好条件転職の年収交渉に使う6ステップ。副業禁止規定に抵触せず規約リスクゼロで実践できるのが最大の強み。機密持ち出し・実績水増しの2大リスク回避まで含める",
+      "target": "定型業務に追われ、副業に踏み切れないが本業のまま市場価値と年収を上げたい会社員エンジニア・AI活用者",
+      "monetization_model": "本業年収アップ（社内実績化による人事評価の昇格・昇給／生成AIスキルを訴求した好条件転職での年収交渉）。副業禁止規定に抵触しない社内ルートが強み",
+      "income_range": "平均+50万〜100万／年、上振れ+200万（生成AIスキル訴求＋役割変更を伴うハイクラス転職の上限ケース）。いずれも賃金プレミアム調査（日経/フロッグ:大企業約11%・ホワイトカラー15〜28%）等からの目安で、昇給・転職は制度・予算・タイミング依存の確約ではない。本手順で個人が達成した公開一次事例は未確認",
+      "review_scores": {
+        "monetization": 8,
+        "actionability": 8,
+        "accuracy": 8,
+        "structure": 8,
+        "originality": 9,
+        "average": 8.2
+      },
+      "file": "articles/drafts/2026-07-24_claude-code-employee-salary-raise-promotion.md"
     }
   ]
 }
