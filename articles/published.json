@@ -683,6 +683,35 @@
         "average": 8.2
       },
       "file": "articles/drafts/2026-07-24_claude-code-employee-salary-raise-promotion.md"
+    },
+    {
+      "id": 25,
+      "date": "2026-07-25",
+      "type": "free",
+      "title": "Claude Opus 5登場：Claude Codeの既定Opusが刷新、料金は据え置き",
+      "slug": "claude-opus-5-claude-code-default",
+      "keywords": [
+        "Claude Opus 5",
+        "Claude Code",
+        "既定モデル",
+        "1Mコンテキスト",
+        "API料金",
+        "effort",
+        "thinking",
+        "Claude Opus 4.8"
+      ],
+      "theme": "Claude Opus 5のリリースとClaude Codeでの既定Opusモデル切り替え・料金・挙動変化",
+      "target": "Claude Codeを使う（使い始めたい）エンジニア・個人開発者",
+      "news_date": "2026-07-24",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "cta": 7,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-25_claude-opus-5-claude-code-default.md"
     }
   ]
 }
