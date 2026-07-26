@@ -712,6 +712,33 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-25_claude-opus-5-claude-code-default.md"
+    },
+    {
+      "id": 26,
+      "date": "2026-07-26",
+      "type": "free",
+      "title": "Claude Codeの週次上限50%増、8月19日まで延長（7月19日終了予定が変更）",
+      "slug": "claude-code-weekly-limits-50-extended-august",
+      "keywords": [
+        "Claude Code",
+        "週次使用量制限",
+        "50%増",
+        "プロモーション延長",
+        "料金改定",
+        "Pro Max Team"
+      ],
+      "theme": "Claude Codeの週次使用量50%増プロモーションが7月19日終了予定から8月19日まで延長された件と読者への影響をまとめた無料ニュース記事",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-07-26",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-26_claude-code-weekly-limits-50-extended-august.md"
     }
   ]
 }
