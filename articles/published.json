@@ -739,6 +739,33 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-26_claude-code-weekly-limits-50-extended-august.md"
+    },
+    {
+      "id": 27,
+      "date": "2026-07-27",
+      "type": "free",
+      "title": "Claude Code v2.1.219の更新：サブエージェントの入れ子が深さ3に",
+      "slug": "claude-code-v2-1-219-220-updates",
+      "keywords": [
+        "Claude Code",
+        "サブエージェント",
+        "ワークフロー",
+        "v2.1.219",
+        "サンドボックス",
+        "マルチエージェント"
+      ],
+      "theme": "Claude Code v2.1.219/220の更新のうち、サブエージェントの入れ子が既定で深さ3に拡張・動的ワークフローのサイズ目安(15エージェント未満)・sandbox strictAllowlistなどマルチエージェント/セキュリティ関連の変更と読者への影響をまとめた無料ニュース記事",
+      "target": "Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-07-25",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 8,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.4
+      },
+      "file": "articles/drafts/2026-07-27_claude-code-v2-1-219-220-updates.md"
     }
   ]
 }
