@@ -766,6 +766,35 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-07-27_claude-code-v2-1-219-220-updates.md"
+    },
+    {
+      "id": 28,
+      "date": "2026-07-28",
+      "type": "free",
+      "title": "Anthropicが「オープンウェイト禁止は求めない」と表明：3つの規制優先課題",
+      "slug": "anthropic-open-weights-position",
+      "keywords": [
+        "Anthropic",
+        "オープンウェイトモデル",
+        "Dario Amodei",
+        "AI規制",
+        "安全性テスト",
+        "チップ輸出規制",
+        "共同書簡",
+        "Claude"
+      ],
+      "theme": "Anthropic（Dario Amodei）が2026年7月27日に公式表明した『オープンウェイトモデルの禁止は求めない』という立場と、禁止に代えて重視すべきとした3つの規制優先課題（AIチップ輸出規制・産業規模の蒸留対策・オープン/クローズド問わず高性能モデルへの義務的安全性テスト）、および7月24日の業界共同書簡に署名しなかった文脈をまとめた無料ニュース記事",
+      "target": "Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-07-27",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-07-28_anthropic-open-weights-position.md"
     }
   ]
 }
