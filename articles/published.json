@@ -795,6 +795,35 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-07-28_anthropic-open-weights-position.md"
+    },
+    {
+      "id": 29,
+      "date": "2026-07-29",
+      "type": "free",
+      "title": "MCP新仕様2026-07-28でステートレス化：自作サーバーへの影響",
+      "slug": "mcp-2026-07-28-stateless-spec",
+      "keywords": [
+        "MCP",
+        "Model Context Protocol",
+        "ステートレス",
+        "MCPサーバー",
+        "Claude Code",
+        "OAuth",
+        "MCP Apps",
+        "非推奨"
+      ],
+      "theme": "MCP仕様リビジョン2026-07-28の公開内容（initializeハンドシェイクとセッション/Mcp-Session-Idの削除によるステートレス化、server/discover必須化、subscriptions/listenとSSE再開の削除、MRTRとresultType必須化、ttlMs/cacheScopeとMcp-Method/Mcp-Nameヘッダー、RFC 9207のiss検証とDCR非推奨、Extensions枠組みとMCP Apps/Tasks、Roots・Sampling・Logging/HTTP+SSEの非推奨と最低12ヶ月の廃止ポリシー、Tier1 SDKの対応状況）と、Claude製品側の展開予定・Claude CodeのRoots対応(v2.1.203)との関係をまとめた無料ニュース記事",
+      "target": "Claude CodeでMCPを使う・MCPサーバーを自作するエンジニア・個人開発者",
+      "news_date": "2026-07-28",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-07-29_mcp-2026-07-28-stateless-spec.md"
     }
   ]
 }
