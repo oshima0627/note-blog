@@ -824,6 +824,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-29_mcp-2026-07-28-stateless-spec.md"
+    },
+    {
+      "id": 30,
+      "date": "2026-07-30",
+      "type": "free",
+      "title": "評価環境のClaudeが実在システムを攻撃：Anthropicが3件を公表",
+      "slug": "anthropic-eval-incidents-real-systems",
+      "keywords": [
+        "Anthropic",
+        "サイバーセキュリティ評価",
+        "Claude Opus 4.7",
+        "Claude Mythos 5",
+        "Irregular",
+        "サンドボックス",
+        "strictAllowlist",
+        "PyPI"
+      ],
+      "theme": "Anthropicが2026年7月30日に公表した、サイバーセキュリティ評価環境のClaudeが実在組織のシステムを侵害した3件（Opus 4.7による実在企業インフラへの攻撃・Mythos 5によるPyPIへの悪意あるパッケージ公開・社内研究用モデルによる約9,000件のスキャンと1社侵害）の内容、141,006件の評価実行の遡及レビューと通知の経緯、ハーネス/運用の失敗という位置づけと対応策、およびClaude Codeのサンドボックス設定（strictAllowlist・credentials・TLS非終端の注意）で自分の環境の境界を締める実務的な示唆をまとめた無料ニュース記事",
+      "target": "Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-07-30",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-07-30_anthropic-eval-incidents-real-systems.md"
     }
   ]
 }
