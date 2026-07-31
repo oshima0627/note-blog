@@ -882,6 +882,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-31_claude-code-legacy-refactor-test-generation.md"
+    },
+    {
+      "id": 32,
+      "date": "2026-07-31",
+      "type": "free",
+      "title": "GPT-5.6が最大80%値下げ：Claudeユーザーが見るべき点",
+      "slug": "openai-gpt-5-6-price-cut-claude-comparison",
+      "keywords": [
+        "GPT-5.6",
+        "OpenAI 値下げ",
+        "API料金",
+        "Claude Sonnet 5",
+        "Claude Opus 5",
+        "トークナイザ",
+        "プロンプトキャッシュ",
+        "Batch API"
+      ],
+      "theme": "OpenAIが2026年7月30日に実施したGPT-5.6の値下げ（Luna 1ドル/6ドル→0.20ドル/1.20ドルの約80%減、Terra 2.50ドル/15ドル→2ドル/12ドルの約20%減、Sol据え置き、Priority processingのFast mode改称）と、公式pricingページにもとづくClaude各モデルの単価・8月31日で終わるSonnet 5導入価格・Batch/キャッシュ割引を並べ、トークナイザ差(Claude 4.7以降は同じテキストで約30%多いトークン)やキャッシュ・バッチの適用差から単価の単純比較が実費とズレる理由、サブスク利用者と従量課金利用者それぞれへの影響と取るべき行動をまとめた無料ニュース記事",
+      "target": "Claude / Claude CodeをAPI従量課金またはサブスクで使うエンジニア・個人開発者",
+      "news_date": "2026-07-30",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-07-31_openai-gpt-5-6-price-cut-claude-comparison.md"
     }
   ]
 }
