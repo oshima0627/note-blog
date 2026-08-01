@@ -911,6 +911,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-31_openai-gpt-5-6-price-cut-claude-comparison.md"
+    },
+    {
+      "id": 33,
+      "date": "2026-08-01",
+      "type": "free",
+      "title": "Claude Proの$100無料クレジット、申請期限は8月2日",
+      "slug": "claude-fable-5-100-credit-deadline",
+      "keywords": [
+        "Claude Pro",
+        "Fable 5",
+        "利用クレジット",
+        "無料クレジット",
+        "Claude Code",
+        "料金改定",
+        "Team標準シート",
+        "申請期限"
+      ],
+      "theme": "2026年7月20日からClaude Fable 5がPro/Team標準シートでは利用クレジット制に移行したことに伴う一度限りの$100無料クレジット（Pro $100、Team標準シート1つあたり$100・組織上限$2,500）について、対象条件（2026年7月19日23:59 PT時点で対象プラン保有・無料トライアル/Max/Team Premium/Enterpriseシートは対象外）、申請期限2026年8月2日23:59 PT、失効日2026年9月17日23:59 PT、申請手順、クレジットがFable 5専用ではなくClaude Code（ターミナル利用含む）にも使えること、単価からの金額感の目安とトークナイザ差の注意点をまとめた無料ニュース記事",
+      "target": "Claude Pro / Team標準シートを使うエンジニア・個人開発者",
+      "news_date": "2026-08-01",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-01_claude-fable-5-100-credit-deadline.md"
     }
   ]
 }
