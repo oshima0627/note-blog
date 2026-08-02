@@ -940,6 +940,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-01_claude-fable-5-100-credit-deadline.md"
+    },
+    {
+      "id": 34,
+      "date": "2026-08-02",
+      "type": "free",
+      "title": "DeepSeek V4 Flash 0731が公開：Claude Codeの接続先にもできます",
+      "slug": "deepseek-v4-flash-0731-claude-code-backend",
+      "keywords": [
+        "DeepSeek V4 Flash",
+        "DeepSeek-V4-Flash-0731",
+        "Claude Code",
+        "Anthropic互換API",
+        "API料金",
+        "Terminal Bench",
+        "MITライセンス",
+        "Opus 5"
+      ],
+      "theme": "2026年7月31日に公開されたDeepSeek-V4-Flash-0731（MITライセンスで重み公開、deepseek-v4-flashが自動的に0731版へ更新）について、DeepSeek公式モデルカードのベンチマーク（Terminal Bench 2.1で82.7、比較掲載の全項目でOpus 4.8が上位、Opus 5は比較対象外）、公式料金（入力$0.14/出力$0.28・キャッシュヒット$0.0028・1Mコンテキスト/384K最大出力、ピーク料金は予告のみ）とClaude料金（Opus 5 $5/$25、Sonnet 5は8/31まで$2/$10・9/1から$3/$15、Haiku 4.5 $1/$5）およびトークナイザ約30%増の注記、Anthropic互換エンドポイント（api.deepseek.com/anthropic、ANTHROPIC_BASE_URL指定、Opus系→v4-pro / Sonnet・Haiku系→v4-flashのマッピング）でClaude Codeの接続先にできる点と、課金枠組み・動作保証・データ取り扱いの確認事項をまとめた無料ニュース記事",
+      "target": "Claude Code / Claude APIを使うエンジニア・個人開発者",
+      "news_date": "2026-07-31",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 7,
+        "average": 8.4
+      },
+      "file": "articles/drafts/2026-08-02_deepseek-v4-flash-0731-claude-code-backend.md"
     }
   ]
 }
