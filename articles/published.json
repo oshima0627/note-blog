@@ -969,6 +969,35 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-08-02_deepseek-v4-flash-0731-claude-code-backend.md"
+    },
+    {
+      "id": 35,
+      "date": "2026-08-03",
+      "type": "free",
+      "title": "旧Workbenchが8月17日終了：保存プロンプトは要エクスポート",
+      "slug": "claude-workbench-legacy-sunset",
+      "keywords": [
+        "Claude Console",
+        "Workbench",
+        "レガシー廃止",
+        "prompt tools API",
+        "generate_prompt",
+        "improve_prompt",
+        "templatize_prompt",
+        "Claude Opus 4.1"
+      ],
+      "theme": "Claude Console のレガシー版 Workbench（platform.claude.com/workbench）が2026年8月17日でアクセス終了し、保存済みプロンプト・変数・evalが更新版Workbench（platform.claude.com/playground）に引き継がれない件と、同日に廃止される experimental prompt tools API（/v1/experimental/generate_prompt・improve_prompt・templatize_prompt、廃止後はエラー）の影響範囲、8月17日までにやること（バナー/組織設定からのエクスポート、v1/experimental/ のコード検索、プロンプトのGit管理化、evalのコード化）、および同時期の期限である claude-opus-4-1-20250805 の8月5日API引退（推奨移行先 claude-opus-4-8、60日前通知ポリシー）をまとめた無料ニュース記事",
+      "target": "Claude API / Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-07-17",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-03_claude-workbench-legacy-sunset.md"
     }
   ]
 }
