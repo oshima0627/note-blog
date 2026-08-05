@@ -1027,6 +1027,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-04_claude-code-v2-1-221-222-updates.md"
+    },
+    {
+      "id": 37,
+      "date": "2026-08-05",
+      "type": "free",
+      "title": "ココナラがClaude公式コネクタに対応：受注側が確認すべきこと",
+      "slug": "coconala-claude-connector",
+      "keywords": [
+        "ココナラ",
+        "ココナラ for Claude",
+        "Claudeコネクタ",
+        "コネクタディレクトリ",
+        "Claude Code",
+        "Claude Cowork",
+        "MCP",
+        "副業"
+      ],
+      "theme": "株式会社ココナラが2026年8月5日に提供開始した「ココナラ for Claude」（Anthropicの審査を経て公式コネクタディレクトリに承認・掲載。Claudeチャット/Claude Code/Claude Coworkで利用可、760種類以上のカテゴリ・累積100万件超の出品を検索とおすすめ機能で扱い、購入・見積り・決済はココナラ上で完結）と、Anthropic公式ヘルプにもとづくコネクタの前提（ディレクトリ掲載コネクタは全ユーザー、カスタムコネクタはFree〜Enterprise・Freeは1つまで、対応サーフェスにClaude Codeを含む、OAuth時に提供者の規約が提示される）を整理し、発注導線がAIの会話内に移りつつあること・出品している受注側は価格/対応範囲/納期をAIが読み取れる形で書く必要があることをまとめた無料ニュース記事。コネクタ一覧ページでの掲載を筆者が直接確認できなかった点とClaude Code上での具体的な呼び出し方法が未確認である点は本文に明記",
+      "target": "Claude Codeを使うエンジニア・個人開発者（特にココナラ等で受注している層）",
+      "news_date": "2026-08-05",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-05_coconala-claude-connector.md"
     }
   ]
 }
