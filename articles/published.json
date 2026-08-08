@@ -1143,6 +1143,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-07_claude-code-v2-1-224-cross-session-messaging.md"
+    },
+    {
+      "id": 41,
+      "date": "2026-08-08",
+      "type": "free",
+      "title": "Claude Codeの既定が8月14日からautoモードに",
+      "slug": "claude-code-auto-mode-default-august-14",
+      "keywords": [
+        "Claude Code",
+        "auto mode",
+        "権限モード",
+        "既定変更",
+        "分類器",
+        "permissions",
+        "defaultMode",
+        "Pro Max Team"
+      ],
+      "theme": "Anthropicが2026年8月7日に発表した、Claude Codeの既定権限モードを2026年8月14日からPro/Max/Teamの新規セッションでautoへ切り替える変更をまとめた無料ニュース記事。autoモードの仕組み（別の分類器モデルがツール呼び出しを実行前に審査し、依頼の範囲を超える・認識されないインフラを対象にする・敵対的コンテンツに誘導された疑いのある操作をブロック）、公開された比較数値（1,053件中テスター143件=13.6%に対しautoモード937件=89%、深刻度7以上で手動承認セッション6.3%対autoモード2.4%、Apolloの再テストで見逃し率12%→7%）、分類器がユーザーメッセージとツール呼び出しのみを見てClaude自身の発言・ツール出力を除去する設計とサーバー側プロンプトインジェクションプローブ、既定でブロックされる操作（curl|bash・機微データ外部送信・本番デプロイ/マイグレーション・クラウドストレージ大量削除・IAM/リポジトリ権限付与・共有インフラ変更・セッション前ファイルの不可逆削除・force push・git reset --hard等・他セッションのコミットへのamend・terraform/pulumi/cdk destroy）と既定で通る操作（作業ディレクトリ内のローカル操作・宣言済み依存インストール・.envを読んで対応APIへ送信・読み取り専用HTTP・作業中リポジトリの任意ブランチへのpush、ただしproduction/gh-pages等は個別判断）、会話で述べた境界がブロック信号になるがコンパクションで失われうる点、フォールバック（3回連続または合計20回のブロックで一時停止・設定不可・-pでは中断）と/permissionsのRecently deniedからのrキー再実行、手動のまま使う方法（Shift+Tab、~/.claude/settings.jsonのpermissions.defaultMode、\"manual\"はv2.1.200以降、プロジェクト設定の\"auto\"はv2.1.142以降無視、管理者はdisableAutoMode）、Enterprise/API/Claude Platform on AWS/Bedrock/Agent Platform/Foundryは当面オプトイン、Pro/Max/Teamでは分類器のオーバーヘッド分を課金しないこと、および2026年8月8日リリースのv2.1.225でautoモードが安全フィルタの拒否を連続ブロック数に数える不具合が修正された点を整理",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-08-07",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-08_claude-code-auto-mode-default-august-14.md"
     }
   ]
 }
