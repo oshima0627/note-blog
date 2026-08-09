@@ -1172,6 +1172,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-08_claude-code-auto-mode-default-august-14.md"
+    },
+    {
+      "id": 42,
+      "date": "2026-08-09",
+      "type": "free",
+      "title": "Sonnet 5の導入価格が8月31日で終了：9月からの備え",
+      "slug": "claude-sonnet-5-intro-pricing-ends-august-31",
+      "keywords": [
+        "Claude Sonnet 5",
+        "導入価格",
+        "API料金",
+        "値上げ",
+        "プロンプトキャッシュ",
+        "Batch API",
+        "セッション予算",
+        "Claude Code"
+      ],
+      "theme": "Claude Sonnet 5（2026年6月30日公開）の導入価格が2026年8月31日で終了し、9月1日から標準価格に切り替わる件をまとめた無料ニュース記事。公式価格ページの数値（基本入力2→3ドル、出力10→15ドル、5分キャッシュ書き込み2.50→3.75ドル、1時間キャッシュ書き込み4→6ドル、キャッシュヒット0.20→0.30ドル、Batch API 1/5→1.50/7.50ドル、すべて100万トークンあたりで一律1.5倍）、月間入力3,000万・出力300万トークンでの試算（90ドル→135ドル）、9月以降の単価はSonnet 4.6/4.5と同額だがClaude 4.7以降は新トークナイザで同じテキストがおよそ30%多いトークンになる点と公開アナウンスの「移行はおおむねコスト中立」という説明、影響範囲の切り分け（APIキー従量課金・LLMゲートウェイ経由・自作ツール運用は影響、Pro/Max等の定額プランのログインはトークン単価課金ではないため基本的に影響しない、Bedrock/Google Cloudはパートナー運営で各社価格ページ要確認・適用日は未確認、Claude Platform on AWSとMicrosoft FoundryはClaude API標準単価をCCU換算）、同週に追加された支出上限の仕組み（8月7日のManaged Agentsセッション予算とbudget_reached停止理由、8月8日のClaude Code v2.1.225のゲートウェイ支出上限警告で上限額・リセット時刻・運用者メッセージを表示、ゲートウェイ側も2.1.225相当が必要）、単価以外の対策3点（Batch API 50%割引で9月以降1.50/7.50ドルは値上げ前の素の単価より安い、プロンプトキャッシュはヒットが基本入力の0.1倍・5分書き込み1.25倍で1回・1時間書き込み2倍で2回の読み出しで元が取れる、モデル使い分けでHaiku 4.5は1/5ドルとSonnet 5の9月以降単価の3分の1、Opus 5は5/25ドル、Fable 5は10/50ドル）、およびClaude 4.6以降は1Mコンテキストを標準価格のまま使える点を整理",
+      "target": "Claude APIを従量課金で使うエンジニア・個人開発者",
+      "news_date": "2026-08-07",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-09_claude-sonnet-5-intro-pricing-ends-august-31.md"
     }
   ]
 }
