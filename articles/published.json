@@ -1201,6 +1201,35 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-08-09_claude-sonnet-5-intro-pricing-ends-august-31.md"
+    },
+    {
+      "id": 43,
+      "date": "2026-08-10",
+      "type": "free",
+      "title": "Metaが「Muse Code」公開：既定はデータ提供プラン",
+      "slug": "meta-muse-code-contributor-tier-default",
+      "keywords": [
+        "Muse Code",
+        "Muse Spark 1.2",
+        "Meta Superintelligence Labs",
+        "コントリビューター階層",
+        "Claude Code",
+        "データ学習",
+        "API料金",
+        "ターミナルエージェント"
+      ],
+      "theme": "Meta Superintelligence Labsが2026年8月5日にベータ公開したターミナル型コーディングエージェント「Muse Code」と、それを動かすMuse Spark 1.2（1Mトークンウィンドウ、macOS/Linux対応、curl経由の1コマンド導入、Muse Code / Meta Model API / OpenRouterで提供）について、料金がモデルIDで決まる仕組み（標準の muse-spark-1.2 はキャッシュ入力$0.15・入力$1.25・出力$4.25 / 1Mトークン、muse-spark-1.2-contributor は5時間ローリングウィンドウのトークン量でレート制限され一部の国のみ提供）と、公式ブログが明記する『Muse Codeはコントリビューター階層から始まる』という既定値、コントリビューター階層のトラフィックがMetaの製品改善に利用され得る点・ゼロデータ保持はセールス経由で申請可能な点を整理した無料ニュース記事。あわせてAnthropicのプライバシーセンターが明記する商用製品（Claude for Work / Anthropic API等）の既定非学習方針と明示フィードバック時の最大5年保管という例外、消費者向けプラン（Free/Pro/MaxでのClaude Code利用）は設定で許可した場合に使われIncognitoは除外される点を並べ、『既定値の向きが逆である』という違いを提示。Claude公式料金（Opus 5 $5/$25、Sonnet 5は8/31まで$2/$10・9/1から$3/$15、Haiku 4.5 $1/$5）と並べたうえで、キャッシュヒット0.1倍・Batch API 50%割引・Claude 4.7以降のトークナイザ約30%増・コントリビューター階層がレート制限ベースであることから単価表の単純比較が実費とズレる点を指摘した。コントリビューター階層のドル建て価格（Engadget報道の入力$0.10・出力$0.20）は公式ページで裏取りできていないため報道ベースと明記し、日本での提供可否とベンチマークの具体スコア（公式ブログでは画像内のため読み取れず）も未確認として本文に記載",
+      "target": "Claude Codeを使うエンジニア・個人開発者（特に受託・業務コードを扱う層）",
+      "news_date": "2026-08-05",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 8,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.4
+      },
+      "file": "articles/drafts/2026-08-10_meta-muse-code-contributor-tier-default.md"
     }
   ]
 }
