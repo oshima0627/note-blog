@@ -1230,6 +1230,35 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-08-10_meta-muse-code-contributor-tier-default.md"
+    },
+    {
+      "id": 44,
+      "date": "2026-08-11",
+      "type": "free",
+      "title": "Sonnet 5の9月値上げは中止：$2/$10が標準価格に",
+      "slug": "claude-sonnet-5-pricing-permanent",
+      "keywords": [
+        "Claude Sonnet 5",
+        "API料金",
+        "値上げ撤回",
+        "標準価格",
+        "プロンプトキャッシュ",
+        "Batch API",
+        "トークナイザ",
+        "Claude Code"
+      ],
+      "theme": "Anthropicが2026年8月10日に公表したClaude Sonnet 5の導入価格($2/$10 per MTok)の標準価格化と、9月1日に予定されていた$3/$15への引き上げ中止をまとめた無料ニュース記事。公式リリースノート・価格ページ・Introducing Claude Sonnet 5の3か所の一次情報が一致することを確認。本アカウントが8月9日に公開した『導入価格が8月31日で終了』記事の前提が変わったため本文で明示的に訂正。現行単価(入力$2/出力$10/キャッシュヒット$0.20/5分書き込み$2.50/1時間書き込み$4/Batch $1・$5)と他モデル比較(Haiku 4.5 $1/$5、Sonnet 4.6 $3/$15、Opus 5 $5/$25、Fable 5 $10/$50)、Sonnet 5が旧世代Sonnet 4.6より単価で安いまま固定された点、月間入力3,000万・出力300万トークンでの試算(90ドルのまま・値上げ時135ドルとの差額は月45ドル/年540ドル)を提示。影響範囲の切り分け(API従量課金は影響あり、Pro/Max/Team等の定額プランは直接影響なし、Bedrock/Google Cloudはパートナー運営で各社価格ページ要確認・反映は未確認、Claude Platform on AWS/Microsoft FoundryはCCU換算のため据え置きと考えられるが明示的言及は未確認)。単価据え置きでも残る注意点としてClaude 4.7以降の新トークナイザによる約30%のトークン増(値下がり分の一部が相殺され請求が3分の2になるとは限らない)とinference_geo=usの1.1倍を明記。引き続き有効な対策としてプロンプトキャッシュ(ヒット0.1倍・5分書き込み1.25倍で1回、1時間書き込み2倍で2回の読み出しで元が取れる)、Batch API 50%割引、Haiku 4.5への振り分け、Claude 4.6以降の1Mコンテキスト標準価格を解説。あわせて2026年8月11日にCompliance APIがEnterprise組織向けベータでローカルのCowork/Claude Codeセッションのトランスクリプトを返すようになった件を記載。値上げ撤回の背景について公式説明は見当たらず、7月30日のOpenAI GPT-5.6値下げとの関連は筆者の推測と明記",
+      "target": "Claude APIを従量課金で使うエンジニア・個人開発者",
+      "news_date": "2026-08-10",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-11_claude-sonnet-5-pricing-permanent.md"
     }
   ]
 }
