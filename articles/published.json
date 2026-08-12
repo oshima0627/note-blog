@@ -1259,6 +1259,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-11_claude-sonnet-5-pricing-permanent.md"
+    },
+    {
+      "id": 45,
+      "date": "2026-08-12",
+      "type": "free",
+      "title": "Claudeの出力に不可視の透かし：開発者が確認すべき点",
+      "slug": "claude-text-watermark-august-2026",
+      "keywords": [
+        "Claude",
+        "透かし",
+        "ウォーターマーク",
+        "C2PA",
+        "EU AI Act",
+        "Claude Code",
+        "AI生成検出",
+        "プロベナンス"
+      ],
+      "theme": "Anthropicが公式ヘルプ「How Claude marks AI-generated content」で公開した、Claude生成コンテンツへのマシン可読マーキング方針をまとめた無料ニュース記事。方式2種（テキストへの知覚できない埋め込み透かし＝コピー＆ペーストで一緒に移動し一部の編集を経ても残る、および.svg/.png/.jpgなど対応ファイルへのC2PA準拠の署名付きプロベナンスメタデータ）、適用範囲（Claude Platform(API)/Claude/Claude Code/Claude Cowork/Claude Tagに加えAWS・Google Cloud・Microsoft Foundry経由、Claudeが提供されるあらゆる場所で世界的に適用）、対象モデル（2026年8月2日以降公開のモデルは公開時点で対応、それ以前は順次対応。主力のSonnet 5＝6月30日公開・Opus 5＝7月24日公開はいずれも8月2日より前のため順次対応側に該当し、対応済みかを示す公式記載は未確認）を整理。検出結果の解釈限界（マーク検出は「Claudeで処理された可能性がある」ことを示すのみで著者を確定しない、マークがないことはAI不使用の証明にならない、大幅な編集・言い換え・翻訳・混在で信号が失われうる、短文では信号量が不足）を明記。検出手段はAnthropicが「ユーザーおよび第三者が検出できるよう作業中」とするのみで、開発者向け検出APIの提供時期・料金・条件は公式未確認、公式ヘルプにオプトアウトの記載も見当たらない点を記載。Claude Codeユーザーへの影響として、散文出力（設計メモ・コミットメッセージ・PR説明・README・記事下書き）は対象になりうる一方、ソースコード自体への適用は公式未明示であることを未確認として示し、The New Stackの「コピー＆ペーストには耐えるが実際の開発ワークフローには耐えない」という論点を紹介。実務対応として納品物のAI利用開示要件の確認と、検出結果を単独の判定根拠にしないことを提示。背景のEU AI Act第50条・GPAI透明性コード（2026年8月2日効力）は複数メディア報道として記載し、世界一律適用の理由についての推測は筆者の見方と明示。技術詳細は非公開でSiliconANGLEが報じたGoogle DeepMind 2024年論文への言及も実装同一とは明示されていない旨を注記",
+      "target": "Claude / Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-08-11",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-12_claude-text-watermark-august-2026.md"
     }
   ]
 }
