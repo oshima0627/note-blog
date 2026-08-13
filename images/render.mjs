@@ -19,6 +19,7 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(HERE, "..");
 const DRAFTS = join(REPO, "articles", "drafts");
 const OUT_DIR = join(REPO, "articles", "images");
+const BG_DIR = join(HERE, "backgrounds");
 
 const WIDTH = 1280;
 const HEIGHT = 670;
@@ -26,9 +27,29 @@ const AUTHOR = "しま@AIエンジニア";
 
 /** 記事種別ごとの見た目。published.json の type に対応する */
 const STYLES = {
-  paid: { badge: "【有料】", accent: "#d63c1e" },
-  free: { badge: "【無料】", accent: "#1668d4" },
+  paid: { badge: "有料記事", accent: "#ffc94d", badgeBg: "linear-gradient(180deg,#ffd679,#e39c1b)", badgeFg: "#21160a" },
+  free: { badge: "無料記事", accent: "#7fd4ff", badgeBg: "linear-gradient(180deg,#9fdcff,#2f9bd6)", badgeFg: "#04202e" },
 };
+
+/**
+ * 背景イラストのテーマ。タイトルに含まれる語で決める。
+ * 上から順に判定し、最初に当たったものを使う。当たらなければ news。
+ */
+const THEMES = [
+  { name: "money", re: /稼|収益|副業|売る|売却|受託|案件|単価|年収|報酬|マネタイズ|物販|万円|課金|価格|値[上下]げ|料金/ },
+  { name: "sec", re: /権限|脆弱|セキュリティ|規約|リスク|監査|抜け穴|透かし|プライバシー|データ提供|終了|引退|廃止|注意/ },
+  { name: "news", re: /.*/ },
+];
+
+/** 記事ごとに背景を決める。同じ記事なら毎回同じ背景になる */
+function pickBackground(title, slug, available) {
+  const theme = THEMES.find((t) => t.re.test(title)).name;
+  const pool = available.filter((f) => f.startsWith(theme));
+  const list = pool.length > 0 ? pool : available;
+  // slug の文字コード和で選ぶ。決定的なので再生成しても picture が変わらない
+  const hash = [...slug].reduce((a, c) => a + c.charCodeAt(0), 0);
+  return list[hash % list.length];
+}
 
 /** 先頭の `# 見出し` を取り出す。無ければファイル名を使う */
 function extractTitle(markdown, fallback) {
@@ -103,6 +124,47 @@ async function loadTypes() {
   return map;
 }
 
+/**
+ * 記事本文から検証できる事実だけをチップにする。
+ *
+ * 「月100万円」のような読者の成果を装う数字は入れない。ここに出すのは
+ * 記事を数えれば誰でも確認できるもの(手順数・文字数・出典数)に限る。
+ */
+function buildChips(markdown) {
+  const chips = [];
+
+  const steps = markdown.match(/全(\d+)ステップ/);
+  if (steps) chips.push(`全${steps[1]}ステップ`);
+
+  const chars = markdown.replace(/\s/g, "").length;
+  if (chars >= 8000) chips.push(`${Math.round(chars / 1000)},000字`);
+
+  const urls = new Set(markdown.match(/https?:\/\/[^\s)]+/g) ?? []);
+  if (urls.size >= 3) chips.push(`出典${urls.size}本`);
+
+  return chips.slice(0, 3);
+}
+
+/**
+ * 見出し画像の下に置く一行。記事の最初の「中身のある」段落から作る。
+ *
+ * ニュース記事は冒頭が「※◯年◯月◯日時点の情報です」という注記で始まることが多く、
+ * それをそのまま出すと見出し画像が注意書きになってしまうので飛ばす。
+ */
+function buildLead(markdown) {
+  const body = markdown.replace(/^\s*#\s+.+$/m, "");
+  for (const line of body.split("\n")) {
+    const s = line.trim();
+    // 見出し・箇条書き・引用・HTMLコメントは飛ばす
+    if (!s || /^[#\-*>|<]/.test(s)) continue;
+    // 日付の注記・断り書きは本文ではないので飛ばす
+    if (/^[※注]|時点の情報|最新は公式|本記事は/.test(s)) continue;
+    const plain = s.replace(/\*\*|`|\[([^\]]+)\]\([^)]+\)/g, "$1");
+    return plain.length > 46 ? `${plain.slice(0, 46)}…` : plain;
+  }
+  return "";
+}
+
 async function exists(p) {
   try {
     await access(p);
@@ -112,11 +174,19 @@ async function exists(p) {
   }
 }
 
-async function render(page, template, mdPath, types) {
+async function render(page, template, mdPath, types, backgrounds) {
   const name = basename(mdPath, ".md");
   const markdown = await readFile(mdPath, "utf8");
   const title = extractTitle(markdown, name);
   const style = STYLES[types.get(`${name}.md`)] ?? STYLES.free;
+
+  const bgFile = pickBackground(title, name, backgrounds);
+  const bgData = await readFile(join(BG_DIR, bgFile));
+  const bgUri = `data:image/png;base64,${bgData.toString("base64")}`;
+
+  const chipsHtml = buildChips(markdown)
+    .map((c) => `<span class="chip">${escapeHtml(c)}</span>`)
+    .join("");
 
   // replaceAll を使う: テンプレート冒頭のコメントが各トークンを説明のために
   // 含んでおり、replace だとコメント側だけが置換されて本体に残る。
@@ -131,8 +201,14 @@ async function render(page, template, mdPath, types) {
   const html = template
     .replaceAll("TITLE_HTML", titleHtml)
     .replaceAll("BADGE_TEXT", style.badge)
+    .replaceAll("BADGE_BG", style.badgeBg)
+    .replaceAll("BADGE_FG", style.badgeFg)
+    .replaceAll("CHIPS_HTML", chipsHtml)
+    .replaceAll("LEAD_TEXT", escapeHtml(buildLead(markdown)))
     .replaceAll("ACCENT_COLOR", style.accent)
-    .replaceAll("AUTHOR_NAME", escapeHtml(AUTHOR));
+    .replaceAll("AUTHOR_NAME", escapeHtml(AUTHOR))
+    // 背景は最後に差し込む。base64 に他のトークンが現れても壊れないようにするため
+    .replaceAll("BG_DATA_URI", bgUri);
 
   await page.setContent(html, { waitUntil: "load" });
   await page.waitForFunction(() => window.__fitted === true);
@@ -187,6 +263,10 @@ async function main() {
   await mkdir(OUT_DIR, { recursive: true });
   const types = await loadTypes();
   const template = await readFile(join(HERE, "template.html"), "utf8");
+  const backgrounds = (await readdir(BG_DIR)).filter((f) => f.endsWith(".png")).sort();
+  if (backgrounds.length === 0) {
+    throw new Error(`背景イラストがありません: ${BG_DIR}`);
+  }
 
   const browser = await chromium.launch();
   const page = await browser.newPage({
@@ -202,7 +282,7 @@ async function main() {
       skipped++;
       continue;
     }
-    const { out, title } = await render(page, template, md, types);
+    const { out, title } = await render(page, template, md, types, backgrounds);
     console.log(`${basename(out)}  <-  ${title}`);
     made++;
   }

@@ -3,100 +3,131 @@
 <!--
   note 見出し画像テンプレート (1280x670)
 
-  設計の根拠: 2026-08-13 に note の「Claude Code」人気記事20本の見出し画像を
-  取得して分析した結果、伸びている記事は例外なく「文字が主役」だった。
-    - タイトル文字が枠のほぼ全面を占める(余白で見せるデザインではない)
-    - 数字や要点の一語だけをアクセント色で強調する
-    - 明るい背景 + 黒文字が11/20。暗い背景は AI イラスト系がほとんどで、
-      文字主体のデザインでは明るい背景が主流
-  この3点を満たす形に作り替えたテンプレート。
+  設計の根拠: 2026-08-13 に note の「Claude」有料記事24本の見出し画像を取得して
+  分析したところ、イラスト・装飾が主体のものが21/24(87.5%)だった。
+  文字だけのカードは3/24しかなく、売れている記事の主流ではない。
+  そこで「右にイラスト、左に文字」の構成にしている。
+
+  イラストは backgrounds/ のライブラリから記事に応じて選ぶ。記事ごとに
+  生成しないのは、生成には候補から選ぶ人の手が要り、日次の自動投稿が
+  そこで止まるため(実際にこの詰まりで28本がnoteに未到達だった)。
 
   render.mjs が置換するプレースホルダ:
-    TITLE_HTML   タイトル(塊ごとに span、強調は <b>)
-    BADGE_TEXT   【無料】【有料】
+    BG_DATA_URI  背景イラスト(data URI)
+    TITLE_HTML   タイトル(塊ごとに span、強調は b)
+    BADGE_TEXT   有料 / 無料 の表示
+    BADGE_BG     バッジの背景(有料=金 / 無料=青)
+    BADGE_FG     バッジの文字色
+    CHIPS_HTML   記事から算出した実績チップ
+    LEAD_TEXT    補足の一行
     ACCENT_COLOR アクセント色
     AUTHOR_NAME  著者表示名
 -->
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html, body { width: 1280px; height: 670px; }
 
   body {
-    background: #fdfaf4;
     font-family: "Yu Gothic UI", "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic ProN", sans-serif;
-    color: #14161a;
-    padding: 26px;
-  }
-
-  /* 内側の細い枠。人気記事に共通して見られた囲み */
-  .frame {
-    width: 100%;
-    height: 100%;
-    border: 3px solid #14161a;
-    display: flex;
-    flex-direction: column;
-    padding: 40px 54px 34px;
-  }
-
-  .badge {
-    font-size: 30px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: .04em;
-    margin-bottom: 10px;
-  }
-
-  /*
-    min-height: 0 が要る。flex アイテムの既定 min-height: auto のままだと
-    中身に合わせて伸び、フッターを枠外へ押し出してしまう。
-  */
-  main {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    min-height: 0;
+    background: #0a1628 url("BG_DATA_URI") right center / cover no-repeat;
+    position: relative;
     overflow: hidden;
   }
 
-  h1 {
-    font-size: 92px;          /* fitTitle() が縮める上限値 */
-    font-weight: 700;
-    line-height: 1.28;
-    letter-spacing: -.01em;
-    line-break: strict;       /* 行頭に句読点が来るのを防ぐ */
+  /* 左を暗く落として文字の可読性を確保する。イラストは右に残す */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(8,18,36,.97) 34%, rgba(8,18,36,.72) 52%, rgba(8,18,36,0) 70%);
   }
 
+  .wrap {
+    position: relative;
+    z-index: 1;
+    width: 64%;
+    height: 100%;
+    padding: 48px 0 44px 54px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .badge {
+    align-self: flex-start;
+    background: BADGE_BG;
+    color: BADGE_FG;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 6px;
+    letter-spacing: .04em;
+  }
+
+  main { display: flex; align-items: center; flex: 1; min-height: 0; overflow: hidden; margin-top: 22px; }
+
+  h1 {
+    font-size: 84px;          /* fitTitle() が縮める上限値 */
+    font-weight: 700;
+    line-height: 1.24;
+    letter-spacing: -.02em;
+    color: #fff;
+    line-break: strict;
+    /* 太い縁取り。イラストの上でも文字が沈まないようにする */
+    -webkit-text-stroke: 9px rgba(8,18,36,.42);
+    paint-order: stroke fill;
+    text-shadow: 0 5px 22px rgba(0,0,0,.6);
+  }
   /*
     render.mjs が句読点・助詞で切った塊を span で包んでいる。
     塊の内部では改行させないので、改行は必ず意味の切れ目で起きる。
   */
   h1 span { white-space: nowrap; }
-
-  /* 数字や要点の一語。ここだけ色を変えて視線を止める */
-  h1 b { color: var(--accent); font-weight: 700; }
-
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 14px;
-    padding-top: 18px;
+  h1 b {
+    color: var(--accent);
+    -webkit-text-stroke: 9px rgba(28,14,0,.42);
+    paint-order: stroke fill;
   }
 
-  .author { font-size: 27px; font-weight: 700; color: #5b6270; }
-  .mark { width: 15px; height: 15px; background: var(--accent); border-radius: 50%; }
+  .lead {
+    font-size: 28px;
+    font-weight: 700;
+    color: #cfe0f5;
+    line-height: 1.5;
+    text-shadow: 0 2px 10px rgba(0,0,0,.75);
+    margin-bottom: 18px;
+  }
+
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+  .chip {
+    background: rgba(255,255,255,.1);
+    border: 2px solid rgba(255,201,77,.5);
+    color: #ffe6ad;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .author {
+    position: absolute;
+    right: 28px; bottom: 20px;
+    z-index: 1;
+    font-size: 23px;
+    font-weight: 700;
+    color: #e6eefb;
+    text-shadow: 0 2px 10px rgba(0,0,0,.9);
+  }
 </style>
 
 <body style="--accent: ACCENT_COLOR">
-  <div class="frame">
-    <div class="badge">BADGE_TEXT</div>
+  <div class="wrap">
+    <span class="badge">BADGE_TEXT</span>
     <main><h1 id="title">TITLE_HTML</h1></main>
-    <footer>
-      <span class="author">AUTHOR_NAME</span>
-      <span class="mark"></span>
-    </footer>
+    <p class="lead">LEAD_TEXT</p>
+    <div class="chips">CHIPS_HTML</div>
   </div>
+  <div class="author">AUTHOR_NAME</div>
 </body>
 
 <script>
@@ -111,7 +142,7 @@
     const h1 = document.getElementById("title");
     const box = document.querySelector("main");
     const min = 34;
-    let size = 92;
+    let size = 84;
 
     const overflows = () => h1.scrollHeight > box.clientHeight || h1.scrollWidth > box.clientWidth;
 
