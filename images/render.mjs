@@ -4,8 +4,10 @@
  *   node render.mjs --article ../articles/drafts/2026-08-13_foo.md
  *   node render.mjs --all            # 画像が無い記事だけ生成
  *   node render.mjs --all --force    # 既存画像も作り直す（テンプレ変更時）
+ *   node render.mjs --from note-only.json   # note にしか無い記事をタイトルから生成
  *
  * 出力: articles/images/<記事と同じbasename>.png (1280x670)
+ *       --from のときは articles/images/note-only/<note の記事キー>.png
  *
  * タイトルは記事ファイル先頭の `# 見出し` を使う。これは nexeed-ops の
  * note-post が投稿タイトルを決めるルールと同じなので、画像と投稿がずれない。
@@ -19,6 +21,8 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(HERE, "..");
 const DRAFTS = join(REPO, "articles", "drafts");
 const OUT_DIR = join(REPO, "articles", "images");
+/** note にしか無い記事の画像。ファイル名は note の記事キー(--from で作る) */
+const NOTE_ONLY_DIR = join(OUT_DIR, "note-only");
 const BG_DIR = join(HERE, "backgrounds");
 
 const WIDTH = 1280;
@@ -174,19 +178,21 @@ async function exists(p) {
   }
 }
 
-async function render(page, template, mdPath, types, backgrounds) {
-  const name = basename(mdPath, ".md");
-  const markdown = await readFile(mdPath, "utf8");
-  const title = extractTitle(markdown, name);
-  const style = STYLES[types.get(`${name}.md`)] ?? STYLES.free;
+/**
+ * 1枚描いて PNG に落とす。記事ファイルから作る場合も、タイトルだけから作る場合も
+ * ここを通す(見た目を1か所に保つため)。
+ *
+ * chips と lead は記事本文から算出したものだけを渡す。本文が無い記事では空にする。
+ * 埋めるために中身を作ると、画像に嘘が載ることになるため。
+ */
+async function renderCard(page, template, backgrounds, { name, title, type, chips = [], lead = "", outDir }) {
+  const style = STYLES[type] ?? STYLES.free;
 
   const bgFile = pickBackground(title, name, backgrounds);
   const bgData = await readFile(join(BG_DIR, bgFile));
   const bgUri = `data:image/png;base64,${bgData.toString("base64")}`;
 
-  const chipsHtml = buildChips(markdown)
-    .map((c) => `<span class="chip">${escapeHtml(c)}</span>`)
-    .join("");
+  const chipsHtml = chips.map((c) => `<span class="chip">${escapeHtml(c)}</span>`).join("");
 
   // replaceAll を使う: テンプレート冒頭のコメントが各トークンを説明のために
   // 含んでおり、replace だとコメント側だけが置換されて本体に残る。
@@ -204,7 +210,7 @@ async function render(page, template, mdPath, types, backgrounds) {
     .replaceAll("BADGE_BG", style.badgeBg)
     .replaceAll("BADGE_FG", style.badgeFg)
     .replaceAll("CHIPS_HTML", chipsHtml)
-    .replaceAll("LEAD_TEXT", escapeHtml(buildLead(markdown)))
+    .replaceAll("LEAD_TEXT", escapeHtml(lead))
     .replaceAll("ACCENT_COLOR", style.accent)
     .replaceAll("AUTHOR_NAME", escapeHtml(AUTHOR))
     // 背景は最後に差し込む。base64 に他のトークンが現れても壊れないようにするため
@@ -221,9 +227,24 @@ async function render(page, template, mdPath, types, backgrounds) {
     console.warn(`  ⚠ 文字が小さめです(${fit.size}px)。タイトルを短くすると読みやすくなります: ${title}`);
   }
 
-  const out = join(OUT_DIR, `${name}.png`);
+  const out = join(outDir, `${name}.png`);
   await page.screenshot({ path: out, clip: { x: 0, y: 0, width: WIDTH, height: HEIGHT } });
   return { out, title };
+}
+
+/** 記事ファイル(.md)から1枚作る */
+async function render(page, template, mdPath, types, backgrounds) {
+  const name = basename(mdPath, ".md");
+  const markdown = await readFile(mdPath, "utf8");
+  const title = extractTitle(markdown, name);
+  return renderCard(page, template, backgrounds, {
+    name,
+    title,
+    type: types.get(`${name}.md`),
+    chips: buildChips(markdown),
+    lead: buildLead(markdown),
+    outDir: OUT_DIR,
+  });
 }
 
 function escapeHtml(s) {
@@ -246,22 +267,15 @@ async function main() {
   const force = args.includes("--force");
   const all = args.includes("--all");
   const one = args[args.indexOf("--article") + 1];
+  const from = args.includes("--from") ? args[args.indexOf("--from") + 1] : null;
 
-  if (!all && args.indexOf("--article") === -1) {
-    console.error("usage: node render.mjs (--all [--force] | --article <path.md>)");
+  if (!all && !from && args.indexOf("--article") === -1) {
+    console.error(
+      "usage: node render.mjs (--all [--force] | --article <path.md> | --from <一覧.json> [--force])",
+    );
     process.exit(1);
   }
 
-  let targets;
-  if (all) {
-    const files = await readdir(DRAFTS);
-    targets = files.filter((f) => f.endsWith(".md")).map((f) => join(DRAFTS, f));
-  } else {
-    targets = [resolve(one)];
-  }
-
-  await mkdir(OUT_DIR, { recursive: true });
-  const types = await loadTypes();
   const template = await readFile(join(HERE, "template.html"), "utf8");
   const backgrounds = (await readdir(BG_DIR)).filter((f) => f.endsWith(".png")).sort();
   if (backgrounds.length === 0) {
@@ -276,19 +290,50 @@ async function main() {
 
   let made = 0;
   let skipped = 0;
-  for (const md of targets) {
-    const png = join(OUT_DIR, `${basename(md, ".md")}.png`);
-    if (!force && (await exists(png))) {
-      skipped++;
-      continue;
+  let outDir = OUT_DIR;
+
+  if (from) {
+    // note にしか無い記事(元原稿がこのリポジトリに無い)の画像を、タイトルだけから作る。
+    // ファイル名は note の記事キー。本文が無いので補足の一行とチップは付けない
+    outDir = NOTE_ONLY_DIR;
+    await mkdir(outDir, { recursive: true });
+    const entries = JSON.parse(await readFile(resolve(from), "utf8"));
+    for (const e of entries) {
+      const png = join(outDir, `${e.key}.png`);
+      if (!force && (await exists(png))) {
+        skipped++;
+        continue;
+      }
+      const { out, title } = await renderCard(page, template, backgrounds, {
+        name: e.key,
+        title: e.title,
+        type: e.type,
+        outDir,
+      });
+      console.log(`${basename(out)}  <-  ${title}`);
+      made++;
     }
-    const { out, title } = await render(page, template, md, types, backgrounds);
-    console.log(`${basename(out)}  <-  ${title}`);
-    made++;
+  } else {
+    const targets = all
+      ? (await readdir(DRAFTS)).filter((f) => f.endsWith(".md")).map((f) => join(DRAFTS, f))
+      : [resolve(one)];
+
+    await mkdir(OUT_DIR, { recursive: true });
+    const types = await loadTypes();
+    for (const md of targets) {
+      const png = join(OUT_DIR, `${basename(md, ".md")}.png`);
+      if (!force && (await exists(png))) {
+        skipped++;
+        continue;
+      }
+      const { out, title } = await render(page, template, md, types, backgrounds);
+      console.log(`${basename(out)}  <-  ${title}`);
+      made++;
+    }
   }
 
   await browser.close();
-  console.log(`\n生成 ${made} 件 / スキップ ${skipped} 件 -> articles/images/`);
+  console.log(`\n生成 ${made} 件 / スキップ ${skipped} 件 -> ${outDir}`);
 }
 
 // 直接実行されたときだけ動かす(segmentTitle を import して検証できるようにするため)

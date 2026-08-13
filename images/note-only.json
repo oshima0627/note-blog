@@ -1,0 +1,458 @@
+[
+  {
+    "key": "n66d61c5dcc1e",
+    "title": "WindsurfのCascadeでTDDサイクルを自動化する実践",
+    "type": "paid",
+    "price": 3980
+  },
+  {
+    "key": "nc365e9b40733",
+    "title": "Make.comでWebhook×Slackの初シナリオを動かす",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n5f8b67c695d3",
+    "title": "Make.com×Stripeで決済通知システムを構築する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nfa4c0fa7e0d6",
+    "title": "Make×NotionでAI週次タスクレポートを自動生成する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nd42bb6012821",
+    "title": "Windsurf×Supabaseで議事録アプリを高速構築する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n7f25b92a81bb",
+    "title": "CodeRabbitでコードレビューを自動化する完全ガイド",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n492dfe514f99",
+    "title": "MakeでGoogleフォームをNotionに自動記録する手順",
+    "type": "paid",
+    "price": 500
+  },
+  {
+    "key": "n38404cd4a19a",
+    "title": "MCPサーバー急拡大：AIツール統合の新標準を徹底解説",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "ne87bfdbb82b9",
+    "title": "n8nとNotionを連携してタスク管理を全自動化する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n023d95e43d59",
+    "title": "Dify×GmailをAPIで繋ぐ！メール自動返信AIの構築手順",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nae9fead7e140",
+    "title": "Dify×Google Sheetsで問い合わせ対応レポートを自動生成する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n4cf5c136a752",
+    "title": "n8nとSlackを連携してアラート通知を全自動化する実践ガイド",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nbfee0d0a917d",
+    "title": "Claude Codeで爆速開発！CLI活用の完全入門ガイド",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nf44c0687f760",
+    "title": "Claude Code Hooks入門：AIの操作を100%制御する仕組み",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n40b736d07742",
+    "title": "Claude Code 機能解説 #12：Security Scanning ―― AIが脆弱性を発見・検証・修正提案まで行うセキュリティスキャン",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n7d96af878ed9",
+    "title": "Claude Code 機能解説 #11：カスタムスラッシュコマンド（Skills）―― チームで共有できる独自コマンドを作る",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n1b38819d3327",
+    "title": "Claude Code 機能解説 #10：GitHub Actions 連携 ―― @claude メンションで PR 作成・バグ修正・コードレビューを自動化する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "ndd6b7c1ee872",
+    "title": "Claude Code 機能解説 #9：/loop コマンド ―― プロンプトの定期自動実行でデプロイ監視・PR確認をバックグラウンドに任せる",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n7cfe65ea65ca",
+    "title": "Claude Code 機能解説 #8：Git Worktree（ギットワークツリー）―― 並列セッションを衝突なしに動かす隔離環境",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n382896eb5d67",
+    "title": "Claude Code 機能解説 #7：Remote Control（リモートコントロール）―― スマホ・別デバイスからローカル作業を継続する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n4ca639a972a2",
+    "title": "Claude Code 機能解説 #6：Voice Mode（音声入力）―― スペースキーを押しながら話すだけでコーディング指示",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n43d8d12418f3",
+    "title": "Claude Code 機能解説 #5：Sub-agents と Agent Teams ―― 並列AIエージェントで大規模タスクを分担する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n6b7f94d8b4ca",
+    "title": "Claude Code 機能解説 #4：Hooks（フック）―― ファイル編集・コミット前後を確実に自動化する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nc176a6822f58",
+    "title": "あなたの記事をもっと 売り伸ばす方法4選",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n189ffd923e1a",
+    "title": "Claude Code 機能解説 #3：MCP（Model Context Protocol）―― Jira・Slack・GitHubを自然言語で操作する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "ndbee978d8046",
+    "title": "Claude Code 機能解説 #2：CLAUDE.md と Memory ―― AIに「覚えておいてほしいこと」を永続させる",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nf3b780ca6822",
+    "title": "Claude Code 機能解説 #1：Plan Mode（プランモード）―― 実行前に「設計図」を確認する",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nd69e07a7c204",
+    "title": "知識ゼロでもできる｜Claude Codeで業務を半分にする5つの使い方",
+    "type": "paid",
+    "price": 500
+  },
+  {
+    "key": "n0c05dee0e30e",
+    "title": "AIで作ったBGMをYouTubeで流すだけ｜ゼロから収益化する全手順",
+    "type": "paid",
+    "price": 4980
+  },
+  {
+    "key": "n277f5a91cf32",
+    "title": "Claudeで書いたnote記事を最短7時間で販売する全手順",
+    "type": "paid",
+    "price": 1980
+  },
+  {
+    "key": "n126bf1838ba3",
+    "title": "Claude vs ChatGPT｜副業初心者が稼ぐための実践プロンプト全集",
+    "type": "paid",
+    "price": 500
+  },
+  {
+    "key": "ndc8681faf18a",
+    "title": "Claude CodeをGitHubで使う完全ガイド",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n3560ed67b5ae",
+    "title": "Claude Code vs Llama 2｜オープンソースAIの実力は？無料で本当に開発できる？",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n734f41a0b040",
+    "title": "Claude Code vs GPT-4o｜OpenAI最新モデルとの開発対決！どっちが本当に使える？",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "naf62804e3fbd",
+    "title": "Claude Code vs GitHub Copilot｜初心者が3ヶ月使って分かった本当の違い",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nfc05a8a084c6",
+    "title": "Claude Code vs CodeWhisperer｜Amazon製AI vs Anthropic製AI！巨大IT企業対決の行方",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n8eb210341bbc",
+    "title": "Claude Code vs Codeium｜無料AI開発ツールの大本命！本当にタダで十分？",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "na88eedf9c005",
+    "title": "Claude Code vs ChatGPT｜同じAIなのに全然違う！開発での使い分け術",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n541379819e61",
+    "title": "Claude Code vs Character.AI｜まさかのキャラクターAI！プログラミングで使えるの？",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "ne38c67102134",
+    "title": "Claude Code vs Bolt.new｜フルスタック開発の新星！一体どっちが初心者向け？",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n325be5ce4d05",
+    "title": "Claude Code vs Bard｜Google製AIの前身！今でも使える？懐かしのBard完全検証",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n77c13f7fefc3",
+    "title": "Claude無料版vs有料版｜あなたはどちらを選ぶべき？",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nb993196e3a99",
+    "title": "分かりやすい日本の政治｜自民党vs参政党、本当はどっちが右でどっちが左？",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n8d540f3d466d",
+    "title": "自由民主党って何？｜政治を知らない人でもわかる基本政策と考え方",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "ndfc7df7a1a9e",
+    "title": "Claude上達のコツ｜プロンプトの書き方をマスターしよう",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n06492a541905",
+    "title": "立憲民主党って何？｜政治を知らない人でもわかる基本政策と考え方",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "na50387f601d3",
+    "title": "Claude活用術｜日常生活が劇的に変わる7つの使い方",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nba8775898dc2",
+    "title": "Claude使い方の基本｜これだけ覚えれば脱初心者！",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nf6dc3eb8e78d",
+    "title": "Claude Code完全攻略｜AI時代の副業革命で月10万円を確実に稼ぐ最強ロードマップ",
+    "type": "paid",
+    "price": 1980
+  },
+  {
+    "key": "n7f3c559d3ea4",
+    "title": "2025年7月参議院選挙｜参政党の挑戦と日本人ファーストの政治",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n8421035ba34d",
+    "title": "Claudeって何？AI初心者でもわかる超基本解説",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "ne8af137b638f",
+    "title": "スマートホーム×AI完全ガイド：月3万円の光熱費削減を実現する最新テクノロジー活用術",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n135997ac62ee",
+    "title": "Claude Code vs Claude 3.5 Sonnet｜同じClaude家族なのに全然違う！使い分けの極意",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n4a4f3e94952f",
+    "title": "Claude Code vs Gemini｜Google製AIの実力は？開発での使い分け完全ガイド",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n6b15a35b4ca3",
+    "title": "AI健康管理アプリ完全ガイド：睡眠・運動・食事管理の最新ツール2025",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n0a702dddb34e",
+    "title": "生成AIの仕組み完全解説：誰でも分かる技術の基礎から最新動向まで",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nf71c26e584bb",
+    "title": "【未来予測】AIエンジニアが語るClaudeCodeの未来と可能性｜2025年技術革命の最前線",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n89b201a53525",
+    "title": "AI倫理とプライバシー完全ガイド：企業価値10億円を守る情報セキュリティ戦略",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n2744c2628bf3",
+    "title": "【上級者向け】ClaudeCodeで本格的なシステム開発｜アーキテクチャ設計から運用まで",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n9a03eb6d7307",
+    "title": "AIと創造性の未来：クリエイター年収3000万円時代を切り拓く革新戦略",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n96b3302326df",
+    "title": "ClaudeCodeで副業収入月10万円達成！エンジニアが実践した具体的な方法",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n9655f9f6adf0",
+    "title": "中小企業のAI導入完全ガイド：低コストで始められるAI活用術2025",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nf36595ac33db",
+    "title": "【実体験】AI駆動開発の真髄｜ClaudeCodeで開発効率が5倍に！？エンジニアが教える実践テクニック",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n328887b990a8",
+    "title": "Claude Code上級テクニック完全マスター：プロ開発者が年収2000万円を稼ぐ秘密の活用術",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nfd2d0aec4e9f",
+    "title": "AI時代のスキルアップ戦略：年収1000万円を実現する最強学習ロードマップ",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n7a78518705e2",
+    "title": "ClaudeCodeで初めてのWebアプリを作ってみた｜3時間で完成した開発体験記",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n4ebb55db2236",
+    "title": "Claude Code完全攻略ガイド：開発効率10倍向上の究極AI プログラミング術",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n4cf99f78bc89",
+    "title": "AI時代の職業変革：影響を受ける仕事と新しく生まれる仕事の完全ガイド",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n63175335e288",
+    "title": "【完全初心者向け】ClaudeCodeって何？プログラミング未経験でも理解できる解説",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "ncb5796b4fbaa",
+    "title": "Claude Code企業導入成功事例：売上10億円増加を実現した革新的ビジネス活用法",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n9645b4e62b4d",
+    "title": "AIライティングツール完全活用ガイド：ブログ・SNS投稿を効率化する方法",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n093de137d490",
+    "title": "Claude初心者が知らないと損する10の裏技｜効率10倍アップの使い方",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n9f6b1a053ee2",
+    "title": "Claude Code開発環境完全構築ガイド：プロ仕様セットアップで開発効率を最大化",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "n239baf356fc6",
+    "title": "【2025年最新】Claude初心者が最初に知るべき5つのこと｜AI初心者でも安心スタート",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nda5662664d85",
+    "title": "AIアートツール完全攻略ガイド：副業で月10万円稼ぐMidjourney・DALL-E活用術",
+    "type": "free",
+    "price": null
+  },
+  {
+    "key": "nc79df7e18063",
+    "title": "Claude Code vs 競合AI開発ツール徹底比較：プロ開発者が選ぶべき最強ツール決定版",
+    "type": "free",
+    "price": null
+  }
+]
