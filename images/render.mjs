@@ -36,6 +36,34 @@ function extractTitle(markdown, fallback) {
   return m ? m[1] : fallback;
 }
 
+/** これより長い塊はさらに助詞で切る(全角の目安文字数) */
+const MAX_SEGMENT = 11;
+
+/**
+ * タイトルを「途中で改行されると読みにくい塊」に分ける。
+ *
+ * CSS に任せると「Claude Code製サー / ビスを売る」のように単語の途中で
+ * 割れてしまう。句読点と助詞の位置で切っておき、テンプレート側では
+ * 塊の内部で改行させない(white-space: nowrap)ことで読みやすくする。
+ */
+export function segmentTitle(title) {
+  // 句読点・閉じ括弧・区切り記号の直後で切る
+  let parts = title.split(/(?<=[。、，：；！？」』）\]｜・／])/).filter(Boolean);
+
+  // 長すぎる塊は助詞の直後でさらに切る(助詞は前の塊に残す)
+  parts = parts.flatMap((p) =>
+    [...p].length <= MAX_SEGMENT ? [p] : p.split(/(?<=[をでにはがとへも]|から|まで|より)/).filter(Boolean),
+  );
+
+  // 1〜2文字の欠片は前の塊にくっつける(行頭に「を」だけ残るのを防ぐ)
+  const merged = [];
+  for (const p of parts) {
+    if (merged.length > 0 && [...p].length <= 2) merged[merged.length - 1] += p;
+    else merged.push(p);
+  }
+  return merged;
+}
+
 async function loadTypes() {
   const raw = await readFile(join(REPO, "articles", "published.json"), "utf8");
   const map = new Map();
@@ -63,14 +91,27 @@ async function render(page, template, mdPath, types) {
   // replaceAll を使う: テンプレート冒頭のコメントが各トークンを説明のために
   // 含んでおり、replace だとコメント側だけが置換されて本体に残る。
   // タイトルは HTML に差し込むのでエスケープする。
+  // 塊ごとに span で包む。テンプレート側でこの span を改行禁止にしている
+  const titleHtml = segmentTitle(title)
+    .map((s) => `<span>${escapeHtml(s)}</span>`)
+    .join("");
+
   const html = template
-    .replaceAll("__TITLE__", escapeHtml(title))
+    .replaceAll("__TITLE__", titleHtml)
     .replaceAll("__BADGE__", style.badge)
     .replaceAll("__ACCENT__", style.accent)
     .replaceAll("__AUTHOR__", escapeHtml(AUTHOR));
 
   await page.setContent(html, { waitUntil: "load" });
   await page.waitForFunction(() => window.__fitted === true);
+
+  // タイトルが長すぎると読めない大きさまで縮む。気づけるように警告を出す
+  const fit = await page.evaluate(() => ({ size: window.__fittedSize, overflowed: window.__overflowed }));
+  if (fit.overflowed) {
+    console.warn(`  ⚠ 収まりきりませんでした(${fit.size}px)。タイトルを短くしてください: ${title}`);
+  } else if (fit.size < 44) {
+    console.warn(`  ⚠ 文字が小さめです(${fit.size}px)。タイトルを短くすると読みやすくなります: ${title}`);
+  }
 
   const out = join(OUT_DIR, `${name}.png`);
   await page.screenshot({ path: out, clip: { x: 0, y: 0, width: WIDTH, height: HEIGHT } });
@@ -127,7 +168,10 @@ async function main() {
   console.log(`\n生成 ${made} 件 / スキップ ${skipped} 件 -> articles/images/`);
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+// 直接実行されたときだけ動かす(segmentTitle を import して検証できるようにするため)
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}
