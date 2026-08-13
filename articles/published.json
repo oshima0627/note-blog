@@ -33,37 +33,6 @@
       "id": 2,
       "date": "2026-04-19",
       "type": "paid",
-      "title": "Claude Codeで副業月10万円！クラウドソーシング実践ルート",
-      "slug": "claude-code-crowdsourcing-sidejob-100k",
-      "keywords": [
-        "Claude Code",
-        "副業",
-        "クラウドワークス",
-        "ランサーズ",
-        "受託開発",
-        "月10万円",
-        "提案文"
-      ],
-      "theme": "Claude Codeを活用したクラウドソーシング副業で月10万円を稼ぐ実践ルート",
-      "target": "副業で月10万円を狙うプログラミング経験1年以上の会社員エンジニア",
-      "monetization_model": "クラウドソーシング経由の受託開発（LP/WordPress/スクレイピング/業務効率化）",
-      "income_range": "月10万〜30万円",
-      "review_scores": {
-        "monetization": 9,
-        "actionability": 9,
-        "accuracy": 7,
-        "structure": 9,
-        "originality": 7,
-        "average": 8.2
-      },
-      "file": "articles/drafts/2026-04-19_claude-code-crowdsourcing-sidejob-100k.md",
-      "price": 1980,
-      "reviewedAt": "2026-08-13"
-    },
-    {
-      "id": 3,
-      "date": "2026-04-19",
-      "type": "paid",
       "title": "Claude APIで月5万円！不労所得マイクロSaaS術",
       "slug": "claude-api-micro-saas-passive-income",
       "keywords": [
@@ -88,6 +57,37 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-04-19_claude-api-micro-saas-passive-income.md",
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
+    },
+    {
+      "id": 3,
+      "date": "2026-04-19",
+      "type": "paid",
+      "title": "Claude Codeで副業月10万円！クラウドソーシング実践ルート",
+      "slug": "claude-code-crowdsourcing-sidejob-100k",
+      "keywords": [
+        "Claude Code",
+        "副業",
+        "クラウドワークス",
+        "ランサーズ",
+        "受託開発",
+        "月10万円",
+        "提案文"
+      ],
+      "theme": "Claude Codeを活用したクラウドソーシング副業で月10万円を稼ぐ実践ルート",
+      "target": "副業で月10万円を狙うプログラミング経験1年以上の会社員エンジニア",
+      "monetization_model": "クラウドソーシング経由の受託開発（LP/WordPress/スクレイピング/業務効率化）",
+      "income_range": "月10万〜30万円",
+      "review_scores": {
+        "monetization": 9,
+        "actionability": 9,
+        "accuracy": 7,
+        "structure": 9,
+        "originality": 7,
+        "average": 8.2
+      },
+      "file": "articles/drafts/2026-04-19_claude-code-crowdsourcing-sidejob-100k.md",
       "price": 1980,
       "reviewedAt": "2026-08-13"
     },
@@ -251,6 +251,38 @@
     {
       "id": 9,
       "date": "2026-07-03",
+      "type": "paid",
+      "title": "Claude Codeで「買い切りAIツール」を量産して月5万円：Gumroad/BOOTHで売るデジタル物販ルート",
+      "slug": "claude-code-buyout-ai-tools-digital-goods",
+      "keywords": [
+        "Claude Code",
+        "買い切り",
+        "デジタル物販",
+        "Gumroad",
+        "BOOTH",
+        "Chrome拡張",
+        "個人開発",
+        "副業"
+      ],
+      "theme": "Claude Codeで小さなAIツール/Chrome拡張を量産し、Gumroad/BOOTHで買い切り単品販売してストック収益化するデジタル物販ルート（価格×本数×手取りの逆算と実手数料での手取り計算を提示）",
+      "target": "サブスク運用の負担を避けたい個人開発者・副業志望者（Claude Codeで小規模ツールを作れる層）",
+      "monetization_model": "デジタル物販（買い切り・都度課金の単品販売）。Gumroad/BOOTHでダウンロード商品またはライセンスキーを1,000〜3,000円で複数本販売し積み上げる。Chrome拡張はストア無料公開＋外部ライセンス販売の二段構え",
+      "income_range": "月3万〜10万円（手数料から逆算した計算上の目安・保証ではない。例：1,500円商品×手取り約1,371円×月35〜70本、または1本月数千円×複数本の合算）",
+      "review_scores": {
+        "monetization": 8,
+        "actionability": 8,
+        "accuracy": 8,
+        "structure": 9,
+        "originality": 8,
+        "average": 8.2
+      },
+      "file": "articles/drafts/2026-07-03_claude-code-buyout-ai-tools-digital-goods.md",
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
+    },
+    {
+      "id": 10,
+      "date": "2026-07-03",
       "type": "free",
       "title": "Claude Sonnet 5がClaude Codeの新既定モデルに：料金と使い分け",
       "slug": "claude-sonnet-5-claude-code-default",
@@ -280,38 +312,6 @@
         "at": "2026-08-13",
         "reason": "既定モデルはOpus 5に変わり陳腐化"
       }
-    },
-    {
-      "id": 10,
-      "date": "2026-07-03",
-      "type": "paid",
-      "title": "Claude Codeで「買い切りAIツール」を量産して月5万円：Gumroad/BOOTHで売るデジタル物販ルート",
-      "slug": "claude-code-buyout-ai-tools-digital-goods",
-      "keywords": [
-        "Claude Code",
-        "買い切り",
-        "デジタル物販",
-        "Gumroad",
-        "BOOTH",
-        "Chrome拡張",
-        "個人開発",
-        "副業"
-      ],
-      "theme": "Claude Codeで小さなAIツール/Chrome拡張を量産し、Gumroad/BOOTHで買い切り単品販売してストック収益化するデジタル物販ルート（価格×本数×手取りの逆算と実手数料での手取り計算を提示）",
-      "target": "サブスク運用の負担を避けたい個人開発者・副業志望者（Claude Codeで小規模ツールを作れる層）",
-      "monetization_model": "デジタル物販（買い切り・都度課金の単品販売）。Gumroad/BOOTHでダウンロード商品またはライセンスキーを1,000〜3,000円で複数本販売し積み上げる。Chrome拡張はストア無料公開＋外部ライセンス販売の二段構え",
-      "income_range": "月3万〜10万円（手数料から逆算した計算上の目安・保証ではない。例：1,500円商品×手取り約1,371円×月35〜70本、または1本月数千円×複数本の合算）",
-      "review_scores": {
-        "monetization": 8,
-        "actionability": 8,
-        "accuracy": 8,
-        "structure": 9,
-        "originality": 8,
-        "average": 8.2
-      },
-      "file": "articles/drafts/2026-07-03_claude-code-buyout-ai-tools-digital-goods.md",
-      "price": 1980,
-      "reviewedAt": "2026-08-13"
     },
     {
       "id": 11,
@@ -531,20 +531,20 @@
       "id": 18,
       "date": "2026-07-17",
       "type": "free",
-      "title": "Claude Code 7月第3週の更新：フリーズ解消とメモリリーク修正",
-      "slug": "claude-code-july-week3-updates",
+      "title": "Claudeが1Passwordで「代わりにログイン」：パスワードを渡さずに会員サイトを操作",
+      "slug": "claude-1password-secure-login",
       "keywords": [
-        "Claude Code",
-        "changelog",
-        "メモリリーク",
-        "Auto mode",
-        "プロンプトインジェクション",
-        "スクリーンリーダー",
-        "アップデート"
+        "Claude",
+        "1Password",
+        "Agentic Mode",
+        "エージェント",
+        "セキュリティ",
+        "会員サイトログイン",
+        "パスワード管理"
       ],
-      "theme": "2026年7月11日〜15日のClaude Code更新（v2.1.207〜2.1.211：長い応答でのターミナルフリーズ修正、長時間セッションのメモリリーク修正とトランスクリプト最大79倍削減などの性能改善、Bedrock/Vertex/FoundryでのAuto mode既定化、間接プロンプトインジェクション対策やrm -rf確認などの安全性強化、スクリーンリーダー/vim/マウス対応、--forward-subagent-textフラグ追加）を公式changelogで整理した無料ニュース記事",
-      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
-      "news_date": "2026-07-15",
+      "theme": "1PasswordとAnthropicが2026年7月16日に発表したClaude向けの安全なログイン連携（1Password for Claude）と、パスワードをClaude/Anthropicに渡さないAgentic Modeの仕組み・対応条件をまとめた無料ニュース記事",
+      "target": "Macで1Passwordを使いClaudeで会員サイトの確認作業を任せたい個人・実務担当者",
+      "news_date": "2026-07-16",
       "review_scores": {
         "accuracy": 9,
         "sourcing": 9,
@@ -553,11 +553,8 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/archived/2026-07-17_claude-code-july-week3-updates.md",
-      "archived": {
-        "at": "2026-08-13",
-        "reason": "週次まとめ。4週間前で価値なし"
-      }
+      "file": "articles/drafts/2026-07-17_claude-1password-secure-login.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 19,
@@ -594,20 +591,20 @@
       "id": 20,
       "date": "2026-07-17",
       "type": "free",
-      "title": "Claudeが1Passwordで「代わりにログイン」：パスワードを渡さずに会員サイトを操作",
-      "slug": "claude-1password-secure-login",
+      "title": "Claude Code 7月第3週の更新：フリーズ解消とメモリリーク修正",
+      "slug": "claude-code-july-week3-updates",
       "keywords": [
-        "Claude",
-        "1Password",
-        "Agentic Mode",
-        "エージェント",
-        "セキュリティ",
-        "会員サイトログイン",
-        "パスワード管理"
+        "Claude Code",
+        "changelog",
+        "メモリリーク",
+        "Auto mode",
+        "プロンプトインジェクション",
+        "スクリーンリーダー",
+        "アップデート"
       ],
-      "theme": "1PasswordとAnthropicが2026年7月16日に発表したClaude向けの安全なログイン連携（1Password for Claude）と、パスワードをClaude/Anthropicに渡さないAgentic Modeの仕組み・対応条件をまとめた無料ニュース記事",
-      "target": "Macで1Passwordを使いClaudeで会員サイトの確認作業を任せたい個人・実務担当者",
-      "news_date": "2026-07-16",
+      "theme": "2026年7月11日〜15日のClaude Code更新（v2.1.207〜2.1.211：長い応答でのターミナルフリーズ修正、長時間セッションのメモリリーク修正とトランスクリプト最大79倍削減などの性能改善、Bedrock/Vertex/FoundryでのAuto mode既定化、間接プロンプトインジェクション対策やrm -rf確認などの安全性強化、スクリーンリーダー/vim/マウス対応、--forward-subagent-textフラグ追加）を公式changelogで整理した無料ニュース記事",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-07-15",
       "review_scores": {
         "accuracy": 9,
         "sourcing": 9,
@@ -616,8 +613,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-17_claude-1password-secure-login.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-07-17_claude-code-july-week3-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "週次まとめ。4週間前で価値なし"
+      }
     },
     {
       "id": 21,
@@ -1461,6 +1461,37 @@
     {
       "id": 48,
       "date": "2026-08-14",
+      "type": "paid",
+      "title": "半日30万円。Claude Code研修を法人に売る",
+      "slug": "claude-code-corporate-training-sales",
+      "keywords": [
+        "法人研修",
+        "講師料 相場",
+        "研修会社 登録講師",
+        "源泉徴収 10.21%",
+        "人材開発支援助成金",
+        "Claude Code 研修",
+        "直請け",
+        "登壇実績"
+      ],
+      "theme": "Claude Code を業務で使うエンジニアが、法人向け集合研修の講師として稼ぐルートを設計する有料記事。公開相場（dotpro 2026年7月21日更新: eラーニング型1人5〜10万円／講師派遣・集合研修型1回30〜150万円で半日基礎30〜50万円・1日実践80〜150万円・対象10〜50名／業務特化カスタマイズ型100〜300万円超、LDcube: 外部講師1日30〜50万円）を起点に、発注企業の支払額と講師の受取額を分けて捉えることを軸にする。市場根拠は帝国データバンク2026年3月調査（2026年3月17〜31日・有効回答1万312社、生成AI活用企業は全体34.5%・大企業46.5%・中小32.4%・小規模28.0%、課題上位は情報の正確性50.4%／専門人材・ノウハウ不足41.3%／活用範囲40.0%／情報漏洩33.5%／ルール整備25.5%）。2026年8月14日からのClaude Code auto モード既定化を、企業側の権限設計ニーズが立ち上がる追い風として位置づける。商品設計3本（A: エンジニア向け実装研修・半日実機演習、B: 情シス/管理職向け権限設計とガードレール2〜3時間、C: 非エンジニア向け業務適用ワークショップ半日）、実績ゼロからの5ステップ（自社無償勉強会→外部登壇→研修会社の登録講師応募→スポットコンサル→直請け）、見積書の内訳分解と4条項（再演料・キャンセル規定・録画二次利用・受講人数上限）、源泉徴収10.21%（100万円超部分20.42%、計算式と請求書の税区分の書き方）、人材開発支援助成金（事業展開等リスキリング支援コース。経費助成率 中小75%/大企業60%、賃金助成 中小1,000円/大企業500円・1人1時間、令和8年度末2027年3月31日終了予定）を値引きの代わりに使う方法、当日の落とし穴（企業PCにClaude Codeを入れられない／レベル差／機密コード／時間不足）、リピートと単価アップ、リスク6点（陳腐化・成果保証しない・企業のAI利用ポリシー・情報の正確性・競業避止・収入の季節変動）を扱う。Claude/Claude Codeの法人研修を個人が受注した公開一次事例は調査範囲で確認できず、架空事例は不記載と明記。研修会社の講師報酬額も公開されていない（リスキルの募集は『講師給：経験等により変動』のみ）ことを明示している",
+      "target": "Claude Code を業務で3ヶ月以上使っており、受託や個人開発で単価の天井を感じているエンジニア・副業エンジニア",
+      "monetization_model": "法人向け集合研修の受託。入口は研修会社の登録講師（実績ゼロでも登壇機会を得られるが中間マージンで受取額は下がる）、出口は直請け（集客・契約・請求は自前）。研修を単発で終わらせず、同一企業内の横展開・階層違いの商品・年間契約・月額の運用支援契約へのアップセルにつなげる",
+      "income_range": "発注企業の支払額の相場帯で半日30万〜50万円／1日80万〜150万円（dotpro 2026年7月21日更新）、外部講師1日30万〜50万円（LDcube）。いずれも発注企業が払う額であり、研修会社経由では中間マージンぶん講師の受取額は下がる。研修会社の講師報酬額は公開されておらず、本記事の調査範囲では確認できなかった",
+      "review_scores": {
+        "monetization": 9,
+        "actionability": 9,
+        "accuracy": 8,
+        "structure": 8,
+        "originality": 9,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-14_claude-code-corporate-training-sales.md",
+      "price": 3980
+    },
+    {
+      "id": 49,
+      "date": "2026-08-14",
       "type": "free",
       "title": "Claudeの透かしの仕組みが公開：追加料金なし、コードは影響小",
       "slug": "claude-watermark-mechanism-explained",
@@ -1488,7 +1519,7 @@
       "file": "articles/drafts/2026-08-14_claude-watermark-mechanism-explained.md"
     },
     {
-      "id": 49,
+      "id": 50,
       "date": "2026-08-15",
       "type": "free",
       "title": "Claude Code更新：新モデルでToDoリストが出なくなりました",
@@ -1517,7 +1548,7 @@
       "file": "articles/drafts/2026-08-15_claude-code-v2-1-233-todo-tools-disabled.md"
     },
     {
-      "id": 50,
+      "id": 51,
       "date": "2026-08-16",
       "type": "free",
       "title": "Anthropicのリスクレポート公開：並列エージェントで起きた4つの事例",
@@ -1546,7 +1577,7 @@
       "file": "articles/drafts/2026-08-16_anthropic-august-2026-risk-report.md"
     },
     {
-      "id": 51,
+      "id": 52,
       "date": "2026-08-17",
       "type": "free",
       "title": "Claude Code v2.1.234：上限リセット後に自動で再開されます",
@@ -1575,7 +1606,7 @@
       "file": "articles/drafts/2026-08-17_claude-code-v2-1-234-auto-continue.md"
     },
     {
-      "id": 52,
+      "id": 53,
       "date": "2026-08-18",
       "type": "free",
       "title": "Claude Code v2.1.235：権限プロンプトの誤承認バグを修正",
