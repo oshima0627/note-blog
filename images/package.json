@@ -1,0 +1,12 @@
+{
+  "name": "note-blog-images",
+  "private": true,
+  "type": "module",
+  "description": "note の見出し画像 (1280x670) を記事タイトルから生成する",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.61.1"
+  }
+}
