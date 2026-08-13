@@ -26,7 +26,8 @@
         "average": 7.8
       },
       "file": "articles/drafts/2026-03-29_claude-code-practical-techniques.md",
-      "price": 500
+      "price": 500,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 2,
@@ -56,7 +57,8 @@
         "average": 8.2
       },
       "file": "articles/drafts/2026-04-19_claude-code-crowdsourcing-sidejob-100k.md",
-      "price": 1980
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-04-19_claude-api-micro-saas-passive-income.md",
-      "price": 1980
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 4,
@@ -116,7 +119,8 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-06-30_claude-sme-ai-consulting-retainer.md",
-      "price": 3980
+      "price": 3980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 5,
@@ -146,7 +150,8 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-01_claude-code-paid-note-monetization.md",
-      "price": 1980
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 6,
@@ -175,7 +180,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-02_claude-5-family-model-news.md"
+      "file": "articles/archived/2026-07-02_claude-5-family-model-news.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "7月7日までの無料枠が主題。期限切れ"
+      }
     },
     {
       "id": 7,
@@ -202,7 +211,11 @@
         "funnel": 8,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-07-02_claude-agent-sdk-billing-split-paused.md"
+      "file": "articles/archived/2026-07-02_claude-agent-sdk-billing-split-paused.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "6月15日時点の凍結情報。期限切れ"
+      }
     },
     {
       "id": 8,
@@ -232,7 +245,8 @@
         "average": 8.4
       },
       "file": "articles/drafts/2026-07-02_claude-code-course-monetization.md",
-      "price": 1980
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 9,
@@ -261,7 +275,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-03_claude-sonnet-5-claude-code-default.md"
+      "file": "articles/archived/2026-07-03_claude-sonnet-5-claude-code-default.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "既定モデルはOpus 5に変わり陳腐化"
+      }
     },
     {
       "id": 10,
@@ -292,7 +310,8 @@
         "average": 8.2
       },
       "file": "articles/drafts/2026-07-03_claude-code-buyout-ai-tools-digital-goods.md",
-      "price": 1980
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 11,
@@ -320,7 +339,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-05_claude-code-july-2026-updates.md"
+      "file": "articles/archived/2026-07-05_claude-code-july-2026-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "週次まとめ。後続の週次記事と重複"
+      }
     },
     {
       "id": 12,
@@ -348,7 +371,8 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-07_alberta-claude-code-security-audit.md"
+      "file": "articles/drafts/2026-07-07_alberta-claude-code-security-audit.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 13,
@@ -376,7 +400,8 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-09_claude-cowork-web-mobile-remote.md"
+      "file": "articles/drafts/2026-07-09_claude-cowork-web-mobile-remote.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 14,
@@ -406,7 +431,8 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-10_claude-agent-sdk-agent-building-outsourcing.md",
-      "price": 3980
+      "price": 3980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 15,
@@ -434,7 +460,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-11_claude-code-july-week2-updates.md"
+      "file": "articles/archived/2026-07-11_claude-code-july-week2-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "週次まとめ。5週間前で価値なし"
+      }
     },
     {
       "id": 16,
@@ -462,7 +492,8 @@
         "funnel": 7,
         "average": 8.0
       },
-      "file": "articles/drafts/2026-07-13_claude-code-desktop-in-app-browser.md"
+      "file": "articles/drafts/2026-07-13_claude-code-desktop-in-app-browser.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 17,
@@ -490,7 +521,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-15_claude-opus-4-1-api-retirement.md"
+      "file": "articles/archived/2026-07-15_claude-opus-4-1-api-retirement.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "移行期限8月5日が経過済み"
+      }
     },
     {
       "id": 18,
@@ -518,7 +553,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-17_claude-code-july-week3-updates.md"
+      "file": "articles/archived/2026-07-17_claude-code-july-week3-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "週次まとめ。4週間前で価値なし"
+      }
     },
     {
       "id": 19,
@@ -548,7 +587,8 @@
         "average": 8.2
       },
       "file": "articles/drafts/2026-07-17_claude-api-line-store-bot-subscription.md",
-      "price": 3980
+      "price": 3980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 20,
@@ -576,7 +616,8 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-17_claude-1password-secure-login.md"
+      "file": "articles/drafts/2026-07-17_claude-1password-secure-login.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 21,
@@ -605,7 +646,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-19_claude-code-july-week4-updates.md"
+      "file": "articles/archived/2026-07-19_claude-code-july-week4-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "週次まとめ。3週間前で価値なし"
+      }
     },
     {
       "id": 22,
@@ -633,7 +678,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-21_claude-code-v2-1-216-updates.md"
+      "file": "articles/archived/2026-07-21_claude-code-v2-1-216-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "v2.1.224まで出ており陳腐化"
+      }
     },
     {
       "id": 23,
@@ -661,7 +710,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-23_claude-code-v2-1-217-218-updates.md"
+      "file": "articles/archived/2026-07-23_claude-code-v2-1-217-218-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "v2.1.224まで出ており陳腐化"
+      }
     },
     {
       "id": 24,
@@ -692,7 +745,8 @@
         "average": 8.2
       },
       "file": "articles/drafts/2026-07-24_claude-code-employee-salary-raise-promotion.md",
-      "price": 1980
+      "price": 1980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 25,
@@ -721,7 +775,8 @@
         "cta": 7,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-25_claude-opus-5-claude-code-default.md"
+      "file": "articles/drafts/2026-07-25_claude-opus-5-claude-code-default.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 26,
@@ -748,7 +803,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-26_claude-code-weekly-limits-50-extended-august.md"
+      "file": "articles/archived/2026-07-26_claude-code-weekly-limits-50-extended-august.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "8月19日終了の告知。残り6日で価値薄"
+      }
     },
     {
       "id": 27,
@@ -775,7 +834,11 @@
         "funnel": 8,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-07-27_claude-code-v2-1-219-220-updates.md"
+      "file": "articles/archived/2026-07-27_claude-code-v2-1-219-220-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "v2.1.224まで出ており陳腐化"
+      }
     },
     {
       "id": 28,
@@ -804,7 +867,8 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-28_anthropic-open-weights-position.md"
+      "file": "articles/drafts/2026-07-28_anthropic-open-weights-position.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 29,
@@ -833,7 +897,8 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-29_mcp-2026-07-28-stateless-spec.md"
+      "file": "articles/drafts/2026-07-29_mcp-2026-07-28-stateless-spec.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 30,
@@ -862,7 +927,8 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-30_anthropic-eval-incidents-real-systems.md"
+      "file": "articles/drafts/2026-07-30_anthropic-eval-incidents-real-systems.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 31,
@@ -892,7 +958,8 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-07-31_claude-code-legacy-refactor-test-generation.md",
-      "price": 3980
+      "price": 3980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 32,
@@ -921,7 +988,8 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-31_openai-gpt-5-6-price-cut-claude-comparison.md"
+      "file": "articles/drafts/2026-07-31_openai-gpt-5-6-price-cut-claude-comparison.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 33,
@@ -950,7 +1018,11 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-01_claude-fable-5-100-credit-deadline.md"
+      "file": "articles/archived/2026-08-01_claude-fable-5-100-credit-deadline.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "申請期限8月2日が経過済み"
+      }
     },
     {
       "id": 34,
@@ -979,7 +1051,8 @@
         "funnel": 7,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-08-02_deepseek-v4-flash-0731-claude-code-backend.md"
+      "file": "articles/drafts/2026-08-02_deepseek-v4-flash-0731-claude-code-backend.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 35,
@@ -1008,7 +1081,8 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-08-03_claude-workbench-legacy-sunset.md"
+      "file": "articles/drafts/2026-08-03_claude-workbench-legacy-sunset.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 36,
@@ -1037,7 +1111,11 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-04_claude-code-v2-1-221-222-updates.md"
+      "file": "articles/archived/2026-08-04_claude-code-v2-1-221-222-updates.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "バージョン更新。資産価値が低い"
+      }
     },
     {
       "id": 37,
@@ -1066,7 +1144,8 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-05_coconala-claude-connector.md"
+      "file": "articles/drafts/2026-08-05_coconala-claude-connector.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 38,
@@ -1095,7 +1174,11 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-06_claude-code-v2-1-223-permission-fixes.md"
+      "file": "articles/archived/2026-08-06_claude-code-v2-1-223-permission-fixes.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "バージョン更新。資産価値が低い"
+      }
     },
     {
       "id": 39,
@@ -1125,7 +1208,8 @@
         "average": 9.0
       },
       "file": "articles/drafts/2026-08-07_claude-code-service-exit-ma-selling.md",
-      "price": 3980
+      "price": 3980,
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 40,
@@ -1154,7 +1238,11 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-07_claude-code-v2-1-224-cross-session-messaging.md"
+      "file": "articles/archived/2026-08-07_claude-code-v2-1-224-cross-session-messaging.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "バージョン更新。資産価値が低い"
+      }
     },
     {
       "id": 41,
@@ -1183,7 +1271,8 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-08_claude-code-auto-mode-default-august-14.md"
+      "file": "articles/drafts/2026-08-08_claude-code-auto-mode-default-august-14.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 42,
@@ -1212,7 +1301,11 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-08-09_claude-sonnet-5-intro-pricing-ends-august-31.md"
+      "file": "articles/archived/2026-08-09_claude-sonnet-5-intro-pricing-ends-august-31.md",
+      "archived": {
+        "at": "2026-08-13",
+        "reason": "8月11日の記事で値上げ中止が判明。内容が否定済み"
+      }
     },
     {
       "id": 43,
@@ -1241,7 +1334,8 @@
         "funnel": 8,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-08-10_meta-muse-code-contributor-tier-default.md"
+      "file": "articles/drafts/2026-08-10_meta-muse-code-contributor-tier-default.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 44,
@@ -1270,7 +1364,8 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-11_claude-sonnet-5-pricing-permanent.md"
+      "file": "articles/drafts/2026-08-11_claude-sonnet-5-pricing-permanent.md",
+      "reviewedAt": "2026-08-13"
     },
     {
       "id": 45,
@@ -1299,7 +1394,8 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-12_claude-text-watermark-august-2026.md"
+      "file": "articles/drafts/2026-08-12_claude-text-watermark-august-2026.md",
+      "reviewedAt": "2026-08-13"
     }
   ]
 }
