@@ -26,8 +26,8 @@ const AUTHOR = "しま@AIエンジニア";
 
 /** 記事種別ごとの見た目。published.json の type に対応する */
 const STYLES = {
-  paid: { badge: "有料", accent: "#e07a5f" },
-  free: { badge: "無料", accent: "#5eb3c9" },
+  paid: { badge: "【有料】", accent: "#d63c1e" },
+  free: { badge: "【無料】", accent: "#1668d4" },
 };
 
 /** 先頭の `# 見出し` を取り出す。無ければファイル名を使う */
@@ -64,6 +64,36 @@ export function segmentTitle(title) {
   return merged;
 }
 
+/**
+ * タイトルの中で色を変える一語を選ぶ。
+ *
+ * 人気記事の見出し画像は例外なく、金額・期日・件数といった「読者が反応する数字」か
+ * 固有名詞を1箇所だけ強調していた。全部を強調すると効果が消えるので1箇所に絞る。
+ * 該当が無ければ強調しない(色を使わない方がまし)。
+ */
+export function pickHighlight(title) {
+  const patterns = [
+    // 金額(月10万円・年収+50万・5万円〜・$2/$10)
+    /[月年]?\+?[\d,]+\s*万円?(?:〜|台|以上)?/,
+    /[月年]?[\d,]+\s*円/,
+    /\$[\d.]+(?:\/\$[\d.]+)?/,
+    // 割合・倍率
+    /[\d.]+\s*[%％]|[\d.]+\s*倍/,
+    // 期日
+    /\d{1,2}月\d{1,2}日/,
+    // 件数・手順数
+    /[\d,]+\s*(?:ステップ|本|件|行|人|日間|分)/,
+    // 鉤括弧の中身(『教材』「Muse Code」など)。
+    // 長い引用は1行まるごと色が付いて強調にならないので10文字までに絞る
+    /[「『][^」』]{2,10}[」』]/,
+  ];
+  for (const re of patterns) {
+    const m = title.match(re);
+    if (m) return m[0];
+  }
+  return null;
+}
+
 async function loadTypes() {
   const raw = await readFile(join(REPO, "articles", "published.json"), "utf8");
   const map = new Map();
@@ -91,16 +121,18 @@ async function render(page, template, mdPath, types) {
   // replaceAll を使う: テンプレート冒頭のコメントが各トークンを説明のために
   // 含んでおり、replace だとコメント側だけが置換されて本体に残る。
   // タイトルは HTML に差し込むのでエスケープする。
-  // 塊ごとに span で包む。テンプレート側でこの span を改行禁止にしている
+  // 塊ごとに span で包む。テンプレート側でこの span を改行禁止にしている。
+  // 強調する語は <b> でくるむ(塊をまたぐ場合は塊の中の該当部分だけ)。
+  const highlight = pickHighlight(title);
   const titleHtml = segmentTitle(title)
-    .map((s) => `<span>${escapeHtml(s)}</span>`)
+    .map((s) => `<span>${emphasize(escapeHtml(s), highlight)}</span>`)
     .join("");
 
   const html = template
-    .replaceAll("__TITLE__", titleHtml)
-    .replaceAll("__BADGE__", style.badge)
-    .replaceAll("__ACCENT__", style.accent)
-    .replaceAll("__AUTHOR__", escapeHtml(AUTHOR));
+    .replaceAll("TITLE_HTML", titleHtml)
+    .replaceAll("BADGE_TEXT", style.badge)
+    .replaceAll("ACCENT_COLOR", style.accent)
+    .replaceAll("AUTHOR_NAME", escapeHtml(AUTHOR));
 
   await page.setContent(html, { waitUntil: "load" });
   await page.waitForFunction(() => window.__fitted === true);
@@ -120,6 +152,17 @@ async function render(page, template, mdPath, types) {
 
 function escapeHtml(s) {
   return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+}
+
+/** エスケープ済みの塊の中に強調語があれば <b> でくるむ */
+function emphasize(escapedChunk, highlight) {
+  if (!highlight) return escapedChunk;
+  const target = escapeHtml(highlight);
+  const at = escapedChunk.indexOf(target);
+  if (at < 0) return escapedChunk;
+  return (
+    escapedChunk.slice(0, at) + `<b>${target}</b>` + escapedChunk.slice(at + target.length)
+  );
 }
 
 async function main() {
