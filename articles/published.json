@@ -25,7 +25,8 @@
         "originality": 7,
         "average": 7.8
       },
-      "file": "articles/drafts/2026-03-29_claude-code-practical-techniques.md"
+      "file": "articles/drafts/2026-03-29_claude-code-practical-techniques.md",
+      "price": 500
     },
     {
       "id": 2,
@@ -54,7 +55,8 @@
         "originality": 7,
         "average": 8.2
       },
-      "file": "articles/drafts/2026-04-19_claude-code-crowdsourcing-sidejob-100k.md"
+      "file": "articles/drafts/2026-04-19_claude-code-crowdsourcing-sidejob-100k.md",
+      "price": 1980
     },
     {
       "id": 3,
@@ -83,7 +85,8 @@
         "originality": 8,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-04-19_claude-api-micro-saas-passive-income.md"
+      "file": "articles/drafts/2026-04-19_claude-api-micro-saas-passive-income.md",
+      "price": 1980
     },
     {
       "id": 4,
@@ -112,7 +115,8 @@
         "originality": 8,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-06-30_claude-sme-ai-consulting-retainer.md"
+      "file": "articles/drafts/2026-06-30_claude-sme-ai-consulting-retainer.md",
+      "price": 3980
     },
     {
       "id": 5,
@@ -141,7 +145,8 @@
         "originality": 9,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-01_claude-code-paid-note-monetization.md"
+      "file": "articles/drafts/2026-07-01_claude-code-paid-note-monetization.md",
+      "price": 1980
     },
     {
       "id": 6,
@@ -226,7 +231,8 @@
         "originality": 8,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-07-02_claude-code-course-monetization.md"
+      "file": "articles/drafts/2026-07-02_claude-code-course-monetization.md",
+      "price": 1980
     },
     {
       "id": 9,
@@ -285,7 +291,8 @@
         "originality": 8,
         "average": 8.2
       },
-      "file": "articles/drafts/2026-07-03_claude-code-buyout-ai-tools-digital-goods.md"
+      "file": "articles/drafts/2026-07-03_claude-code-buyout-ai-tools-digital-goods.md",
+      "price": 1980
     },
     {
       "id": 11,
@@ -398,7 +405,8 @@
         "originality": 9,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-10_claude-agent-sdk-agent-building-outsourcing.md"
+      "file": "articles/drafts/2026-07-10_claude-agent-sdk-agent-building-outsourcing.md",
+      "price": 3980
     },
     {
       "id": 15,
@@ -539,7 +547,8 @@
         "originality": 8,
         "average": 8.2
       },
-      "file": "articles/drafts/2026-07-17_claude-api-line-store-bot-subscription.md"
+      "file": "articles/drafts/2026-07-17_claude-api-line-store-bot-subscription.md",
+      "price": 3980
     },
     {
       "id": 20,
@@ -682,7 +691,8 @@
         "originality": 9,
         "average": 8.2
       },
-      "file": "articles/drafts/2026-07-24_claude-code-employee-salary-raise-promotion.md"
+      "file": "articles/drafts/2026-07-24_claude-code-employee-salary-raise-promotion.md",
+      "price": 1980
     },
     {
       "id": 25,
@@ -881,7 +891,8 @@
         "originality": 9,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-31_claude-code-legacy-refactor-test-generation.md"
+      "file": "articles/drafts/2026-07-31_claude-code-legacy-refactor-test-generation.md",
+      "price": 3980
     },
     {
       "id": 32,
@@ -1113,7 +1124,8 @@
         "originality": 9,
         "average": 9.0
       },
-      "file": "articles/drafts/2026-08-07_claude-code-service-exit-ma-selling.md"
+      "file": "articles/drafts/2026-08-07_claude-code-service-exit-ma-selling.md",
+      "price": 3980
     },
     {
       "id": 40,
