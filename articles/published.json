@@ -1425,6 +1425,38 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-13_claude-code-v2-1-228-231-security-changes.md"
+    },
+    {
+      "id": 47,
+      "date": "2026-08-14",
+      "type": "paid",
+      "title": "Claude API請求を削って売る：12の型と契約7論点",
+      "slug": "claude-api-cost-reduction-success-fee",
+      "keywords": [
+        "LLM APIコスト最適化",
+        "AI FinOps",
+        "プロンプトキャッシュ",
+        "成果報酬 契約",
+        "Claude API 料金",
+        "Usage Cost API",
+        "Batch API",
+        "ベースライン再計算"
+      ],
+      "theme": "すでにClaude/LLMを本番運用している企業のAPI請求を、モデル使い分け・プロンプトキャッシュ・Batch API・トークン設計で圧縮し、削減額の一部を成果報酬として受け取る『AI FinOps』型の受託業。コストが膨らむ12パターンの診断チェックリスト（Claude Codeのカスタムコマンド化まで）、Usage/Cost Admin APIで作る削減の証跡とベースライン固定、そして揉めない契約7論点（特に『提供元の値下げによる自然減を成果に計上しない』ベースライン再計算条項）を条文文案つきで具体化。料金・仕様は2026年8月14日時点の platform.claude.com 公式ドキュメントで全件裏取り済み",
+      "target": "Claude Codeでコードベースを読めるが売り物が『開発できる』しかなく、時間×人月の単価から抜け出したい副業・独立志望のエンジニア。Claude APIを本番運用している企業に既存の接点がある人",
+      "monetization_model": "3工程契約（初期診断フィー固定 → 改修実装 → 計測レポート期間の削減額シェア）による成果報酬型コンサル。プランBとして固定フィー診断のみ／月額顧問／ハイブリッド（診断フィー固定＋低料率シェア）を併設",
+      "income_range": "初期診断10万〜30万円＋削減額の20〜30%（※いずれも筆者の設計値であり、これを裏付ける公開相場は調査範囲で確認できなかった。国内の成果報酬型コスト削減コンサル4社はいずれも料率を非公開）。出典のある隣接相場はフリーランスエンジニア平均月単価約80万円・時間単価5,319円（ファインディ 2026年3月11日発表・n=265）、技術顧問は週1日稼働で月20万円前後（FLEXY掲載案件例・二次情報）",
+      "review_scores": {
+        "monetization": 8,
+        "actionability": 9,
+        "accuracy": 9,
+        "structure": 8,
+        "originality": 9,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-14_claude-api-cost-reduction-success-fee.md",
+      "price": 3980,
+      "reviewedAt": "2026-08-14"
     }
   ]
 }
