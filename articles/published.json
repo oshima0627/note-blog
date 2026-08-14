@@ -1457,6 +1457,35 @@
       "file": "articles/drafts/2026-08-14_claude-api-cost-reduction-success-fee.md",
       "price": 3980,
       "reviewedAt": "2026-08-14"
+    },
+    {
+      "id": 48,
+      "date": "2026-08-14",
+      "type": "free",
+      "title": "Claudeの透かしの仕組みが公開：追加料金なし、コードは影響小",
+      "slug": "claude-watermark-mechanism-explained",
+      "keywords": [
+        "Claude",
+        "透かし",
+        "ウォーターマーク",
+        "SynthID-Text",
+        "検出API",
+        "EU AI Act",
+        "Claude Code",
+        "AI生成検出"
+      ],
+      "theme": "Anthropicが2026年8月14日に公開した公式解説『How Claude's text watermarking works』の内容（SynthID-Textベースの単語選択への鍵の埋め込み、追加トークンなしで料金・速度・品質に影響しないこと、コードは透かしが疎で影響が軽微・コメントには付きうること、軽い編集では残り完全な書き直しで消える等の頑健性、確率スコアを返す検出の仕組みと限界、提供予定の検出API、8月2日以降のモデルから対応し既存モデルは順次展開、EU AI Act準拠という導入理由）を一次情報で整理した無料ニュース記事。8月12日記事で未確認としていた技術詳細・コードへの影響の続報",
+      "target": "Claude / Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-08-14",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-14_claude-watermark-mechanism-explained.md"
     }
   ]
 }
