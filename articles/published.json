@@ -1486,6 +1486,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-14_claude-watermark-mechanism-explained.md"
+    },
+    {
+      "id": 49,
+      "date": "2026-08-15",
+      "type": "free",
+      "title": "Claude Code更新：新モデルでToDoリストが出なくなりました",
+      "slug": "claude-code-v2-1-233-todo-tools-disabled",
+      "keywords": [
+        "Claude Code",
+        "v2.1.233",
+        "TodoWrite",
+        "TaskCreate",
+        "タスク管理",
+        "Agent SDK",
+        "GitLab",
+        "環境変数"
+      ],
+      "theme": "Claude Code v2.1.233（2026年8月14日公開）で、タスク管理ツール（TodoWrite・TaskCreate/TaskGet/TaskUpdate/TaskList）がOpus 4.8 / Sonnet 5 / Fable 5 / Mythos 5とその後継モデルでは既定で提供されなくなった変更をまとめた無料ニュース記事。公式Tools referenceにもとづく対象モデル・理由（モデルがチェックリストなしで多段作業を追える／定義とリマインダーがコンテキストを消費する）・例外（Opus 4.7等の非対象モデル、バックグラウンドセッション、Claude Code on the web）・元に戻す4つの方法（CLAUDE_CODE_ENABLE_TODO_TOOLS=1 / --allowedTools / --tools / Agent SDKのallowedTools・toolsオプション）、サブエージェントとエージェントチームへの波及、Agent SDKの対象バージョン（TypeScript 0.3.233以降・Python 0.2.139以降）と進捗監視コードへの影響。あわせて同リリースの修正（WindowsのNT \\??\\ デバイスプレフィックスによるUNCパス検証回避＝NTLM資格情報漏えい経路の修正、Linuxサンドボックス有効時のアイドルCPU100%、Notificationフック未発火、内蔵スキルエイリアスのUnknown command、v2.1.232のWindows Bash権限変更の巻き戻し）、v2.1.232/233のGitLab対応拡充、新環境変数CLAUDE_CODE_TOOL_MEMORY_LIMIT・CLAUDE_CODE_WEBFETCH_CACHE_TTL_MSを整理",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-08-14",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-15_claude-code-v2-1-233-todo-tools-disabled.md"
     }
   ]
 }
