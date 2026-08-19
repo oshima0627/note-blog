@@ -1673,6 +1673,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-18_claude-code-v2-1-235-permission-prompt-fix.md"
+    },
+    {
+      "id": 54,
+      "date": "2026-08-19",
+      "type": "free",
+      "title": "Claude Codeの週次上限+50%が8月31日まで延長、恒久化にも言及",
+      "slug": "claude-code-weekly-limits-extended-august-31",
+      "keywords": [
+        "Claude Code",
+        "週次使用量制限",
+        "50%増",
+        "延長",
+        "v2.1.236",
+        "サンドボックス",
+        "ANTHROPIC_DEFAULT_MODEL",
+        "autoモード"
+      ],
+      "theme": "Claude Codeの週次使用量上限50%増が2026年8月19日に8月31日まで延長され、はじめて恒久化への意向が示された件と、同日公開のv2.1.236（macOSサンドボックスのワイルドカード読み取り拒否ルール強化、ANTHROPIC_DEFAULT_MODEL追加、autoモードのMonitor確認とgit status誤認の修正）をまとめた無料ニュース記事",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-08-19",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-19_claude-code-weekly-limits-extended-august-31.md"
     }
   ]
 }
