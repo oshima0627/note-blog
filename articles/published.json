@@ -371,8 +371,12 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-07_alberta-claude-code-security-audit.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-07-07_alberta-claude-code-security-audit.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "43日前のニュース。鮮度切れ"
+      }
     },
     {
       "id": 13,
@@ -553,8 +557,12 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-17_claude-1password-secure-login.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-07-17_claude-1password-secure-login.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "33日前のニュース。鮮度切れ"
+      }
     },
     {
       "id": 19,
@@ -775,8 +783,12 @@
         "cta": 7,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-07-25_claude-opus-5-claude-code-default.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-07-25_claude-opus-5-claude-code-default.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "25日前のニュース。既定モデルの話はその後の更新で状況が変わっている"
+      }
     },
     {
       "id": 26,
@@ -897,8 +909,12 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-29_mcp-2026-07-28-stateless-spec.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-07-29_mcp-2026-07-28-stateless-spec.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "21日前のニュース。鮮度切れ"
+      }
     },
     {
       "id": 30,
@@ -927,8 +943,12 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-07-30_anthropic-eval-incidents-real-systems.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-07-30_anthropic-eval-incidents-real-systems.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "20日前のニュース。08-16のリスクレポート記事と主題が重なる"
+      }
     },
     {
       "id": 31,
@@ -1051,8 +1071,12 @@
         "funnel": 7,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-08-02_deepseek-v4-flash-0731-claude-code-backend.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-08-02_deepseek-v4-flash-0731-claude-code-backend.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "17日前。本文のSonnet 5料金(9月から$3/$15)が撤回済みで事実と異なる"
+      }
     },
     {
       "id": 35,
@@ -1081,8 +1105,12 @@
         "funnel": 8,
         "average": 8.6
       },
-      "file": "articles/drafts/2026-08-03_claude-workbench-legacy-sunset.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-08-03_claude-workbench-legacy-sunset.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "旧Workbenchの終了期限8月17日が経過済み。記事の用をなさない"
+      }
     },
     {
       "id": 36,
@@ -1271,8 +1299,12 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-08_claude-code-auto-mode-default-august-14.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-08-08_claude-code-auto-mode-default-august-14.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "autoモード既定化の8月14日が経過済み。未来形で書かれており実態と合わない"
+      }
     },
     {
       "id": 42,
@@ -1334,8 +1366,12 @@
         "funnel": 8,
         "average": 8.4
       },
-      "file": "articles/drafts/2026-08-10_meta-muse-code-contributor-tier-default.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-08-10_meta-muse-code-contributor-tier-default.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "9日前。本文のSonnet 5料金(9月から$3/$15)が撤回済みで事実と異なる"
+      }
     },
     {
       "id": 44,
