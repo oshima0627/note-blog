@@ -1119,7 +1119,7 @@
     },
     {
       "id": 37,
-      "date": "2026-08-05",
+      "date": "2026-08-19",
       "type": "free",
       "title": "ココナラがClaude公式コネクタに対応：受注側が確認すべきこと",
       "slug": "coconala-claude-connector",
@@ -1144,7 +1144,7 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-05_coconala-claude-connector.md",
+      "file": "articles/drafts/2026-08-19_coconala-claude-connector.md",
       "reviewedAt": "2026-08-13"
     },
     {
@@ -1339,7 +1339,7 @@
     },
     {
       "id": 44,
-      "date": "2026-08-11",
+      "date": "2026-08-19",
       "type": "free",
       "title": "Sonnet 5の9月値上げは中止：$2/$10が標準価格に",
       "slug": "claude-sonnet-5-pricing-permanent",
@@ -1364,7 +1364,7 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-11_claude-sonnet-5-pricing-permanent.md",
+      "file": "articles/drafts/2026-08-19_claude-sonnet-5-pricing-permanent.md",
       "reviewedAt": "2026-08-13"
     },
     {
@@ -1394,8 +1394,12 @@
         "funnel": 8,
         "average": 8.8
       },
-      "file": "articles/drafts/2026-08-12_claude-text-watermark-august-2026.md",
-      "reviewedAt": "2026-08-13"
+      "file": "articles/archived/2026-08-12_claude-text-watermark-august-2026.md",
+      "reviewedAt": "2026-08-13",
+      "archived": {
+        "at": "2026-08-19",
+        "reason": "08-14の続報記事（透かしの仕組みが公開）と同じニュースのため重複"
+      }
     },
     {
       "id": 46,
