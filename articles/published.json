@@ -1702,6 +1702,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-19_claude-code-weekly-limits-extended-august-31.md"
+    },
+    {
+      "id": 55,
+      "date": "2026-08-20",
+      "type": "free",
+      "title": "Claude Code v2.1.237/238：長時間セッションのメモリ肥大を修正",
+      "slug": "claude-code-v2-1-237-238-memory-fix",
+      "keywords": [
+        "Claude Code",
+        "v2.1.237",
+        "v2.1.238",
+        "メモリリーク",
+        "出力スタイル",
+        "Concise",
+        "headersHelper",
+        "MCP"
+      ],
+      "theme": "2026年8月20日公開のClaude Code v2.1.237/238をまとめた無料ニュース記事。長時間対話セッションでのメモリ無制限増加の修正（サブエージェントのツール結果の解放）、組み込み出力スタイルConciseの追加と出力スタイルが途中で既定に戻る不具合の修正、プラグイン・MCPのheadersHelperに加わった確認と制限、Ctrl+L/Cmd+Kの挙動変更やkeybindingFlavorなどを扱う",
+      "target": "Claude Codeを日常的に使うエンジニア・個人開発者",
+      "news_date": "2026-08-20",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-20_claude-code-v2-1-237-238-memory-fix.md"
     }
   ]
 }
