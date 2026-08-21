@@ -1731,6 +1731,38 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-20_claude-code-v2-1-237-238-memory-fix.md"
+    },
+    {
+      "id": 56,
+      "date": "2026-08-21",
+      "type": "paid",
+      "title": "平均時給を信じない：ドル建て受注の手取り逆算と90日計画",
+      "slug": "claude-code-overseas-freelance-usd",
+      "keywords": [
+        "海外フリーランス",
+        "ドル建て受注",
+        "Claude Code",
+        "Upwork",
+        "手取り逆算",
+        "輸出免税",
+        "W-8BEN",
+        "副業"
+      ],
+      "theme": "Claude / Claude Code を使って、日本に居住したまま海外フリーランスプラットフォーム（Upwork / Contra / Toptal）でドル建て案件を受注し、時間あたりの手取りを引き上げるルート。軸は「市場の選び直し × 英語産出の仕組み化 × 守りの統合」。平均時給を断定せず読者自身が20件サンプリングで中央値を出す手順、ドル単価から手数料・入金経路コスト・税を引く手取り逆算式、CLAUDE.md / .claude/skills/proposal/SKILL.md / .claude/agents/job-screener.md の実ファイル構成、AI利用を開示して加点に変える英文提案、手数料の二重積み上げ・輸出免税・事業所得と雑所得の帳簿要件・W-8BEN・circumvention 2年ルールを一次出典付きで一本化した守りのチェックリストを提示",
+      "target": "Web系実装3〜6年・国内クラウドソーシングで月5〜15万円・TOEIC600前後で英会話の実務経験なし・稼働週10〜15時間の会社員副業エンジニア",
+      "monetization_model": "海外フリーランスプラットフォーム（Upwork / Contra / Toptal）経由での役務提供対価をUSD建てで受け取り、受取口座（Payoneer / Wise等）を通じて日本円に着金させるモデル。時間単価契約（Hourly）と固定価格契約（Fixed-price）の2形態。国内クラウドソーシングと同じスキルを、単価水準の異なる市場に持ち込むことで時間あたりの手取りを引き上げる",
+      "income_range": "金額は断定しない。時間単価×稼働時間から手数料・入金経路コスト・税を差し引く逆算方式で読者自身が算出する。時間単価の公開一次データ（Upwork公式のレート統計）は本稿の調査時点で確認できず、流通する『平均時給39ドル』等はすべて第三者集計のため、平均時給・相場・収益額を断定していない。代わりに20件サンプリングで自分の中央値を出す手順と、手取り逆算式・90日ロードマップを提示",
+      "review_scores": {
+        "monetization": 8,
+        "actionability": 9,
+        "accuracy": 9,
+        "structure": 8,
+        "originality": 9,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-21_claude-code-overseas-freelance-usd.md",
+      "price": 1980,
+      "reviewedAt": "2026-08-21"
     }
   ]
 }
