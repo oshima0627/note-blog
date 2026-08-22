@@ -1792,6 +1792,35 @@
         "average": 8.8
       },
       "file": "articles/drafts/2026-08-21_claude-code-v2-1-239-bedrock-billing-fix.md"
+    },
+    {
+      "id": 58,
+      "date": "2026-08-22",
+      "type": "free",
+      "title": "Claude Academy公開：Claude Code・API・MCPの公式講座が集約",
+      "slug": "claude-academy-launch-claude-code-courses",
+      "keywords": [
+        "Claude Academy",
+        "Claude Code",
+        "Claude API",
+        "MCP",
+        "AI Fluency",
+        "academy-guide",
+        "バッジ",
+        "学習"
+      ],
+      "theme": "Anthropicが2026年8月20日に公開した学習ハブ Claude Academy（academy.claude.com）の内容を一次情報で整理した無料ニュース記事。Claude Code 101（12レッスン）とClaude Code in Action（9レッスン）のカリキュラム、Building with the Claude API（67レッスン）やMCP入門などの開発者向け講座のレッスン数、サインイン・アカウント要件（Pro/Max/EnterpriseまたはAPIキー）、料金の明記が公式ページで確認できなかった点、Anthropic社内の4D AI Fluency Frameworkとever-boarding、GitHubのanthropics/skillsに置かれたacademy-guideスキルを扱う",
+      "target": "Claude Code・Claude APIを使うエンジニア・個人開発者",
+      "news_date": "2026-08-20",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-22_claude-academy-launch-claude-code-courses.md"
     }
   ]
 }
