@@ -1821,6 +1821,36 @@
         "average": 8.6
       },
       "file": "articles/drafts/2026-08-22_claude-academy-launch-claude-code-courses.md"
+    },
+    {
+      "id": 59,
+      "date": "2026-08-23",
+      "type": "free",
+      "title": "Claude公式Python SDKがv1.0に：temperature指定が廃止されました",
+      "slug": "anthropic-python-sdk-v1-breaking-changes",
+      "keywords": [
+        "anthropic Python SDK",
+        "v1.0.0",
+        "temperature廃止",
+        "httpx2",
+        "破壊的変更",
+        "Claude API",
+        "移行ガイド",
+        "claude-api upgrade"
+      ],
+      "theme": "Claude APIのPython SDK（anthropicパッケージ）が2026年8月20日にv1.0.0となり、破壊的変更が入った件を公式一次情報で整理した無料ニュース記事。Python 3.10以上の必須化、Messagesメソッドからのtemperature/top_p/top_k削除とextra_bodyでの回避、HTTP層のhttpx→httpx2（Pydantic保守のAPI互換フォーク）移行とrespx/pytest-httpx/OpenTelemetry/Sentryなどhttpxにパッチを当てるツールがSDK通信を捕捉できなくなる問題およびhttpx2.alias_httpx()での対処、旧Text Completions API（client.completions.create・HUMAN_PROMPT/AI_PROMPT）の削除、非同期.with_raw_responseのawait必須化と同期側の.text/.readのメソッド化、AnthropicBedrockのus-east-1既定フォールバック廃止、messages.parse(stream=True)とtool_runnerのcompaction_control廃止を扱う。あわせて依存未固定プロジェクトが次のpip installで巻き込まれるリスク、anthropic<1での一時固定、Claude Code v2.1.239で追加された/claude-api upgrade pythonによる移行手順を提示",
+      "target": "Claude APIをPythonから使うエンジニア・個人開発者",
+      "news_date": "2026-08-20",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-23_anthropic-python-sdk-v1-breaking-changes.md",
+      "reviewedAt": "2026-08-23"
     }
   ]
 }
