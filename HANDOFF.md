@@ -1,87 +1,68 @@
 # HANDOFF
 
-最終更新: 2026-08-24
+最終更新: 2026-08-24（無料記事ルーチン 2本目）
 
 ## いま何をしているのか
 
 note向けの記事を、CLAUDE.md の役割分担フロー（有料ルート／無料ルート）で生成・蓄積している。
 無料記事・有料記事とも、スケジュール実行のルーチンで追加している。
 
-## 今回やったこと（2026-08-24 / 無料記事）
+## 今回やったこと（2026-08-24 / 無料記事・同日2本目）
 
-無料記事を1本、軽量フロー（企画→ニュース→管理）で生成した。作業は worktree
-`.claude/worktrees/scheduled-article-posting-2d5de6`（ブランチ `claude/free-article-posting-67d430`）で行い、
-`git push origin HEAD:main` でリモートの main に反映した。
+無料記事を1本、軽量フロー（企画→ニュース→管理）で生成し、`git push origin HEAD:main` で main に反映した。
+作業ブランチは `claude/gallant-hypatia-nam86w`（リモートには push していない。main にのみ反映）。
 
-- **【企画】**: 公式リリースノートと Claude Code の CHANGELOG を確認。候補と判断は次のとおり
-  1. Claude Code v2.1.240 / v2.1.241 → いずれも "Bug fixes and reliability improvements" の1行のみで**記事化不可**（前回と同じ）
-  2. 2026-08-19 のベータ卒業まとめ＋browser use ツール新設 → **選定**（published.json に未掲載）
-  3. Claude Managed Agents の 8/7 の4更新 → 次点。今回の記事に一部（8/19分のドメイン制限等）だけ取り込んだ
-  4. 2026-08-20 の Python SDK v1.0 → 前回（id:59）で扱い済みのため除外
-- **【ニュース】**: 一次情報のみで執筆。裏取りしたURLは6本（すべて記事末尾の出典に記載）
-  - platform.claude.com のリリースノート全文（8/19・8/20 の項を逐語確認）
-  - computer use ツールのドキュメント（`computer_toolset_20260801`、バッチ操作、zoom既定有効、
-    `configs`、`computer_20251124` からの移行手順）
-  - browser use ツールのドキュメント（`browser_toolset_20260801`、メンバー一覧、既定無効の4メンバー、
-    クライアント側ホスト、Claude API 限定）
-  - Files API ドキュメント（`expires_in_seconds`/`expires_at`、`page`/`next_page`、`ids[]`）
-  - Agent Skills の API ガイド（現行ドキュメントに beta ヘッダーの記載がないことを確認）
-  - Managed Agents のツール設定ページ（出典として記載）
-- **【管理】**: 品質チェックと事実確認を実施。第三者ブログが「5機能がGA」と書いていたが、
-  公式リリースノートでは **ベータ卒業は4つ、browser use は新設** だったため、記事は公式の区分に合わせた
-- **保存**: `articles/drafts/2026-08-24_claude-api-beta-graduation-browser-use.md`
-- **台帳**: `articles/published.json` に id:60 を type:"free" / news_date:2026-08-19 で追記
-- **見出し画像**: `images/render.mjs --article <記事のフルパス>` で
-  `articles/images/2026-08-24_claude-api-beta-graduation-browser-use.png` を生成し、main に push した
-- **note へ公開**: nexeed-ops の note-post を `--only` 付きで実行し、下書き→公開まで通した。
-  公開URL: https://note.com/oshima0627/n/n05c8ee1514e4
-  （`--only` は今回 nexeed-ops 側に追加したオプション。未処理のキューを飛ばして1件だけ処理できる）
+- **【企画】**: 直近の一次情報を確認して候補を比較した
+  1. Claude Code v2.1.240 / 241（8/22・8/23）→ いずれも "Bug fixes and reliability improvements" の1行のみで**記事化不可**
+  2. Claude Platform リリースノートの最新は 8/20 の Python SDK v1.0 → id:59 で扱い済み
+  3. Claude Tag（Slack）の全会話コンテキスト対応（8/24）→ 一次情報が見つからず（VentureBeat等の報道のみ。
+     公式の Introducing Claude Tag は 6/23 付で今回の更新の記載なし）。Enterprise/Team 向けで読者層とのズレもあり見送り
+  4. Managed Agents の 8/7 の4更新 → 一次情報あり。次点（17日前で鮮度が落ちる）
+  5. **Claude Security のスキャンが Mythos 5 に（8/21）→ 選定**。公式ブログ＋製品ページ＋Claude Code公式ドキュメントで裏取り可能
+- **【ニュース】**: 一次情報のみで執筆。裏取りしたURLは5本（すべて記事末尾の出典に記載）
+  - claude.com/blog/bringing-claude-mythos-5-to-more-defenders（8/21・Mythos 5対応、0xDAF $35M、Cyber Verification Program拡大）
+  - claude.com/product/claude-security（Enterprise公開ベータ、GitHub接続、CWE/確信度/深刻度、反対検証、パッチは人がレビュー）
+  - claude.com/blog/claude-security-public-beta（4/30・公開ベータ開始時の内容）
+  - code.claude.com/docs/en/claude-security（claude-security プラグイン。前提条件・出力先・パッチ非自動適用・非決定性）
+  - code.claude.com/docs/en/security-guidance（security-guidance プラグイン。全プラン・3層・コスト・無効化）
+- **【管理】**: 品質チェックと事実確認を実施
+- **保存**: `articles/drafts/2026-08-24_claude-security-mythos-5-scans.md`
+- **台帳**: `articles/published.json` に id:61 を type:"free" / news_date:2026-08-21 で追記
 
 ## 検証済みの事実
 
-- 本文3,297字（空白除く、出典・CTA・メタデータを除く）— スクリプトで実測。目安2,000〜4,000字に収まっている
-- **Markdownテーブル 0件** — 行頭 `|` の行が0であることをスクリプトで確認
-- 見出しの半角コロン 0件（全角「：」に統一）／太字 `**` 0件（既存記事に合わせた）— スクリプトで確認
-- 誇大表現の grep（「絶対」「誰でも」「確実に稼」「驚愕」「激震」「爆速」「神」「革命」）で該当なし
-- `articles/published.json` は JSON としてパース可能。記事は60本。
-  `git diff --stat` で **30行の追加のみ**（既存部分の再フォーマットなし）を確認
-- 記事中の技術的主張（4機能のベータ卒業／browser use の新設とメンバー構成／computer use のバッチ操作・
-  zoom既定有効・17メンバー化・`toolset_name` 必須／Files API はヘッダーを外すと新応答形式に切り替わる／
-  Skills・Admin API はヘッダーを送り続けても不変／Managed Agents のドメイン制限）は
-  すべて上記の一次情報と突き合わせ済み。**架空の事例・出典なしの数値はゼロ**
+- 本文3,338字（空白除く、出典・CTA・メタデータを除く）— スクリプトで実測。目安2,000〜4,000字に収まっている
+- **Markdownテーブル 0件** / 太字 `**` 0件 / 見出しの半角コロン 0件 — スクリプトで確認
+- 誇大表現の grep（「絶対」「誰でも」「確実に稼」「驚愕」「激震」「爆速」「神ツール」「革命」）で該当なし
+- `articles/published.json` は JSON としてパース可能。記事は61本。`git diff --stat` で **30行の追加のみ**
+- 記事中の事実（Mythos 5対応／Enterprise公開ベータ／CWE・確信度・深刻度／0xDAF の3,500万ドル／
+  Cyber Verification Program の拡大／claude-security プラグインの前提条件・出力先・パッチ非自動適用／
+  security-guidance の全プラン提供・3層・追加コストなしの層）はすべて上記一次情報と突き合わせ済み。
+  **架空の事例・出典なしの数値はゼロ**
 - 品質チェック: 正確性9 / 出典明記9 / 鮮度9 / 読みやすさ8 / 導線8 = 平均8.6（合格ライン7.0以上）
-- **note で公開済み**。公開ページ https://note.com/oshima0627/n/n05c8ee1514e4 を**未ログインで取得**し、
-  タイトル・見出し画像・本文（出典セクションとCTAまで）が読めること、
-  Markdown記法が生テキストで残っていないこと、有料ラインが無いことを確認した
-- nexeed-ops の実行ログ（exit 0）とスクショ `shots/20260824-132204-261-note-published.png` に
-  「記事が公開されました」モーダルと「無料」選択が写っている。LINE通知もタスク側から送信済み
+- main への push 完了（`b5b2db6..097d879`）
+- LINE通知を送信（push status 200）
 
 ## 未検証のもの
 
-- **実際にAPIを叩いての動作確認はしていない**。すべて公式ドキュメント・リリースノートの記載にもとづく。
-  とくに「Files API のヘッダーを外すと応答形式が変わる」はリリースノートの記述であり、実挙動は未確認
-- browser use のトークン効率（要素参照のほうがスクリーンショット連打より効率的）は
-  公式が「より効率的になりうる」と述べているだけで、実測値は未確認。記事でも断定していない
-- 公開後の表示崩れは、本文テキストの取得までしか見ていない。実際の見た目（見出しの階層・箇条書き）は
-  ブラウザで目視していない
+- **プラグインを実際にインストールして動かしてはいない**。すべて公式ドキュメントの記載にもとづく
+- マネージド版 Claude Security の課金方式（既存プランのトークン使用量として課金されるか、
+  別アドオンが要るか）は**公式一次情報で確認できなかった**ため、記事には書いていない。
+  第三者ブログには「追加アドオン不要」との記述があるが未検証
+- note への投稿は未実施（下記「次にやること」参照）
 
 ## 次にやること
 
-- **note への自動投稿が止まっている**。ポーリング用のスケジュールタスク `NotePost_Recurring` が未登録で、
-  note-post のログも 2026-08-19 が最後だった。そのため `articles/drafts/` に
-  **未投稿の記事が15件**残っている（今回の1件を除く。`npm run dry:note` で確認）。
-  再開するなら nexeed-ops で `npm run arm:note`。ただし古い記事は鮮度ガード（7日）で
-  下書き止まりになるため、溜まった分をどう捌くかは別途判断が要る
+- **note への投稿が止まったまま**。nexeed-ops のポーリング用スケジュールタスク `NotePost_Recurring` が未登録で、
+  `articles/drafts/` に未投稿の記事が溜まっている（前回時点で15件＋今回の1件）。
+  再開するなら nexeed-ops で `npm run arm:note`。古い記事は鮮度ガード（7日）で下書き止まりになる
 - **次回の無料記事の候補**（いずれも一次情報あり）:
   - Claude Managed Agents の8/7の4更新（セッション予算 `budget_reached` / advisorモデル /
     `inference_geo`（us指定は1.1倍課金）/ GitHubリポジトリの `.claude/skills` 自動読み込み）
-  - Workbench が Playground に刷新（2026-08-18）。旧Workbenchの終了（8/17）は id:35 で扱い済みなので、
-    後継の Playground 側の話として書けば重複しない
-  - Compliance API が Cowork / Claude Code のローカルセッション記録に対応（2026-08-11、Enterprise向け・beta）
-  - Claude Code v2.1.242 以降の changelog（v2.1.240・241 は1行のみで記事化不可だった）
-- 次回の有料記事ルーチンでは、既存16本（国内受託・SaaS・コンサル・note・講座・物販・Agent SDK・
-  LINEボット・年収アップ・レガシー改修・M&A・APIコスト削減・法人研修・海外PF・ドル建て受注）と
-  重複しない切り口を選ぶ
+  - Workbench が Playground に刷新（2026-08-18）。旧Workbenchの終了は id:35 で扱い済み
+  - Claude Tag の全会話コンテキスト対応（8/24）。**公式の一次情報が出たら**扱う
+  - Claude Code v2.1.242 以降の changelog（240・241 は1行のみで記事化不可だった）
+- 次回の有料記事ルーチンでは、既存16本と重複しない切り口を選ぶ
 - 未解決の確認事項（前回から継続）: 週次使用量上限の50%増プロモについて、
   2026-08-19 記事では「8月31日まで延長」と書いたが、第三者ブログに「8月20日で標準に戻った」との記述がある。
   公式の記載を再確認し、必要なら該当記事を訂正すること
@@ -90,8 +71,6 @@ note向けの記事を、CLAUDE.md の役割分担フロー（有料ルート／
 
 - `articles/published.json` は**末尾に追記するだけ**にする。全体を json.dump で書き直すと
   既存部分が再フォーマットされ差分が膨れるので避ける（今回も文字列末尾の置換で追記した）
-- 出典が取れない数値・事例は書かない。第三者メディアの数値を公式扱いしない。
-  今回のように第三者ブログと公式で件数の数え方が食い違うことがある
+- 出典が取れない数値・事例は書かない。第三者メディアの数値を公式扱いしない
 - 実行して確かめていない挙動を断定形で書かない
-- worktree 作業時、ローカルの `main` は別 worktree でチェックアウトされているため
-  `git checkout main` はできない。`git push origin HEAD:main` でリモートに反映する
+- リモートに作業ブランチを作らず、`git push origin HEAD:main` で main に直接反映する
