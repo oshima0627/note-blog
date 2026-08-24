@@ -31,6 +31,11 @@ note向けの記事を、CLAUDE.md の役割分担フロー（有料ルート／
   公式リリースノートでは **ベータ卒業は4つ、browser use は新設** だったため、記事は公式の区分に合わせた
 - **保存**: `articles/drafts/2026-08-24_claude-api-beta-graduation-browser-use.md`
 - **台帳**: `articles/published.json` に id:60 を type:"free" / news_date:2026-08-19 で追記
+- **見出し画像**: `images/render.mjs --article <記事のフルパス>` で
+  `articles/images/2026-08-24_claude-api-beta-graduation-browser-use.png` を生成し、main に push した
+- **note へ公開**: nexeed-ops の note-post を `--only` 付きで実行し、下書き→公開まで通した。
+  公開URL: https://note.com/oshima0627/n/n05c8ee1514e4
+  （`--only` は今回 nexeed-ops 側に追加したオプション。未処理のキューを飛ばして1件だけ処理できる）
 
 ## 検証済みの事実
 
@@ -45,6 +50,11 @@ note向けの記事を、CLAUDE.md の役割分担フロー（有料ルート／
   Skills・Admin API はヘッダーを送り続けても不変／Managed Agents のドメイン制限）は
   すべて上記の一次情報と突き合わせ済み。**架空の事例・出典なしの数値はゼロ**
 - 品質チェック: 正確性9 / 出典明記9 / 鮮度9 / 読みやすさ8 / 導線8 = 平均8.6（合格ライン7.0以上）
+- **note で公開済み**。公開ページ https://note.com/oshima0627/n/n05c8ee1514e4 を**未ログインで取得**し、
+  タイトル・見出し画像・本文（出典セクションとCTAまで）が読めること、
+  Markdown記法が生テキストで残っていないこと、有料ラインが無いことを確認した
+- nexeed-ops の実行ログ（exit 0）とスクショ `shots/20260824-132204-261-note-published.png` に
+  「記事が公開されました」モーダルと「無料」選択が写っている。LINE通知もタスク側から送信済み
 
 ## 未検証のもの
 
@@ -52,12 +62,16 @@ note向けの記事を、CLAUDE.md の役割分担フロー（有料ルート／
   とくに「Files API のヘッダーを外すと応答形式が変わる」はリリースノートの記述であり、実挙動は未確認
 - browser use のトークン効率（要素参照のほうがスクリーンショット連打より効率的）は
   公式が「より効率的になりうる」と述べているだけで、実測値は未確認。記事でも断定していない
-- note への投稿は未実施（nexeed-ops の note-post タスクによる下書き自動作成は未確認）
-- **LINE通知は送っていない**。今回は対話セッションでの依頼だったため、ルーチン手順5をスキップした。
-  スケジュール実行時は routine_free-article.md のとおり送信すること
+- 公開後の表示崩れは、本文テキストの取得までしか見ていない。実際の見た目（見出しの階層・箇条書き）は
+  ブラウザで目視していない
 
 ## 次にやること
 
+- **note への自動投稿が止まっている**。ポーリング用のスケジュールタスク `NotePost_Recurring` が未登録で、
+  note-post のログも 2026-08-19 が最後だった。そのため `articles/drafts/` に
+  **未投稿の記事が15件**残っている（今回の1件を除く。`npm run dry:note` で確認）。
+  再開するなら nexeed-ops で `npm run arm:note`。ただし古い記事は鮮度ガード（7日）で
+  下書き止まりになるため、溜まった分をどう捌くかは別途判断が要る
 - **次回の無料記事の候補**（いずれも一次情報あり）:
   - Claude Managed Agents の8/7の4更新（セッション予算 `budget_reached` / advisorモデル /
     `inference_geo`（us指定は1.1倍課金）/ GitHubリポジトリの `.claude/skills` 自動読み込み）
