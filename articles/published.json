@@ -1851,6 +1851,36 @@
       },
       "file": "articles/drafts/2026-08-23_anthropic-python-sdk-v1-breaking-changes.md",
       "reviewedAt": "2026-08-23"
+    },
+    {
+      "id": 60,
+      "date": "2026-08-24",
+      "type": "free",
+      "title": "Claude APIの4機能がベータ卒業：browser useツールも新登場",
+      "slug": "claude-api-beta-graduation-browser-use",
+      "keywords": [
+        "Claude API",
+        "browser use",
+        "computer use",
+        "Files API",
+        "Agent Skills",
+        "betaヘッダー",
+        "GA",
+        "Managed Agents"
+      ],
+      "theme": "2026年8月19日にClaude APIでcomputer useツール（computer_toolset_20260801）・Files API・Agent SkillsとSkills API・Claude EnterpriseのAdmin APIユーザー管理の4機能がベータを卒業し、同日にブラウザ操作用のbrowser useツール（browser_toolset_20260801）が新設された件を一次情報でまとめたニュース記事。computer use正式版のバッチ操作・zoom既定有効・configsによるメンバー制御・display_width_px等の廃止と、旧computer_20251124からの移行（1ツール＋actionから17メンバーツールへ、tool_resultにtoolset_nameが必要）、browser useのread_page/find/form_input/タブ操作と要素参照、クライアント側でブラウザをホストする点、Claude API限定でjavascript_exec等4メンバーが既定無効な点、Files APIはbetaヘッダーを外すと応答形式が新形式（expires_in_seconds/expires_at、page/next_pageページング、ids[]フィルタ）に切り替わる注意、Skills・Admin APIはヘッダーを送り続けても変わらない点、Managed Agents側のweb_search/web_fetchドメイン制限とセルフホストサンドボックスのメモリストア対応・Consoleセッションビューア刷新を解説。",
+      "target": "Claude APIでエージェントやツール連携を実装しているエンジニア・個人開発者",
+      "news_date": "2026-08-19",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-24_claude-api-beta-graduation-browser-use.md",
+      "reviewedAt": "2026-08-24"
     }
   ]
 }
