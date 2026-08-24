@@ -1881,6 +1881,36 @@
       },
       "file": "articles/drafts/2026-08-24_claude-api-beta-graduation-browser-use.md",
       "reviewedAt": "2026-08-24"
+    },
+    {
+      "id": 61,
+      "date": "2026-08-24",
+      "type": "free",
+      "title": "Claude SecurityがMythos 5に：Claude Code側の使い分けも整理",
+      "slug": "claude-security-mythos-5-scans",
+      "keywords": [
+        "Claude Security",
+        "Mythos 5",
+        "脆弱性スキャン",
+        "Claude Code",
+        "プラグイン",
+        "security-guidance",
+        "CWE",
+        "Defender Advantage Fund"
+      ],
+      "theme": "Anthropicが2026年8月21日に公式ブログ『Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders』で発表した、Claude SecurityのスキャンのMythos 5対応を一次情報で整理した無料ニュース記事。マネージド版Claude SecurityがClaude Enterprise向け公開ベータであること（管理コンソールから有効化、GitHubリポジトリ接続、CWE分類・確信度・深刻度・修正案、報告前の反対検証、検出対象はメモリ破壊/インジェクション/認証バイパス/複雑なロジックの誤り）、Defender Advantage Fund（0xDAF）の3,500万ドル分クレジット、Cyber Verification Programの拡大（Opus・Sonnetの制限緩和、Mythos級は後続）を扱う。読者への影響としてEnterprise以外の入口を2つ提示：Claude Codeのclaude-securityプラグイン（ベータ・有料プラン・v2.1.154以降・python3 3.9.6以降・ProはDynamic workflows有効化、複数エージェントによるスキャンと独立検証、CLAUDE-SECURITY-<timestamp>/への出力、パッチ非自動適用、GitLab/Bitbucketに届く、スキャンは非決定的）と、security-guidanceプラグイン（全プラン、編集ごとの文字列一致は追加コストなし、ターン終了時の差分レビュー、コミット/プッシュ時の深いレビュー、レビューの独立性、書き込みは止めない、.claude/claude-security-guidance.mdでの独自ルール、SECURITY_GUIDANCE_DISABLE=1）。公式ドキュメントの防御多層化の並び（書きながら/単発の-security-review/深いスキャン/PR時のCode Review（Team・Enterprise）/マネージド版（Enterprise）/CI）をそのまま整理し、Fable 5利用時のセーフガード発火とOpusへの自動切替が想定内である点、パッチは必ず人がレビューすべき旨の公式注記を明記。Claude Codeプラグインは Mythos 5 で動くわけではない点も本文で明示",
+      "target": "Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-08-21",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 9,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.6
+      },
+      "file": "articles/drafts/2026-08-24_claude-security-mythos-5-scans.md",
+      "reviewedAt": "2026-08-24"
     }
   ]
 }
