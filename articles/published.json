@@ -1911,6 +1911,36 @@
       },
       "file": "articles/drafts/2026-08-24_claude-security-mythos-5-scans.md",
       "reviewedAt": "2026-08-24"
+    },
+    {
+      "id": 62,
+      "date": "2026-08-25",
+      "type": "free",
+      "title": "Claude Code v2.1.243〜246：軽量化とキャッシュTTL設定",
+      "slug": "claude-code-v2-1-243-246-lighter-cache-ttl",
+      "keywords": [
+        "Claude Code",
+        "v2.1.243",
+        "v2.1.246",
+        "プロンプトキャッシュ",
+        "promptCacheTtl",
+        "メモリ削減",
+        "権限",
+        "glibc"
+      ],
+      "theme": "2026年8月25日に公開されたClaude Code v2.1.243 / 245 / 246の3バージョンを公式チェンジログと公式ドキュメントで裏取りして整理した無料ニュース記事。(1)軽量化：ネイティブ版のzstd圧縮でLinux x64のダウンロードが約340MB→約75MB、オンデマンド読み込みで1セッション約40〜70MBのメモリ削減、バイナリ約2MB縮小、長時間セッションのピークメモリ改善、起動時間改善（サンドボックス/MCP立ち上げが初回描画をブロックしない）、フルスクリーン/Ctrl+Oのトランスクリプトのメモリ肥大修正。(2)プロンプトキャッシュTTLの自分設定：promptCacheTtl / subagentPromptCacheTtl（v2.1.242以降・値は5m/1hのみ・環境変数CLAUDE_CODE_PROMPT_CACHE_TTL等）、既定はサブスクのプラン内利用でメイン会話1時間・それ以外5分、クレジット/APIキー/クラウドプロバイダは一律5分、1時間TTLは書き込み単価が高く短時間作業では割高、apps gatewayでは非対応、Bedrockはモデル依存。(3)/usageのLoops内訳と/loopの連続無操作起動の集約。(4)v2.1.246の権限・認証関連：Bash許可ルールのサブコマンド前ワイルドカードに起動時警告、/permissionsのAuto modeタブ、サードパーティゲートウェイ用APIキーがAnthropic宛テレメトリに付いていた問題の修正、末尾に&&/||が残る不正コマンドは常に承認要求、サンドボックスのネットワーク確認中にNotificationフックが発火しない問題の修正。(5)v2.1.245のglibc 2.44環境（Arch/CachyOS/Fedora Rawhide）での起動クラッシュ修正。あわせて更新直後はキャッシュ再構築で最初のターンが遅く高くなる点、長い会話の再開が最も高くつく点、APIが応答を返さない場合に約3分でタイムアウトし1回リトライする修正も記載。v2.1.242とv2.1.244は公式チェンジログに見出しがない点も明記",
+      "target": "Claude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-08-25",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-25_claude-code-v2-1-243-246-lighter-cache-ttl.md",
+      "reviewedAt": "2026-08-25"
     }
   ]
 }
