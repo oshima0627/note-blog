@@ -1941,6 +1941,36 @@
       },
       "file": "articles/drafts/2026-08-25_claude-code-v2-1-243-246-lighter-cache-ttl.md",
       "reviewedAt": "2026-08-25"
+    },
+    {
+      "id": 63,
+      "date": "2026-08-26",
+      "type": "free",
+      "title": "Claude Codeのセッション記録が正式版に：誰が何を見られるのか",
+      "slug": "claude-code-compliance-session-transcripts-ga",
+      "keywords": [
+        "Claude Code",
+        "Compliance API",
+        "セッション記録",
+        "トランスクリプト",
+        "Claude Enterprise",
+        "データ保持",
+        "セキュリティ",
+        "Admin API"
+      ],
+      "theme": "2026年8月26日のClaude Platformリリースノートで、Compliance APIのセッション取得エンドポイントがCowork/Claude Codeについてベータを卒業した件を、公式ドキュメントで裏取りして整理した無料ニュース記事。(1)経緯：8月3日にリモート(claude.ai web/モバイルのCowork)がベータ追加、8月11日にローカル(利用者マシン上のCowork/Claude Code)がベータ追加、8月26日にCowork/Claude Codeが安定版へ。同日にClaude ScienceとMicrosoft 365アドインのセッション取得がベータで追加。(2)対象範囲：Claude Enterprise組織のみで個人のPro/Maxは対象外。有効化はprimary ownerがclaude.aiのOrganization settings > APIで行い親組織から配下へ引き継がれる。取得にはCompliance Access Keyとread:compliance_user_dataスコープが必要で新しいキー・設定・クライアント更新は不要。記録は有効化時点から始まり、それ以前のセッションは一覧に出ても本文が取得不可。(3)取得の仕組み：リクエストがClaude APIに届いた時点でサーバー側に記録。デバイスに何もインストールされず、クライアントが既に送っているリクエスト以上は収集されない。APIに届かないローカル活動は記録されない。ホスト/デバイスのメタデータ(端末種別・ワークスペースパス)とトークン使用量/コストは含まれない。(4)含まれるもの：ユーザープロンプト、アシスタントのテキスト、ツール呼び出しとツール結果のテキスト、ツール経由で読んだファイル内容(テキストのみ)とファイル名、CLAUDE.md(通常のユーザー発話として)、スキル内容。含まれないもの：thinkingブロック、システムプロンプト([system prompt content not shown]の目印に置換)、ツール定義とMCPサーバー設定、画像/PDF等のバイナリ(プレースホルダー)、citationメタデータ。ツール入力とツール結果テキストは既定10,000バイト、指定で約1MiBまで。(5)『URL・認証情報・個人データにマスクは一切かからない』と公式が明記している点を強調。(6)記録されないケース：Console APIキー認証、Bedrock/Google Cloud/Microsoft Foundry経由、Claude Code on the web、HIPAA readiness有効組織、ZDR適用セッション。(7)保存期間：ローカルは既定6年または組織の有限保持期間(複数なら最短)、リモートは6年。期間変更は『短縮は即時反映・延長は失効済みを復元しない』。セッションエンドポイントは読み取り専用で削除不可。(8)AnthropicはOpenTelemetryではなくCompliance APIをセッション内容取得の推奨手段としている点。(9)同日のAdmin API更新(antCLIとPython/TypeScript/C#/Go/Java/PHP/Ruby SDKのclient.beta.organization、使用量・コストレポートとEnterpriseユーザー管理/分析はcurlのみ)。『新たに監視が始まったわけではなくベータが安定版になった』という整理と、認証方式で扱いが変わる点・貼り付ける内容に注意する点は筆者の見方として明示",
+      "target": "業務でClaude Codeを使うエンジニア・個人開発者",
+      "news_date": "2026-08-26",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 8,
+        "funnel": 8,
+        "average": 8.8
+      },
+      "file": "articles/drafts/2026-08-26_claude-code-compliance-session-transcripts-ga.md",
+      "reviewedAt": "2026-08-26"
     }
   ]
 }

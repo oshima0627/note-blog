@@ -1,119 +1,88 @@
 # HANDOFF
 
-最終更新: 2026-08-26（LINE通知の Flex Message 化）
+最終更新: 2026-08-26（無料記事ルーチン。同日の LINE Flex 化セッションの後）
 
 ## いま何をしているのか
 
 note向けの記事を、CLAUDE.md の役割分担フロー（有料ルート／無料ルート）で生成・蓄積している。
 無料記事・有料記事とも、スケジュール実行のルーチンで追加している。
 
-2026-08-26 に触ったのは**記事ではなくルーチンの LINE 通知**。
-以下「今回やったこと（2026-08-26）」を参照。記事側の状況は 2026-08-25 のセッションの記録がそのまま残っている
-（`git log` を見ると 2026-08-26 にも記事が2本追加されているが、その分の記録はここには無い）。
+直近の作業は 2026-08-26 の無料記事1本の生成と main への反映。
+同じ 2026-08-26 に、別セッションで LINE 通知の Flex Message 化を行っている（下記「LINE通知の現状」）。
 
-## 今回やったこと（2026-08-26 / LINE通知）
+## 今回やったこと（2026-08-26 / 無料記事）
 
-ルーチンの LINE 通知が読みづらかったので、**Flex Message（カード形式）に置き換えた**。
-あわせて、**プロンプト内に python で JSON を直書きするのをやめた**。
-
-| ファイル | 変更内容 |
-|---|---|
-| `scripts/notify-line.mjs`（新規） | 引数を渡すだけで送れる依存ゼロの CLI。`--dry` で送信せず内容だけ確認できる |
-| `scripts/flex.mjs`（新規） | カード仕様 → Flex JSON の描画層と送信前検証 |
-| `scripts/notify-line.test.mjs`（新規） | 引数解釈とカード組み立てのテスト |
-| `prompts/routines/routine_free-article.md` | LINE通知の手順を python 直書きから CLI 呼び出しに置換 |
-| `prompts/routines/routine_paid-article.md` | 同上 |
-
-**これで「JSONエスケープ事故を避けるため python3 で組み立てる」という回避策自体が不要になった。**
-毎回 LLM に JSON を書かせるのをやめ、値をそのまま引数で渡す形にしたため。
-
-4リポジトリ共通の作業で、仕様は gas-notify-hub の
-`docs/superpowers/specs/2026-08-26-line-flex-design.md` にある。**通知を触る前に読むこと。**
-
-### 検証済みの事実（2026-08-26 分）
-
-```
-node --test scripts/notify-line.test.mjs → ℹ tests 12 / ℹ pass 12 / ℹ fail 0
-```
-
-プロンプトに書いたコマンドをそのまま `--dry` で実行し、出力を確認した（送信はしていない）:
-
-```
---- 送信内容（--dry のため送信しません） ---
-💰 note 有料記事が完成
-サンプル記事タイトル
-...
---- 検証 ---
-OK
-```
-
-### 未検証のもの（2026-08-26 分）
-
-- **実機での見え方は未確認。** LINE アプリに1度も表示していない
-- **ルーチンからの実行はまだ。** 次の記事ルーチンが走ったときが初回になる
-- `--status` をルーチンが実態どおりに渡すか（失敗時に `error` を選ぶか）は、実際に失敗するまで分からない
-
----
-
-## 以下は 2026-08-25（無料記事ルーチン）の記録
-
-## 今回やったこと（2026-08-25 / 無料記事）
-
-無料記事を1本、軽量フロー（企画→ニュース→管理）で生成し、`git push origin HEAD:main` で main に反映した。
+無料記事を1本、軽量フロー（企画→ニュース→管理）で生成し、main に反映した。
 
 - **【企画】**: 候補を比較して選定した
-  1. **Claude Code v2.1.243 / 245 / 246（すべて8月25日付）→ 選定**。公式チェンジログに中身のある更新が並んでいた
-  2. Claude Managed Agents の8/7の4更新 → 一次情報はあるが18日前で鮮度が落ちるため見送り
-  3. Workbench → Playground 刷新（8/18）→ 旧Workbench終了は id:35 で扱い済み
-  4. Claude Tag の全会話コンテキスト対応（8/24）→ 前回同様、公式の一次情報が見つからず見送り
-  - 既存の無料記事で最も新しい Claude Code バージョン記事は id:57 の v2.1.239。重複なし
+  1. **Compliance API のセッション取得エンドポイントがベータ卒業（2026-08-26 付リリースノート）→ 選定**。
+     当日付の一次情報で、業務で Claude Code を使う読者に直接影響する
+  2. Claude のメモリ統合（chat と Cowork で共通化、Topics で編集・削除、センシティブ話題のトグル。8/25 の公式ブログあり）→
+     一次情報はあるが、読者層（Claude Code ユーザー）への影響は Compliance API のほうが直接的なため見送り
+  3. AI ウェルビーイング研究への $5M 助成（8/25）→ 読者への実務的影響が薄く見送り
+  4. Claude Code changelog → **v2.1.246（8/25）が最新で、前回 id:62 で扱い済み**。新規なし
+  - 既存の無料記事に Compliance API を主題にしたものは無い。id:44（8/19 の Sonnet 5 値上げ中止記事）が
+    8/11 のベータ開始を**本文の付記として**触れているだけなので、続報として成立すると判断した
 - **【ニュース】**: 一次情報のみで執筆。裏取りしたURLは4本（すべて記事末尾の出典に記載）
-  - code.claude.com/docs/en/changelog（v2.1.243 / 245 / 246 の全項目、v2.1.240・241 が1行のみである点）
-  - code.claude.com/docs/en/prompt-caching（TTLの既定値表、5m/1hのみ、書き込み単価、apps gateway非対応、Bedrockはモデル依存）
-  - code.claude.com/docs/en/settings-reference（promptCacheTtl / subagentPromptCacheTtl / modelPicker）
-  - code.claude.com/docs/en/settings（modelPicker が v2.1.242以降を要する旨）
+  - platform.claude.com/docs/en/release-notes/api（8/26・8/11・8/3 の各項目、Admin API の CLI/SDK 対応）
+  - platform.claude.com/docs/en/manage-claude/compliance-sessions（Enterprise 限定、取得の仕組み、
+    含まれる／含まれない項目、10,000バイト上限、保存期間、記録されないケース）
+  - platform.claude.com/docs/en/manage-claude/compliance-api（概要・キーとスコープ・OTEL との比較）
+  - platform.claude.com/docs/en/manage-claude/compliance-faq（有効化の権限、データ範囲の要約）
 - **【管理】**: 品質チェックと事実確認を実施
-- **保存**: `articles/drafts/2026-08-25_claude-code-v2-1-243-246-lighter-cache-ttl.md`
-- **台帳**: `articles/published.json` に id:62 を type:"free" / news_date:2026-08-25 で追記
+- **保存**: `articles/drafts/2026-08-26_claude-code-compliance-session-transcripts-ga.md`
+- **台帳**: `articles/published.json` に id:63 を type:"free" / news_date:2026-08-26 で追記
 
 ## 検証済みの事実
 
-- 本文3,336字（空白除く、出典・CTA・メタデータを除く）— スクリプトで実測。目安2,000〜4,000字に収まっている
+- 本文3,826字（空白除く、出典・CTA・メタデータを除く）— スクリプトで実測。目安2,000〜4,000字に収まっている
 - **Markdownテーブル 0件** / 太字 `**` 0件 — スクリプトで確認
-- 誇大表現の grep（「絶対」「誰でも」「確実に稼」「驚愕」「激震」「爆速」「神ツール」「革命」「必見」「衝撃」）で該当なし
-- `articles/published.json` は JSON としてパース可能。記事は62本。`git diff --stat` で **30行の追加のみ**
-- 公式チェンジログの見出しを個別に確認: 2.1.246 / 2.1.245 / 2.1.243 はいずれも August 25, 2026。
-  **2.1.244 と 2.1.242 の見出しはページに存在しない**。2.1.241 は 8/23、2.1.240 は 8/22（どちらも1行）
-- 記事中の数値（340MB→75MB、40〜70MB、約2MB、約3分でタイムアウト、glibc 2.44）はすべて公式チェンジログの原文と突き合わせ済み。
-  TTLの既定値表・5m/1h制限・1時間TTLの書き込み単価・apps gateway非対応は prompt-caching ドキュメントの原文どおり。
+- 誇大表現の grep（「絶対」「誰でも」「確実に稼」「驚愕」「激震」「爆速」「神ツール」「革命」「必見」「衝撃」「完全に」「ヤバ」）で該当なし
+- `articles/published.json` は JSON としてパース可能。記事は63本。`git diff --stat` で **30行の追加のみ**
+- 記事中の事実はすべて公式ドキュメントの原文と突き合わせ済み。
+  ベータ卒業（8/26）／ローカルベータ開始（8/11）／リモートベータ開始（8/3）の3つの日付、
+  Enterprise 限定である旨、`read:compliance_user_data` スコープ、10,000バイト既定・約1MiB上限、
+  保存6年と組織の有限保持期間の優先、記録されない5ケース、
+  「URL・認証情報・個人データにマスクはかからない」の記述、Admin API の対応言語一覧。
   **架空の事例・出典なしの数値はゼロ**
 - 品質チェック: 正確性9 / 出典明記9 / 鮮度10 / 読みやすさ8 / 導線8 = 平均8.8（合格ライン7.0以上）
 - main への push 完了
-- LINE通知を送信
+- LINE通知を送信（`scripts/notify-line.mjs` 経由）
 
 ## 未検証のもの
 
-- **実際にアップデートして動かしてはいない**。すべて公式チェンジログ・公式ドキュメントの記載にもとづく
-- `promptCacheTtl` を `1h` にしたときの実コスト差は測っていない（公式の記述をそのまま伝えている）
-- 設定ドキュメントは modelPicker / promptCacheTtl を「v2.1.242以降が必要」としているが、
-  チェンジログ上は v2.1.243 の追加項目として並んでいる。**この食い違いは未解決**なので、
-  記事では「公式ドキュメントでは v2.1.242以降が必要」と書き、断定を避けている
-- `modelPricing` 設定は settings-reference の取得範囲に見つからなかったため、記事では扱っていない
+- **Compliance API を実際に叩いてはいない**。すべて公式リリースノート・公式ドキュメントの記載にもとづく
+- 「記録は有効化した時点から始まる」は、Activity Feed について
+  「recording is not retroactive」と明記された記述と、セッション一覧に
+  「取得開始前のセッションが本文なしで含まれうる」という記述から書いている。
+  **セッション取得について「非遡及」と直接書かれた1文は見つけていない**ので、記事では断定を避けている
 - note への投稿は未実施（下記「次にやること」参照）
+
+## LINE通知の現状（2026-08-26 の別セッション分）
+
+- 通知は `scripts/notify-line.mjs` に引数を渡す方式に置き換わっている。
+  `prompts/routines/routine_free-article.md` / `routine_paid-article.md` も更新済み
+- **スケジューラに登録されているルーチンのプロンプト本文は、まだ python 直書きの旧版だった。**
+  今回はリポジトリ側の新しい手順（`scripts/notify-line.mjs`）に従って送信した。
+  スケジュール設定側のプロンプトを新版に貼り直しておくとズレが解消する
+- 仕様は gas-notify-hub の `docs/superpowers/specs/2026-08-26-line-flex-design.md` にある。通知を触る前に読むこと
 
 ## 次にやること
 
+- **スケジューラ側のルーチンプロンプトを更新する**（上記「LINE通知の現状」）。
+  リポジトリの `prompts/routines/routine_free-article.md` の本文をそのまま貼り直せばよい
 - **note への投稿が止まったまま**。nexeed-ops のポーリング用スケジュールタスク `NotePost_Recurring` が未登録で、
-  `articles/drafts/` に未投稿の記事が溜まっている（前回時点で16件＋今回の1件）。
-  再開するなら nexeed-ops で `npm run arm:note`。古い記事は鮮度ガード（7日）で下書き止まりになる
+  `articles/drafts/` に未投稿の記事が溜まっている。再開するなら nexeed-ops で `npm run arm:note`。
+  古い記事は鮮度ガード（7日）で下書き止まりになる
 - **次回の無料記事の候補**:
-  - Claude Managed Agents の8/7の4更新（セッション予算 `budget_reached` / advisorモデル /
-    `inference_geo`（us指定は1.1倍課金）/ GitHubリポジトリの `.claude/skills` 自動読み込み）。鮮度は落ちている
+  - Claude のメモリ統合（chat と Cowork で共通、Topics で編集・削除、センシティブ話題は既定オフ）。
+    2026-08-25 の公式ブログあり。今回の次点
+  - Claude Managed Agents の 8/7 の4更新（セッション予算 `budget_reached` / advisorモデル /
+    `inference_geo` / GitHubリポジトリの `.claude/skills` 自動読み込み）。鮮度は落ちている
+  - Inference hooks（8/5 に Enterprise 向けベータ）。今回の記事と地続きで、まだ単独では扱っていない
   - Workbench が Playground に刷新（2026-08-18）。旧Workbenchの終了は id:35 で扱い済み
-  - Claude Tag の全会話コンテキスト対応（8/24）。**公式の一次情報が出たら**扱う
-  - v2.1.246 の `/permissions` Auto mode タブ・autoモード分類ルールを単体で深掘りする記事
-  - Claude Code v2.1.247 以降の changelog
-- 次回の有料記事ルーチンでは、既存16本と重複しない切り口を選ぶ
+  - Claude Code v2.1.247 以降の changelog（8/26 時点では 2.1.246 が最新）
+- 次回の有料記事ルーチンでは、既存の有料記事と重複しない切り口を選ぶ
 - 未解決の確認事項（前回から継続）: 週次使用量上限の50%増プロモについて、
   2026-08-19 記事では「8月31日まで延長」と書いたが、第三者ブログに「8月20日で標準に戻った」との記述がある。
   公式の記載を再確認し、必要なら該当記事を訂正すること
