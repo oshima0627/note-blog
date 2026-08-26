@@ -110,14 +110,21 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const spec = buildSpec(args);
   const plain = cardToPlainText(spec);
-  const card = buildFlexCard(spec);
-  const problems = validateFlexPayload(card);
+  let card;
+  let problems;
+  try {
+    card = buildFlexCard(spec);
+    problems = validateFlexPayload(card);
+  } catch (e) {
+    // 組み立てで落ちても通知そのものを消さない
+    problems = [`組み立てで例外: ${e.message}`];
+  }
 
   if (args.dry) {
     console.log('--- 送信内容（--dry のため送信しません） ---');
     console.log(plain);
     console.log('--- altText ---');
-    console.log(card.altText);
+    console.log(card ? card.altText : '(組み立てに失敗)');
     console.log('--- 検証 ---');
     console.log(problems.length === 0 ? 'OK' : problems.join('\n'));
     return;
@@ -125,7 +132,7 @@ async function main() {
 
   // 見た目より「通知を失わないこと」を優先する。
   // 組み立てや送信に失敗したら、同じ内容をテキストに落として送る。
-  if (problems.length > 0) {
+  if (!card || problems.length > 0) {
     console.error(`Flex 検証に失敗: ${problems.join(' / ')} → テキストで送信します`);
     await push({ type: 'text', text: plain.slice(0, 4900) });
     return;
