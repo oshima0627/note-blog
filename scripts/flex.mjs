@@ -190,10 +190,7 @@ export function buildFlexCard(spec) {
   }
 
   const blocks = (spec.blocks ?? []).filter(Boolean).map(renderBlock);
-  if (blocks.length === 0) {
-    blocks.push({ type: 'text', text: '内容なし', size: 'xs', color: FLEX_INK.muted, wrap: true });
-  }
-  blocks[0] = { ...blocks[0], margin: 'none' };
+  if (blocks.length > 0) blocks[0] = { ...blocks[0], margin: 'none' };
 
   const bubble = {
     type: 'bubble',
@@ -206,8 +203,12 @@ export function buildFlexCard(spec) {
       spacing: 'sm',
       contents: header,
     },
-    body: { type: 'box', layout: 'vertical', paddingAll: '14px', contents: blocks },
   };
+  // 中身が無いときは body 自体を出さない。「内容なし」のような
+  // プレースホルダは読む側に何も伝えないため置かない（設計書 3節）
+  if (blocks.length > 0) {
+    bubble.body = { type: 'box', layout: 'vertical', paddingAll: '14px', contents: blocks };
+  }
 
   if (spec.action?.uri) {
     bubble.footer = {
