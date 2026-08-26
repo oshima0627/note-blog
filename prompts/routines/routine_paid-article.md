@@ -50,34 +50,36 @@ nexeed-ops の note-post タスクが記事を検出し、note.com に**下書�
    - コミットメッセージは記事タイトルがわかる日本語で書く
 
 9. **LINE通知（必須・最後に必ず実行）**
-   - 成功時は記事タイトルと概要を、失敗・スキップ時はその理由を送信する
-   - 環境変数 `NEXEED_LINE_USER_ID` と `NEXEED_LINE_CHANNEL_ACCESS_TOKEN` を使い、
-     以下の形式で送信する（JSONエスケープ事故を避けるためpython3で組み立てる）：
+   - `scripts/notify-line.mjs` を使う。**プロンプトの中で JSON を組み立てない。**
+     整形もエスケープもスクリプト側が行うので、値をそのまま渡してよい
+   - `--status` は**実態に合わせる**。成功 `success` / 中断・スキップ `warn` / エラー `error`。
+     失敗を `success` で送ると通知の色を信用できなくなる
+   - `（）` の中は実際の値に置き換える。送る内容を先に見たいときは `--dry` を付ける
+     （`--dry` は送信しないので LINE の通数を消費しない）
+   - 環境変数 `NEXEED_LINE_USER_ID` と `NEXEED_LINE_CHANNEL_ACCESS_TOKEN` はスクリプトが読む
+
+   成功時:
 
 ```bash
-python3 - <<'PY'
-import json, os, urllib.request
-msg = """【note有料記事が完成しました】
-タイトル: （記事タイトル）
-概要: （2〜3行の記事概要）
-想定収益: （income_range） / 収益化モデル: （monetization_model）
-文字数: 約◯,◯◯◯字 / 品質スコア平均: ◯.◯
-有料化ライン: （販売設計の提案があれば1行で）
-保存先: articles/drafts/（ファイル名）
-※noteへの下書きは自動作成されます（push後、次のポーリングで反映）。内容と有料設定を確認して公開してください。"""
-req = urllib.request.Request(
-    "https://api.line.me/v2/bot/message/push",
-    data=json.dumps({
-        "to": os.environ["NEXEED_LINE_USER_ID"],
-        "messages": [{"type": "text", "text": msg}],
-    }).encode(),
-    headers={
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + os.environ["NEXEED_LINE_CHANNEL_ACCESS_TOKEN"],
-    },
-)
-print("LINE push status:", urllib.request.urlopen(req).status)
-PY
+node scripts/notify-line.mjs \
+  --status success \
+  --title "💰 note 有料記事が完成" \
+  --headline "（記事タイトル）" \
+  --quote "（2〜3行の記事概要）" \
+  --row "想定収益=（income_range）" \
+  --row "収益化モデル=（monetization_model）" \
+  --row "文字数=約◯,◯◯◯字" \
+  --row "品質スコア平均=◯.◯" \
+  --note "有料化ライン: （販売設計の提案があれば1行で）／articles/drafts/（ファイル名）／noteへの下書きは push 後のポーリングで自動作成されます。内容と有料設定を確認して公開してください。"
+```
+
+   失敗・スキップ時（重複しない候補が作れず中断した場合を含む）:
+
+```bash
+node scripts/notify-line.mjs \
+  --status error \
+  --title "💰 note 有料記事の生成を中断" \
+  --quote "（中断した理由を1〜3行で）"
 ```
 
 ## 制約（必ず守る）
