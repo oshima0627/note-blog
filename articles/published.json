@@ -1971,6 +1971,35 @@
       },
       "file": "articles/drafts/2026-08-26_claude-code-compliance-session-transcripts-ga.md",
       "reviewedAt": "2026-08-26"
+    },
+    {
+      "id": 64,
+      "date": "2026-08-27",
+      "type": "free",
+      "title": "Claude Code vs Cursor｜プログラミング初心者はどっちから始めるべき？【2026年8月版】",
+      "slug": "claude-code-vs-cursor-beginner",
+      "note_key": "n54370e748c01",
+      "note_url": "https://note.com/oshima0627/n/n54370e748c01",
+      "keywords": [
+        "Claude Code",
+        "Cursor",
+        "AIコーディング",
+        "初心者",
+        "料金比較",
+        "ツール選定"
+      ],
+      "theme": "検索流入型の比較記事（実証済みフォーマット）。上位流入3本と同じ「vs比較 × 初心者」の型",
+      "target": "AIでコードを書きたいがツールを決めかねている初心者",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 9,
+        "funnel": 9,
+        "average": 9.2
+      },
+      "file": "articles/drafts/2026-08-27_claude-code-vs-cursor-beginner.md",
+      "reviewedAt": "2026-08-27"
     }
   ]
 }
