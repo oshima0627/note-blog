@@ -61,7 +61,7 @@
 ## 未検証のもの
 
 - **記事はまだ note に投稿していない。** note_key 無し・`published.json` 未追記
-- 実機で Copilot CTL / Copilot Free を動かしていない。記述は公式ページの記載のみに依拠
+- 実機で Copilot CLI / Copilot Free を動かしていない。記述は公式ページの記載のみに依拠
 - Copilot Free の「AIクレジットの枠」は公式に数値の記載が無かった。**本文でも数値を書いていない**
 - 1・2本目（`n54370e748c01` / `nfd25ea1dabf6`）とCTA16本の効果はまだ測っていない（最低2週間後）
 
