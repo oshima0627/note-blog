@@ -1,6 +1,6 @@
 # Claude Code vs Codex（ChatGPT）｜初心者はどっちを選ぶ？【2026年8月版】
 
-<!-- 状態: 下書き（未公開）。公開したら note_url をここに追記する
+<!-- 公開済み: https://note.com/oshima0627/n/nfd25ea1dabf6 （2026-08-27 20:33 JST / 無料 / 大見出し8・埋め込みCTA2・タグ5）
      事実確認: 2026-08-27 に以下の公式ページを実際に開いて記載を突き合わせた
        - code.claude.com/docs/en/overview（Claude Code の入り口と導入方法）
        - claude.com/pricing（Claude のプランと価格・USD表記）
