@@ -2029,6 +2029,35 @@
       },
       "file": "articles/drafts/2026-08-27_claude-code-vs-codex-beginner.md",
       "reviewedAt": "2026-08-27"
+    },
+    {
+      "id": 66,
+      "date": "2026-08-28",
+      "type": "free",
+      "title": "Claude Code vs GitHub Copilot｜初心者はどっちから始めるべき？【2026年8月版】",
+      "slug": "claude-code-vs-github-copilot-beginner",
+      "note_key": "ncf5da0d7b604",
+      "note_url": "https://note.com/oshima0627/n/ncf5da0d7b604",
+      "keywords": [
+        "Claude Code",
+        "GitHub Copilot",
+        "初心者",
+        "料金比較",
+        "無料プラン",
+        "ツール選定"
+      ],
+      "theme": "検索流入型の比較記事（vs比較 × 初心者）の3本目。補完が出発点かエージェントが出発点か＋0円で始められるかで選ばせる",
+      "target": "AIにコードを書かせたいがClaude CodeとGitHub Copilotを決めかねている初心者",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 9,
+        "funnel": 9,
+        "average": 9.2
+      },
+      "file": "articles/drafts/2026-08-27_claude-code-vs-github-copilot-beginner.md",
+      "reviewedAt": "2026-08-28"
     }
   ]
 }
