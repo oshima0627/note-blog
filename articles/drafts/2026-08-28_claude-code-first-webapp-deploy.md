@@ -1,5 +1,8 @@
 # プログラミング未経験から、Claude Codeで最初のWebアプリを公開するまで【全手順・実機検証済み】
 
+<!-- 公開済み: https://note.com/oshima0627/n/n621957de7745 （2026-08-28 17:03 JST 公開 / 有料 ¥3,980 / note_key: n621957de7745）
+     有料ライン: 「ここから先は、実際に手を動かす部分です。」の直後（＝第0章から有料）。API の separator で確認済み -->
+
 <!-- 事実確認: 2026-08-28 に以下の公式ページを実際に開いて記載を突き合わせた
        - code.claude.com/docs/en/setup（動作要件・Windowsの導入コマンド・必要なプラン）
        - claude.com/pricing（Claude のプランと価格）
@@ -183,7 +186,7 @@ npx serve -l 5173 .
 
 初回は serve というツールを取りに行くので、インストールしてよいかの確認が出ます。許可して少し待ってください。次のように出れば起動しています。
 
-INFO  Accepting connections at http://localhost:5173
+INFO Accepting connections at http://localhost:5173
 
 ブラウザで http://localhost:5173 を開いてください。
 

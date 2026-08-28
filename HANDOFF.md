@@ -1,6 +1,6 @@
 # HANDOFF
 
-最終更新: 2026-08-28（vs比較3本目を公開＋初心者向け有料記事の下書きを作成）
+最終更新: 2026-08-28（無料記事1本＋初心者向け有料記事1本を公開）
 
 ## いま何をしているのか
 
@@ -8,120 +8,126 @@
 
 やることは2つ。
 1. 流入を6倍にする（「vs比較 × 初心者」型）← **3本公開済み**
-2. **商品を読者に合わせる** ← いまここ。**初心者向け有料記事の下書きが完成。未公開**
+2. 商品を読者に合わせる ← **監査で特定した空白を埋める本命商品を公開した**
+
+**次は「売れたかどうかの測定」と「主力記事へのクロスセル」。**
 
 ## 実態（note API で実測。数字は 2026-08-27 時点の監査）
 
 詳細: `analytics/2026-08-27_note-account-audit.md` / `_sales-reality.md` / `_audience-product-mismatch.md`
 
-- 公開115本 / 全期間 40,875ビュー / フォロワー259 / 直近30日 1,677ビュー
+- 公開114本（監査時点）/ 全期間 40,875ビュー / フォロワー259 / 直近30日 1,677ビュー
 - 生涯売上 ¥13,880（14ヶ月・手数料前）。2026年7月 ¥0 / 8月 ¥0
 - 未振込 ¥6,940。**本人判断で据え置き。たまってから申請する**
-- 売上ゼロの構造的原因: 流入は初心者向けに集中、¥3,980帯7本はすべて事業者向け。
-  **来ている人と売っている物が別人向け**
+- 売上ゼロの構造的原因: 流入は初心者向けに集中、¥3,980帯は事業者向けばかりだった
+  → **今回、初心者向けの ¥3,980 を初めて投入した**
 
 ## 今回やったこと（2026-08-28）
 
-### 1. vs比較の3本目を公開した
+### 1. 無料記事（vs比較 3本目）を公開
 
-**https://note.com/oshima0627/n/ncf5da0d7b604**（2026-08-28 16:05 JST / 無料）
+**https://note.com/oshima0627/n/ncf5da0d7b604**（16:05 JST / 無料）
 「Claude Code vs GitHub Copilot｜初心者はどっちから始めるべき？【2026年8月版】」
-`articles/published.json` に id:66 を追記済み。
 
-### 2. 初心者向け有料記事の下書きを作った（**未公開**）
+### 2. 初心者向け有料記事を公開（本命商品）
 
-- ファイル: `articles/drafts/2026-08-28_claude-code-first-webapp-deploy.md`
-- 「プログラミング未経験から、Claude Codeで最初のWebアプリを公開するまで【全手順・実機検証済み】」
-- 想定価格 **¥3,980** / 本文 **9,517字**（空白除く）/ 大見出し14・小見出し13 / 表0・太字0・バッククォート0
-- **有料ライン: 「第0章 先にお金の話をします」の直前**（無料部分で実物URLと検証環境まで見せる）
-- 埋め込みCTA2（¥1,980 `nf6dc3eb8e78d` + 入口A ¥500 `nd69e07a7c204`）
-- `published.json` には**まだ追記していない**（既存65件はすべて note_key 付き。公開時に id:67 を追記する）
+**https://note.com/oshima0627/n/n621957de7745**（17:03 JST / **有料 ¥3,980**）
+「プログラミング未経験から、Claude Codeで最初のWebアプリを公開するまで【全手順・実機検証済み】」
 
-### 3. 記事のために実機で手順を最後まで通した（HANDOFF の制約に対応）
+- 本文 約9,500字 / 大見出し14 / 小見出し13 / 表0 / 埋め込みCTA2 / タグ5
+- **有料ライン: 「ここから先は、実際に手を動かす部分です。」の直後（＝第0章から有料）**
+- 原稿: `articles/drafts/2026-08-28_claude-code-first-webapp-deploy.md`
+- 台帳: `articles/published.json` に id:67 を追記（30行の追記のみ・削除0）
 
-サンプルアプリ「時給ログ」を作って実際に公開した。
+### 3. 記事のために実機で手順を最後まで通した
+
+サンプルアプリ「時給ログ」を作って公開した。**記事本文がこのURLを実物として参照している。**
 
 - **公開URL: https://jikyu-log.oshima6-27.workers.dev**（Cloudflare Workers・稼働中）
 - リポジトリ: https://github.com/oshima0627/jikyu-log（**パブリック**）
-- 中身は HTML/CSS/JS の3ファイル＋`wrangler.jsonc` のみ。ビルド無し・localStorage 保存
+- HTML/CSS/JS の3ファイル＋`wrangler.jsonc` のみ。ビルド無し・localStorage 保存
+- 当初 GitHub Pages に出したが、**本人の指示で Workers に切り替え**。Pages は API で削除済み
 
-**当初 GitHub Pages でデプロイしたが、本人の指示で Workers に切り替えた。**
-Pages は `gh api -X DELETE repos/oshima0627/jikyu-log/pages` で削除済み。
+### 4. 手順書 `analytics/cta-funnel-plan.md` を大幅に追記
+
+有料記事の公開手順、クリップボード方式での本文投入、noteの自動変換、座標の取り方を記録した。
 
 ## 検証済みの事実（実際に画面に出した出力のみ）
 
-### 公開した無料記事（note API `/api/v3/notes/ncf5da0d7b604`）
+### 有料記事（note API `/api/v3/notes/n621957de7745`）
 
-- `status:"published"` / `price:0` / `publish_at:2026-08-28T16:05:21+09:00`
-- `<h2>` 9個 / `<table>` 0個 / `<figure>` 2個 / `**` 0 / `|` 0
-- CTA両方（`nd69e07a7c204` / `nf6dc3eb8e78d`）が本文に存在
-- ハッシュタグ5件を **`data.hashtag_notes`** で確認（`data.hashtags` は空に見えるので誤判定注意）
-- 転記ミスゼロを **len 4038 / hash 1019815352** の照合で確認
+- `status:"published"` / **`price:3980`** / `publish_at:2026-08-28T17:03:46+09:00`
+- `<h2>` 14 / `<h3>` 13 / `<table>` **0** / `<figure>` **2** / `<ul>` 1 / `<ol>` 1 / `**` 0
+- CTA両方（`nd69e07a7c204` / `nf6dc3eb8e78d`）と workers.dev のURLが本文に存在
+- タグ5件（#副業 #ClaudeCode #個人開発 #プログラミング初心者 #CloudflareWorkers）
+- **`separator` が「ここから先は、実際に手を動かす部分です。」のブロックidと一致**
+  → 有料ラインが意図した位置にあることを確認
+- 本文の投入結果を原稿と照合し、**差は1文字だけ**（`INFO  ` の連続スペースが1つに詰まった）と特定。
+  原稿側を公開版に合わせた。他は完全一致（セグメントごとのハッシュで確認）
 
-### 実機検証（2026-08-28・すべて実行して出力を確認）
+### 無料記事（note API `/api/v3/notes/ncf5da0d7b604`）
+
+- `status:"published"` / `price:0` / `<h2>` 9 / `<table>` 0 / `<figure>` 2 / タグ5
+- 転記ミスゼロを len 4038 / hash 1019815352 の照合で確認
+
+### 実機検証（2026-08-28）
 
 環境: Windows 11 (10.0.26200) / Node v24.1.0 / npm 11.3.0 / git 2.49.0.windows.1 /
 Claude Code **2.1.233** / wrangler **4.127.0**
 
-- アプリの計算: 150分・5,000円 を入力 → 画面に「今週の作業 2.5 時間 / 報酬 5,000 円 / 実質時給 2,000 円」
-- 生成ファイルの実サイズ: index.html 939 / style.css 792 / app.js 1,991 バイト（計3,722）
-- `npx serve -l 5173 .` → `INFO Accepting connections at http://localhost:5173`、HTTP 200
-- **サブパス配下のパス検証**: `/jikyu-log/` の下で `./style.css` → **200**、`/style.css` → **404**
-- `git init` の既定ブランチが **master** になった（git 2.49.0.windows.1・init.defaultBranch 未設定）
-- `npx wrangler deploy` 実出力: 3ファイル upload 1.01秒 / Uploaded 4.06秒 / Deployed 1.91秒（計約7秒）
-- 公開後の挙動: `/` `/style.css` `/app.js` → **200**、`/index.html` → **307**（`/` へリダイレクト）、
-  存在しないパス → **404**
-- GitHub Pages（切替前）: 有効化から15秒間隔ポーリングの3回目で 200。Pages API は現在 404（削除済み）
+- アプリの計算: 150分・5,000円 → 「実質時給 2,000 円」
+- 生成ファイル: index.html 939 / style.css 792 / app.js 1,991 バイト（計3,722）
+- `npx wrangler deploy` 実出力: upload 1.01秒 / Uploaded 4.06秒 / Deployed 1.91秒（計約7秒）
+- 公開後: `/` `/style.css` `/app.js` → **200**、`/index.html` → **307**（`/`へ）、存在しないパス → **404**
+- サブパス配下: `./style.css` → **200**、`/style.css` → **404**
+- `git init` の既定ブランチが **master** になった
 
 ### 公式ページで裏取りした事実
 
-- Claude Code は Pro/Max/Team/Enterprise/Console が必要。**Freeプランでは使えない**（公式に明記）
+- Claude Code は Pro/Max/Team/Enterprise/Console が必要。**Freeプランでは使えない**
 - Claude Pro 月$20（年払い実質$17・$200前払い）/ Max $100から
-- Windows導入: PowerShell `irm https://claude.ai/install.ps1 | iex` /
-  CMD `curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd` /
-  WinGet `winget install Anthropic.ClaudeCode`
-- ネイティブインストーラーは **Node.js 不要**。npm経由なら Node.js 22以上
 - Workers 無料枠: 1日10万リクエスト。**静的アセットへのリクエストは無料かつ無制限**。有料は月$5から
-- Workers 静的サイトは `main` 不要、`assets.directory` だけでよい
 - note手数料: 事務手数料 クレカ5%/キャリア15%/PayPay7%/AmazonPay7%/noteポイント10%/PayPal6.5%、
   プラットフォーム利用料（売上−事務手数料）の10%、振込手数料270円。
   公式の計算例: 1,000円クレカ1件 → 振込585円
 
 ## 未検証のもの
 
-- **有料記事はまだ note に投稿していない。** note_key 無し・`published.json` 未追記
-- **note で有料記事を出す操作（価格設定・有料ラインの位置指定）は一度もやっていない。**
-  `analytics/cta-funnel-plan.md` の手順は無料記事のもの。**有料化の画面操作は未知**
-- 手順は **Windows 11 でしか通していない**。macOS / Linux は未検証（記事にもその旨を明記済み）
-- wrangler の**初回ログイン画面は見ていない**（検証環境が認証済みだったため。記事にも明記済み）
-- **旧 GitHub Pages URL `https://oshima0627.github.io/jikyu-log/` がまだ HTTP 200 を返す。**
+- **有料記事が実際に購入導線として機能するかは未測定。** 売上0のまま
+- **購入者から見た表示（有料エリアの見え方）を、購入者視点で確認していない。**
+  確認したのは著者としての API 応答のみ
+- 手順は **Windows 11 でしか通していない**。macOS / Linux は未検証（記事にも明記）
+- wrangler の**初回ログイン画面は見ていない**（環境が認証済みだったため。記事にも明記）
+- **旧 GitHub Pages URL `https://oshima0627.github.io/jikyu-log/` がまだ 200 を返す。**
   Pages 自体は削除済み（API は 404）なので CDN キャッシュの残り。**いつ落ちるかは未確認**
 - vs比較3本とCTA16本の効果はまだ測っていない（最短で 2026-09-10 以降）
 
 ## 次にやること
 
-1. **有料記事を note に公開する（本人の許可待ち）。** 手順は無料記事と同じだが、
-   公開設定画面で「有料」を選び、価格 **¥3,980** と**有料ラインの位置**を指定する必要がある。
-   有料ラインは原稿末尾のコメントに書いた位置（第0章の直前）
-2. 公開できたら `published.json` に id:67 を追記（`type:"paid"` / `price:3980` / `note_key` / `note_url`）し、
-   原稿先頭に「公開済み: URL」のコメントを足す
-3. **検証用リポジトリとWorkerの扱いを決める**（記事の実物サンプルとして残す / 削除する）。
-   削除するなら `gh repo delete oshima0627/jikyu-log` と `npx wrangler delete`。
-   **残す場合、記事内のURLが生きている必要がある**
-4. 主力 ¥1,980 記事 `nf6dc3eb8e78d` にクロスセルを入れる（現在リンク0本）
-5. 有料26本の棚卸し（FX・競馬・AI BGM など Claude と無関係な商品が7本以上）
-6. 2週間後に `/api/v1/stats/pv?filter=monthly` でビュー変化を測る
+1. **主力 ¥1,980 記事 `nf6dc3eb8e78d` にクロスセルを入れる**（現在リンク0本）。
+   今回の ¥3,980 と ¥500 入口へ繋ぐ。手順は `analytics/cta-funnel-plan.md`
+2. **新しい ¥3,980 記事 `n621957de7745` から、他の商品への導線を確認する**（現在CTAは2本入り）
+3. 2週間後（**2026-09-11 以降**）に `/api/v1/stats/pv?filter=monthly` でビュー変化と売上を測る。
+   特に **¥3,980 の初心者向けが売れるか**が、監査の仮説の答え合わせになる
+4. 有料27本の棚卸し（FX・競馬・AI BGM など Claude と無関係な商品が7本以上）
+5. 4本目の無料記事を出すなら候補は「Opus 5 と Sonnet 5 の使い分け」/「vs Gemini CLI（2026年版）」
 
 ## 触ってはいけないところ
 
-- **記事で扱う製品は、料金ページだけでなく製品の概要ページを必ず開いてから書く。**
-  1本目（vs Cursor `n54370e748c01`）で「ターミナル専用」「Node.js が必要」の2件を公開後に訂正した
+- **`jikyu-log` のリポジトリと Worker を消さない。**
+  有料記事 `n621957de7745` の本文が https://jikyu-log.oshima6-27.workers.dev を
+  「実物」として参照している。**消すと記事が嘘になる**
+- **記事で扱う製品は、料金ページだけでなく製品の概要ページを必ず開いてから書く**
 - **手順記事は実機で通してから書く。** 通していない部分は「未検証」と本文に明記する
 - **note の本文に Markdown 記法を持ち込まない。** `**` も表もバックティックも生テキストで出る
-- **noteエディタ: Enter は段落を分割しない（brになる）。** 段落は `text/html` の paste で入れる。
-  埋め込みカードは「段落を空にしてから `text/plain` の URL を paste」。**複数なら後ろから**
-- **大見出しは Ctrl+Alt+2**（JS選択と併用可）。ただし**取りこぼすので index 一覧を照合して再実行する**
-- **JS でカーソルを置いてから `type` しない**（英数字が脱落する）
+- **note は貼り付け時に勝手に変換する。** 行頭 `+ ` → 箇条書き、行頭 `1. ` → 番号付き、
+  連続スペース → 1つ。ターミナル出力を貼るときに必ず起きる
+- **本文投入はクリップボード（Set-Clipboard ＋ 実キー Ctrl+V）が最も安全。** 段落は空行区切り
+- **ローカルHTTPへの `fetch` は note のページでは通らない**（PNAヘッダーを足しても hang する）
+- **クリック座標は毎回 DOM から計算し、打つ前に `document.activeElement` を確認する。**
+  今回これを飛ばして、本文に英数字が脱落した文字列を書き、Ctrl+V を**タイトル欄に流し込んだ**
+- **長い記事では見出しが取りこぼされる。** 選択 → 1秒待つ → Ctrl+Alt+2 → 1秒待つ の順にする
+- **`scrollIntoView` は効かない。** 実ホイールでスクロールして座標を測り直す
 - **数値IDのエディタURLを開いて保存しない。** key形式を使う
 - **`.ProseMirror` が出るまで（約10秒）保存しない**
 - **パスワード・本人確認情報は Claude が入力しない。** 売上確認・振込は本人が行う

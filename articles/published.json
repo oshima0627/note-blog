@@ -2058,6 +2058,36 @@
       },
       "file": "articles/drafts/2026-08-27_claude-code-vs-github-copilot-beginner.md",
       "reviewedAt": "2026-08-28"
+    },
+    {
+      "id": 67,
+      "date": "2026-08-28",
+      "type": "paid",
+      "title": "プログラミング未経験から、Claude Codeで最初のWebアプリを公開するまで【全手順・実機検証済み】",
+      "slug": "claude-code-first-webapp-deploy",
+      "note_key": "n621957de7745",
+      "note_url": "https://note.com/oshima0627/n/n621957de7745",
+      "price": 3980,
+      "keywords": [
+        "Claude Code",
+        "初心者",
+        "Webアプリ",
+        "デプロイ",
+        "Cloudflare Workers",
+        "個人開発"
+      ],
+      "theme": "監査で特定した「¥1,980と¥3,980の間の空白」を埋める初心者向け本命商品。手順を実機で最後まで通し実行ログを根拠に執筆",
+      "target": "プログラミング未経験〜ほぼ未経験で、Claude Codeで自分のURLを持つWebアプリを公開したい人",
+      "review_scores": {
+        "accuracy": 9,
+        "sourcing": 9,
+        "freshness": 10,
+        "readability": 9,
+        "funnel": 8,
+        "average": 9
+      },
+      "file": "articles/drafts/2026-08-28_claude-code-first-webapp-deploy.md",
+      "reviewedAt": "2026-08-28"
     }
   ]
 }
