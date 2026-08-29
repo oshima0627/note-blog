@@ -318,3 +318,90 @@ Ctrl+Z で戻せるが、**20回押すと全文が消える。** その場合は
   `1568 / window.innerWidth` 倍する
 - **打つ前に `document.activeElement.tagName` を確認する。**
   タイトルなら `TEXTAREA`、本文なら ProseMirror の中
+
+## 有料記事のCTAは購入者にしか見えていなかった（2026-08-29 実測）
+
+`https://note.com/api/v3/notes/<key>` は**未ログインだと無料プレビュー部分の body しか返さない**
+（`can_read:false`）。これで有料4本を調べたところ、無料プレビュー内の
+`note.com/oshima0627/n/` リンクが **3本とも0本**だった。公開ページのHTMLでも同じ。
+
+- `nf6dc3eb8e78d`（¥1,980・547ビュー）: 無料プレビューは第2章まで。リンク0
+- `n621957de7745`（¥3,980）: 入れた埋め込みCTA2本は `separator` より後ろ＝有料エリア内
+- `nd69e07a7c204`（¥500 入口A）: 無料プレビューは**1段落だけ**。ほぼ全文が有料
+
+→ 有料記事に末尾CTAを入れても、見えるのは購入者だけ。¥1,980 は14ヶ月で2本しか売れていないので
+実質2人にしか届かない。**入れるべきは有料ラインより前（無料プレビュー内）。**
+
+### 実施（2026-08-29・両方 PUT 200 で確認）
+
+- `nf6dc3eb8e78d`: 「あなたはどちらのマインドセットを選ぶ？」の直後、HR＋第3章H2の前に
+  1文＋入口Aの埋め込みカードを挿入
+- `n621957de7745`: 「macOS と Linux では通していません…」の直後、
+  「ここから先は、実際に手を動かす部分です。」の前に1文＋入口Aの埋め込みカードを挿入
+- どちらも `separator` は変わらず、`price` / `publish_at` も変わらない
+
+`nd69e07a7c204`（入口A自身）は**意図的に除外**。無料プレビューが1段落しかなく、
+そこに置けるのは上位商品へのリンクだけ。購入判断の直前に高い商品を出すのは逆効果と判断した。
+
+## 「更新する」を押すとページが固まる問題の正体（2026-08-29 特定）
+
+`nf6dc3eb8e78d` で2回連続して、更新するの直後にページが完全に固まった
+（スクショもread_pageも「script injection timed out」）。原因は推測ではなく実測で特定した。
+
+**`PUT /api/v1/text_notes/119031232` が 422 を返し、note が
+`window.alert("数量限定販売をするにはプレミアムユーザになる必要があります")` を出していた。**
+ネイティブの alert がレンダラを止めるので、拡張のスクリプト注入が全部タイムアウトする。
+
+この記事は `prior_sale: {activated:true, first_served_sales_count:10, stock_count:8}` で、
+**数量限定販売（先着10枠・残8）が有効。いまのアカウントでは premium が要るため保存が通らない。**
+
+### 診断のやり方（再発したらこれをやる）
+
+クリックする**前に**フックを入れて、記録を localStorage に逃がす。固まっても後から読める。
+
+```js
+const push=o=>{const a=JSON.parse(localStorage.getItem('__dbg')||'[]');a.push(o);localStorage.setItem('__dbg',JSON.stringify(a.slice(-60)));};
+localStorage.setItem('__dbg','[]');
+const of=window.fetch;
+window.fetch=function(...a){const u=String((a[0]&&a[0].url)||a[0]).split('?')[0];push({ev:'f',u,m:(a[1]&&a[1].method)||'GET'});
+  return of.apply(this,a).then(r=>{push({ev:'r',u,s:r.status});return r;});};
+window.alert=m=>push({ev:'alert',msg:String(m).slice(0,150)});
+window.confirm=m=>{push({ev:'confirm',msg:String(m).slice(0,150)});return true;};
+```
+
+**alert を差し替えておくと固まらなくなる**ので、note編集を自動操作するときは常に入れておく。
+
+### 回避方法
+
+公開設定の「セール」で **「設定しない」を選んでから更新する** と `PUT` が 200 になる。
+
+**更新後も公開ページの「数量限定：残り 8 / 10」表示は残っており、
+`prior_sale.activated` は `true` のままだった**（2026-08-29 に公開ページHTMLとAPIの両方で確認）。
+つまり先着販売の表示は失わずに本文だけ更新できた。仕組みは未検証なので、
+次回も更新前後で `prior_sale` と公開ページの表示を必ず確認すること。
+
+## 本文の途中に段落を挿入する手順（2026-08-29 確立）
+
+末尾ではなく**記事の途中**に入れる場合の手順。無料プレビュー内にCTAを置くときはこれを使う。
+
+1. 挿入したい段落を DOM の index で特定する
+   （`[...document.querySelector('.ProseMirror').children]`）
+2. **`scrollIntoView` は効かない。** 実ホイールでスクロールしてから
+   `getBoundingClientRect()` で座標を測る（スクショ座標 = ページ座標 × `1568/innerWidth`）
+3. その段落の**テキストより右側・ブロック内**を実クリック → `End`
+4. `getSelection()` の親チェーンと `document.activeElement` を確認してから次へ進む
+5. `ClipboardEvent('paste')` の `text/html` に
+   **`<p><br></p><p>本文</p><p>PLACEHOLDER</p>`** を入れて dispatch する
+   - **先頭の空 `<p>` が要る。** 無いと1つ目の段落がカーソル位置の既存段落に連結される
+     （実際に「あなたはどちらのマインドセットを選ぶ？ここから先は有料エリアです。」になった）
+6. URLの埋め込みカードは、**プレースホルダ段落を triple_click → Delete で空にしてから、
+   `text/plain` に URL だけ入れて paste** する。5秒待つと `<figure><iframe>` になる
+   - **`text/html` で URL を入れてもカードにならない**（ただのテキストのまま）
+7. `computer` の `key: Return` は**段落を分割しない**（`<br>` が入るだけ）。これは再確認済み
+
+### 保存フロー（有料記事）
+
+公開に進む → 有料エリア設定 → 更新する。
+**エディタ読み込み直後の1クリック目は効かない**ことが多いので、押した後にURLかボタン名で確認する。
+有料エリア設定の画面では `textContent==='このラインより先を有料にする'` の要素の
+直前テキストを見て、有料ラインが動いていないことを確認してから更新する。
